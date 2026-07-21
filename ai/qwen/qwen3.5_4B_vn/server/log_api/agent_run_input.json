@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-07-21T02:18:57.556944Z",
+  "route": "run",
+  "request_to_qwen": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "xin chao"
+      }
+    ],
+    "context_text": "",
+    "model": "Qwen3.5-4B-V4",
+    "enable_thinking": false,
+    "max_new_tokens": 8,
+    "temperature": 0.1,
+    "top_p": 0.8
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "workflows": {
+    "OqlVod0flxqPWVM8": {
+      "lastSyncedHash": "f22268b324e5563510ea168ddebc69ed6f75fbb0c0848a6b1315bae3763f9312",
+      "lastSyncedAt": "2026-07-16T04:21:18.964Z",
+      "filename": "test_1.workflow.ts"
+    },
+    "yJRYT0KzPlheIhyt": {
+      "lastSyncedHash": "1c1144152a3263a7ac9caed90c30922163f2330c6f3f61181500c607d348758d",
+      "lastSyncedAt": "2026-07-16T08:53:35.370Z",
+      "filename": "test_2.workflow.ts"
+    },
+    "XtUDQiu8KkvsKpkM": {
+      "lastSyncedHash": "08461d4259b5fe9a06cf0ee92f292fa415db52afaac9aaba49b1474b9b27ba4e",
+      "lastSyncedAt": "2026-07-21T07:50:10.026Z",
+      "filename": "test_3.workflow.ts"
+    }
+  }
+}

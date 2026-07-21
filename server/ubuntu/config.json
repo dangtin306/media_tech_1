@@ -1,0 +1,15 @@
+{
+  "ubuntu_ssh_host": "n1.de.clorecloud.net",
+  "ubuntu_ssh_port": 1649,
+  "ubuntu_ssh_user": "root",
+  "ubuntu_ssh_password": "Matkhau@abc",
+  "clore_key" : "pf7cV9CR5XszaWrg78AV0urKdpM8NGxS",
+  "ubuntu_test_host": "vip.tecom.pro",
+  "ubuntu_test_port": 8799,
+  "ubuntu_test_user": "root",
+  "ubuntu_test_password": "Matkhau@abc",
+  "ubuntu_test_container": "ubuntu-gpu-test",
+  "ubuntu_test_dockerImage": "ubuntu:22.04",
+  "ubuntu_test_dockerPort": "8799:22",
+  "ubuntu_test_sshCommand": "ssh root@localhost -p 8799"
+}

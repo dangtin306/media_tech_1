@@ -1,0 +1,66 @@
+﻿{
+    "features":  [
+                     {
+                         "feature_idx":  0,
+                         "name":  "question",
+                         "type":  {
+                                      "dtype":  "string",
+                                      "_type":  "Value"
+                                  }
+                     },
+                     {
+                         "feature_idx":  1,
+                         "name":  "answer",
+                         "type":  {
+                                      "dtype":  "string",
+                                      "_type":  "Value"
+                                  }
+                     },
+                     {
+                         "feature_idx":  2,
+                         "name":  "type",
+                         "type":  {
+                                      "dtype":  "string",
+                                      "_type":  "Value"
+                                  }
+                     }
+                 ],
+    "rows":  [
+                 {
+                     "row_idx":  0,
+                     "row":  {
+                                 "question":  "dáº¡ vÃ¢ng em ÄÃ£ náº¯m thÃ´ng tin sáº½ liÃªn há» láº¡i vá»i bÃªn báº¡n sá»m nháº¥t áº¡.",
+                                 "answer":  "dáº¡ vÃ¢ng áº¡. Náº¿u cáº§n thÃ´ng tin nÃ o thÃªm thÃ¬ anh cá»© nháº¯n em sáº½ há» trá»£ anh nhÃ©.",
+                                 "type":  "General"
+                             },
+                     "truncated_cells":  [
+
+                                         ]
+                 },
+                 {
+                     "row_idx":  1,
+                     "row":  {
+                                 "question":  "Em check ck giÃºp anh, kÃ­ch hoáº¡t tk dÃ¹m anh vá»i.",
+                                 "answer":  "dáº¡ há» thá»ng ÄÃ£ kÃ­ch hoáº¡t gÃ³i cho anh rá»i áº¡. Anh check láº¡i giÃºp em áº¡.",
+                                 "type":  "General"
+                             },
+                     "truncated_cells":  [
+
+                                         ]
+                 },
+                 {
+                     "row_idx":  2,
+                     "row":  {
+                                 "question":  "CÃ³ pháº£n há»i ÄÆ°á»£c ngay khÃ´ng báº¡n? Hay pháº£i Äá»£i mai.",
+                                 "answer":  "dáº¡ cháº¯c pháº£i Äá»£i áº¥y áº¡. CÃ³ pháº£n há»i em bÃ¡o anh ngay áº¡.",
+                                 "type":  "General"
+                             },
+                     "truncated_cells":  [
+
+                                         ]
+                 }
+             ],
+    "num_rows_total":  1500,
+    "num_rows_per_page":  100,
+    "partial":  false
+}

@@ -1,0 +1,47 @@
+{
+  "windows": {
+    "expected_conda_prefix": "D:\\hustmedia\\conda_envs\\qwen",
+    "base_model": "D:\\huggingface\\hub\\Qwen\\Qwen3.5-4B",
+    "lora_adapter": "D:\\huggingface\\hub\\Qwen\\Qwen3.5-4B_vn_1\\adapter",
+    "offload_folder": "D:\\hustmedia\\python\\llms\\media_tech\\ai\\qwen\\qwen3.5_4B_vn\\server\\offload",
+    "app_port": 8005,
+    "strict_cuda_only": true,
+    "default_use_4bit": true,
+    "default_cpu_offload": true,
+    "kill_port_on_start": true,
+    "auto_reload": true,
+    "log_max_lines": 100,
+    "log_keep_files": 3
+  },
+  "ubuntu": {
+    "expected_conda_prefix": "/root/miniconda3/envs/qwen",
+    "base_model": "/root/model/Qwen/Qwen3.5-4B",
+    "lora_adapter": "/root/model/Qwen/Qwen3.5-4B_vn_1/adapter",
+    "offload_folder": "/root/media_tech/ai/qwen/qwen3.5_4B_vn/server/offload",
+    "app_port": 8005,
+    "strict_cuda_only": true,
+    "default_use_4bit": true,
+    "default_cpu_offload": true,
+    "kill_port_on_start": true,
+    "auto_reload": true,
+    "log_max_lines": 100,
+    "log_keep_files": 3
+  },
+  "webservice": {
+    "ws_url": "wss://oc.hust.media/chatbot/gpu",
+    "ws_hello_payload": {
+      "message": "chào bạn"
+    },
+    "ws_reconnect_delay": 30,
+    "ws_ping_interval": 20,
+    "ws_ping_timeout": 10,
+    "http_connect_timeout_seconds": 5,
+    "http_timeout_seconds": 40,
+    "windows": {
+      "ws_headers": ["device: win"]
+    },
+    "ubuntu": {
+      "ws_headers": ["device: gpu"]
+    }
+  }
+}

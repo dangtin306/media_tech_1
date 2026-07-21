@@ -1,0 +1,468 @@
+2026-07-17T09:47:00.836862Z run
+Traceback (most recent call last):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
+    return self._decompress(data)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\brotlicffi\_api.py", line 413, in decompress
+    raise error(
+brotlicffi._api.error: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 442, in _embed
+    return _embed_with_sentence_transformers(texts, device)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
+    _IBM_SENTENCE_MODEL = SentenceTransformer(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\sentence_transformer\model.py", line 188, in __init__
+    super().__init__(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 216, in __init__
+    modules, self.module_kwargs = self._load_modules(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 1002, in _load_modules
+    return self._load_config_modules(model_name_or_path, **load_kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 1208, in _load_config_modules
+    module = module_class.load(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\modules\transformer.py", line 2030, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\modules\transformer.py", line 671, in __init__
+    self.processor = AutoProcessor.from_pretrained(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\processing_auto.py", line 269, in from_pretrained
+    tokenizer_config_file = cached_file(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 527, in cached_files
+    raise e
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1238, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1877, in _download_to_tmp_and_move
+    http_get(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 433, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_models.py", line 898, in iter_bytes
+    decoded = decoder.decode(raw_bytes)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
+    raise DecodingError(str(exc)) from exc
+httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
+    return self._decompress(data)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\brotlicffi\_api.py", line 413, in decompress
+    raise error(
+brotlicffi._api.error: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
+    raw_result = run_handler(request_payload, None)
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
+    messages, retrieved_context, _ = qwen_context.prepare_rag_context_with_query(
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
+    return _load_search_main_module().prepare_rag_context_with_query(
+  File "D:\hustmedia\python\llms\media_tech\ai\search\main.py", line 371, in prepare_rag_context_with_query
+    retrieval = retrieve_context_fn(
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 561, in retrieve_context
+    index = _get_ibm_index()
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 519, in _get_ibm_index
+    index = IBMSearchIndex(CORPUS_PATH)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 476, in __init__
+    self.refresh(force=True)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 485, in refresh
+    embeddings = _embed(texts, self.device).detach().cpu().float()
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 445, in _embed
+    return _embed_with_transformers(texts, device)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 408, in _embed_with_transformers
+    _IBM_TRANSFORMERS_TOKENIZER = AutoTokenizer.from_pretrained(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 747, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 583, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 527, in cached_files
+    raise e
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1238, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1877, in _download_to_tmp_and_move
+    http_get(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 433, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_models.py", line 898, in iter_bytes
+    decoded = decoder.decode(raw_bytes)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
+    raise DecodingError(str(exc)) from exc
+httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+2026-07-17T09:47:22.049505Z run
+Traceback (most recent call last):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
+    return self._decompress(data)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\brotlicffi\_api.py", line 413, in decompress
+    raise error(
+brotlicffi._api.error: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 442, in _embed
+    return _embed_with_sentence_transformers(texts, device)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
+    _IBM_SENTENCE_MODEL = SentenceTransformer(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\sentence_transformer\model.py", line 188, in __init__
+    super().__init__(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 216, in __init__
+    modules, self.module_kwargs = self._load_modules(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 1002, in _load_modules
+    return self._load_config_modules(model_name_or_path, **load_kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 1208, in _load_config_modules
+    module = module_class.load(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\modules\transformer.py", line 2030, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\modules\transformer.py", line 671, in __init__
+    self.processor = AutoProcessor.from_pretrained(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\processing_auto.py", line 269, in from_pretrained
+    tokenizer_config_file = cached_file(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 527, in cached_files
+    raise e
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1238, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1877, in _download_to_tmp_and_move
+    http_get(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 433, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_models.py", line 898, in iter_bytes
+    decoded = decoder.decode(raw_bytes)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
+    raise DecodingError(str(exc)) from exc
+httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
+    return self._decompress(data)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\brotlicffi\_api.py", line 413, in decompress
+    raise error(
+brotlicffi._api.error: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
+    raw_result = run_handler(request_payload, None)
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
+    messages, retrieved_context, _ = qwen_context.prepare_rag_context_with_query(
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
+    return _load_search_main_module().prepare_rag_context_with_query(
+  File "D:\hustmedia\python\llms\media_tech\ai\search\main.py", line 371, in prepare_rag_context_with_query
+    retrieval = retrieve_context_fn(
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 561, in retrieve_context
+    index = _get_ibm_index()
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 519, in _get_ibm_index
+    index = IBMSearchIndex(CORPUS_PATH)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 476, in __init__
+    self.refresh(force=True)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 485, in refresh
+    embeddings = _embed(texts, self.device).detach().cpu().float()
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 445, in _embed
+    return _embed_with_transformers(texts, device)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 408, in _embed_with_transformers
+    _IBM_TRANSFORMERS_TOKENIZER = AutoTokenizer.from_pretrained(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 747, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 583, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 527, in cached_files
+    raise e
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1238, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1877, in _download_to_tmp_and_move
+    http_get(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 433, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_models.py", line 898, in iter_bytes
+    decoded = decoder.decode(raw_bytes)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
+    raise DecodingError(str(exc)) from exc
+httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+2026-07-17T09:48:00.650491Z run
+Traceback (most recent call last):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
+    return self._decompress(data)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\brotlicffi\_api.py", line 413, in decompress
+    raise error(
+brotlicffi._api.error: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 442, in _embed
+    return _embed_with_sentence_transformers(texts, device)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
+    _IBM_SENTENCE_MODEL = SentenceTransformer(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\sentence_transformer\model.py", line 188, in __init__
+    super().__init__(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 216, in __init__
+    modules, self.module_kwargs = self._load_modules(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 1002, in _load_modules
+    return self._load_config_modules(model_name_or_path, **load_kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 1208, in _load_config_modules
+    module = module_class.load(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\modules\transformer.py", line 2030, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\modules\transformer.py", line 671, in __init__
+    self.processor = AutoProcessor.from_pretrained(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\processing_auto.py", line 269, in from_pretrained
+    tokenizer_config_file = cached_file(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 527, in cached_files
+    raise e
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1238, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1877, in _download_to_tmp_and_move
+    http_get(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 433, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_models.py", line 898, in iter_bytes
+    decoded = decoder.decode(raw_bytes)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
+    raise DecodingError(str(exc)) from exc
+httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
+    return self._decompress(data)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\brotlicffi\_api.py", line 413, in decompress
+    raise error(
+brotlicffi._api.error: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
+    raw_result = run_handler(request_payload, None)
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
+    messages, retrieved_context, _ = qwen_context.prepare_rag_context_with_query(
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
+    return _load_search_main_module().prepare_rag_context_with_query(
+  File "D:\hustmedia\python\llms\media_tech\ai\search\main.py", line 371, in prepare_rag_context_with_query
+    retrieval = retrieve_context_fn(
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 561, in retrieve_context
+    index = _get_ibm_index()
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 519, in _get_ibm_index
+    index = IBMSearchIndex(CORPUS_PATH)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 476, in __init__
+    self.refresh(force=True)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 485, in refresh
+    embeddings = _embed(texts, self.device).detach().cpu().float()
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 445, in _embed
+    return _embed_with_transformers(texts, device)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 408, in _embed_with_transformers
+    _IBM_TRANSFORMERS_TOKENIZER = AutoTokenizer.from_pretrained(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 747, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 583, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 527, in cached_files
+    raise e
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1238, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1877, in _download_to_tmp_and_move
+    http_get(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 433, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_models.py", line 898, in iter_bytes
+    decoded = decoder.decode(raw_bytes)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
+    raise DecodingError(str(exc)) from exc
+httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+2026-07-17T09:58:13.854866Z run
+Traceback (most recent call last):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
+    return self._decompress(data)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\brotlicffi\_api.py", line 413, in decompress
+    raise error(
+brotlicffi._api.error: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 442, in _embed
+    return _embed_with_sentence_transformers(texts, device)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
+    _IBM_SENTENCE_MODEL = SentenceTransformer(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\sentence_transformer\model.py", line 188, in __init__
+    super().__init__(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 216, in __init__
+    modules, self.module_kwargs = self._load_modules(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 1002, in _load_modules
+    return self._load_config_modules(model_name_or_path, **load_kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\model.py", line 1208, in _load_config_modules
+    module = module_class.load(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\modules\transformer.py", line 2030, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\base\modules\transformer.py", line 671, in __init__
+    self.processor = AutoProcessor.from_pretrained(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\processing_auto.py", line 269, in from_pretrained
+    tokenizer_config_file = cached_file(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 527, in cached_files
+    raise e
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1238, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1877, in _download_to_tmp_and_move
+    http_get(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 433, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_models.py", line 898, in iter_bytes
+    decoded = decoder.decode(raw_bytes)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
+    raise DecodingError(str(exc)) from exc
+httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
+    return self._decompress(data)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\brotlicffi\_api.py", line 413, in decompress
+    raise error(
+brotlicffi._api.error: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
+    raw_result = run_handler(request_payload, None)
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
+    messages, retrieved_context, _ = qwen_context.prepare_rag_context_with_query(
+  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
+    return _load_search_main_module().prepare_rag_context_with_query(
+  File "D:\hustmedia\python\llms\media_tech\ai\search\main.py", line 371, in prepare_rag_context_with_query
+    retrieval = retrieve_context_fn(
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 561, in retrieve_context
+    index = _get_ibm_index()
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 519, in _get_ibm_index
+    index = IBMSearchIndex(CORPUS_PATH)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 476, in __init__
+    self.refresh(force=True)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 485, in refresh
+    embeddings = _embed(texts, self.device).detach().cpu().float()
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 445, in _embed
+    return _embed_with_transformers(texts, device)
+  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 408, in _embed_with_transformers
+    _IBM_TRANSFORMERS_TOKENIZER = AutoTokenizer.from_pretrained(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 747, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 583, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 527, in cached_files
+    raise e
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\utils\hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1016, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1238, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 1877, in _download_to_tmp_and_move
+    http_get(
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\huggingface_hub\file_download.py", line 433, in http_get
+    for chunk in response.iter_bytes(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_models.py", line 898, in iter_bytes
+    decoded = decoder.decode(raw_bytes)
+  File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
+    raise DecodingError(str(exc)) from exc
+httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+

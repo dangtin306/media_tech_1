@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-07-21T14:45:55.668Z",
+  "endpoint": "http://127.0.0.1:8005/openclaw/agent/run",
+  "transport": "gpu_websocket",
+  "request": {
+    "system_context": "Luôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt. Bạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.",
+    "user_message": "bạn là ai",
+    "history": [],
+    "scenario": "customer_consulting",
+    "user_state": {},
+    "runtime": {},
+    "options": {
+      "mode": "run",
+      "need_decision": true,
+      "allow_tool_call": true,
+      "max_history": 20
+    },
+    "metadata": {},
+    "model": "Qwen3.5-4B-V4",
+    "user": "media_tech:request",
+    "session_key": "agent:media_tech:ubuntu",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Luôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt. Bạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\nscenario: customer_consulting"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai"
+      }
+    ],
+    "temperature": 0.5,
+    "max_tokens": 512,
+    "top_p": 0.9,
+    "enable_thinking": false,
+    "use_lora": true,
+    "use_rag": false,
+    "rag_top_k": 4,
+    "model_code": "qwen-3.5/qwen-3.5-ubuntu"
+  },
+  "response_text": "{\"decision\":{},\"raw\":{\"error\":\"Can't find 'adapter_config.json' at '/root/model/Qwen/Qwen3.5-4B_vn_1/adapter'\"},\"reply\":\"Lỗi GPU server: Can't find 'adapter_config.json' at '/root/model/Qwen/Qwen3.5-4B_vn_1/adapter'\",\"state_patch\":{},\"tool_calls\":[],\"usage\":null}",
+  "response": {
+    "decision": {},
+    "raw": {
+      "error": "Can't find 'adapter_config.json' at '/root/model/Qwen/Qwen3.5-4B_vn_1/adapter'"
+    },
+    "reply": "Lỗi GPU server: Can't find 'adapter_config.json' at '/root/model/Qwen/Qwen3.5-4B_vn_1/adapter'",
+    "state_patch": {},
+    "tool_calls": [],
+    "usage": null
+  }
+}

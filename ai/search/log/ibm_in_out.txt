@@ -1,0 +1,39 @@
+================================================================================
+TIME: 2026-07-20T11:01:33Z
+MODEL: Qwen3.5-4B-V4
+USED_V4: True
+
+CONTEXT INPUT
+  system prompt:
+    Bạn là bộ tách cụm từ tìm kiếm cho RAG. Đọc ngữ cảnh hội thoại và trả về đúng một cụm từ tìm kiếm tự nhiên, sát nhu cầu tra cứu. Không giải thích, không markdown, không thêm nhãn.
+  messages (5 gan nhat):
+    [1] role=system
+        Bạn là trợ lý tư vấn khách hàng. Trả lời rõ ràng, đúng ngữ cảnh.
+    [2] role=user
+        Dùng ngữ cảnh truy xuất nếu liên quan. Trả lời ngắn gọn bằng tiếng Việt. Không bịa thông tin. Ngữ cảnh truy xuất:
+        [1] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: Nhà hàng Hà Giang. Tên menu: Đồ nhậu. Layout: Nhà hàng Hà Giang - Lẩu Cua Đồng, Bò cuốn cải Món ngon nhất định phải thử khi đến Nhà hàng Hà Giang!, Gà rang muối 1/2 con, Gà chiên mắm, Bò cuốn cải, Bò xào nấm, Sụn gà rang muối, Sụn gà chiên cay, Cua con rang muối. Chế độ layout: grid. Thứ tự hiển thị: 1.
+        [2] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: Bếp Tuổi Thơ. Tên menu: Suất ăn. Layout: Có những hương vị, chỉ cần nhìn thấy thôi là ký ức đã chậm rãi quay về., Hạnh phúc đôi khi chỉ là một bữa cơm nhà, Ăn cùng những thương yêu bình thường nhất., Người ta đi thật xa để tìm điều đẹp đẽ, còn Bếp chỉ gom vài món quen, nấu một mâm cơm nhà., Nếu bạn đang muốn tìm một quán cơm Việt thật ấm giữa Hà Nội, Thì ghé quán Bếp tuổi thơ một lần nha, Cá ngừ kho tộ, Tuổi thơ, Dân dã, Bò xào dưa cải chua, Rau muống xào tỏi, Gà ta kho gừng, Bánh tráng cuốn thịt heo, Mỳ quảng gà đặc biệt, Gỏi bưởi tôm thịt, Cá nục cuốn rau muống, Thịt kho tàu, Ba chỉ luộc, Trứng chiên hành, Thịt rim, Info + QR Đặt lịch, Suất mẹ nấu 1 người. Chế độ layout: grid. Thứ tự hiển thị: 1.
+        [3] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: Hà Nội Quán 1990. Tên menu: Rau & Súp. Layout: Tối nay không biết ăn gì, cứ rủ nhau ra Hà Nội quán 1990, Cần xào bò, Nụ bí xào bò, Mầm đá chấm trứng, Mầm cải chấm trứng, Cải chíp xào nấm, Info + QR Đặt lịch, Ngọn su xào tỏi, Súp gà ngô non, Hà Nội Quán 1990. Chế độ layout: grid. Thứ tự hiển thị: 1.
+        [4] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: Nhà Hàng Hải Béo. Tên menu: Cơm văn phòng, gia đình. Layout: Cơm văn phòng ,cơm trắng ,cơm rang ,chỉ sợ khách đói chứ không sợ khách no ạ, Cơm văn phòng, gia đình, Chân giò giả cầy, Khâu nhục, Gà xáo gừng, Cơmrang thập cẩm + tối đa 2 món (Bản sao), Gà rang nghệ, Sườn xào chua ngọt, Cơm trắng + tối đa 2 món, Info + QR Đặt lịch, Nhà Hàng Hải Béo. Chế độ layout: grid. Thứ tự hiển thị: 4.
+        
+        mình ăn gì cũng dc mình cần ăn ở quận Hai Bà Trưng
+  prompt gui Qwen:
+    Ngữ cảnh hội thoại (5 message gần nhất):
+    system: Bạn là trợ lý tư vấn khách hàng. Trả lời rõ ràng, đúng ngữ cảnh.
+    user: Dùng ngữ cảnh truy xuất nếu liên quan. Trả lời ngắn gọn bằng tiếng Việt. Không bịa thông tin. Ngữ cảnh truy xuất:
+    [1] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: Nhà hàng Hà Giang. Tên menu: Đồ nhậu. Layout: Nhà hàng Hà Giang - Lẩu Cua Đồng, Bò cuốn cải Món ngon nhất định phải thử khi đến Nhà hàng Hà Giang!, Gà rang muối 1/2 con, Gà chiên mắm, Bò cuốn cải, Bò xào nấm, Sụn gà rang muối, Sụn gà chiên cay, Cua con rang muối. Chế độ layout: grid. Thứ tự hiển thị: 1.
+    [2] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: Bếp Tuổi Thơ. Tên menu: Suất ăn. Layout: Có những hương vị, chỉ cần nhìn thấy thôi là ký ức đã chậm rãi quay về., Hạnh phúc đôi khi chỉ là một bữa cơm nhà, Ăn cùng những thương yêu bình thường nhất., Người ta đi thật xa để tìm điều đẹp đẽ, còn Bếp chỉ gom vài món quen, nấu một mâm cơm nhà., Nếu bạn đang muốn tìm một quán cơm Việt thật ấm giữa Hà Nội, Thì ghé quán Bếp tuổi thơ một lần nha, Cá ngừ kho tộ, Tuổi thơ, Dân dã, Bò xào dưa cải chua, Rau muống xào tỏi, Gà ta kho gừng, Bánh tráng cuốn thịt heo, Mỳ quảng gà đặc biệt, Gỏi bưởi tôm thịt, Cá nục cuốn rau muống, Thịt kho tàu, Ba chỉ luộc, Trứng chiên hành, Thịt rim, Info + QR Đặt lịch, Suất mẹ nấu 1 người. Chế độ layout: grid. Thứ tự hiển thị: 1.
+    [3] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: Hà Nội Quán 1990. Tên menu: Rau & Súp. Layout: Tối nay không biết ăn gì, cứ rủ nhau ra Hà Nội quán 1990, Cần xào bò, Nụ bí xào bò, Mầm đá chấm trứng, Mầm cải chấm trứng, Cải chíp xào nấm, Info + QR Đặt lịch, Ngọn su xào tỏi, Súp gà ngô non, Hà Nội Quán 1990. Chế độ layout: grid. Thứ tự hiển thị: 1.
+    [4] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: Nhà Hàng Hải Béo. Tên menu: Cơm văn phòng, gia đình. Layout: Cơm văn phòng ,cơm trắng ,cơm rang ,chỉ sợ khách đói chứ không sợ khách no ạ, Cơm văn phòng, gia đình, Chân giò giả cầy, Khâu nhục, Gà xáo gừng, Cơmrang thập cẩm + tối đa 2 món (Bản sao), Gà rang nghệ, Sườn xào chua ngọt, Cơm trắng + tối đa 2 món, Info + QR Đặt lịch, Nhà Hàng Hải Béo. Chế độ layout: grid. Thứ tự hiển thị: 4.
+    
+    mình ăn gì cũng dc mình cần ăn ở quận Hai Bà Trưng
+    
+    Hãy lấy cụm từ search phù hợp nhất từ ngữ cảnh trên.
+
+CONTEXT OUTPUT
+  raw_output:
+    dạ mình cần tìm kiếm thông tin về các nhà hàng ở quận Hai Bà Trưng đúng không ạ?
+  normalized:
+    dạ mình cần tìm kiếm thông tin về các nhà hàng ở quận Hai Bà Trưng đúng không ạ?
+  selected_query:
+    dạ mình cần tìm kiếm thông tin về các nhà hàng ở quận Hai Bà Trưng đúng không ạ?

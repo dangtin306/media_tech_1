@@ -1,0 +1,29 @@
+{
+  "system_context": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.",
+  "user_message": "tìm các món ngon ở quán KaffirLime",
+  "history": [],
+  "scenario": "customer_consulting",
+  "user_state": {},
+  "runtime": {},
+  "options": {},
+  "metadata": {},
+  "model": "Qwen3.5-4B-V4",
+  "user": "media_tech:request",
+  "session_key": "agent:media_tech:ubuntu",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.\n\nscenario: customer_consulting"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    }
+  ],
+  "temperature": 0.2,
+  "max_tokens": 512,
+  "top_p": 0.8,
+  "enable_thinking": false,
+  "use_lora": false,
+  "use_rag": false
+}

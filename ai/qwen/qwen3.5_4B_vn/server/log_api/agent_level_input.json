@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-07-21T14:01:36.390404Z",
+  "route": "level",
+  "input_before_qwen": {
+    "text": "tìm Món bán chạy dưới 200k\ntìm các món ngon ở quán KaffirLime\ntìm Món bán chạy dưới 200k\ntìm Món bán chạy dưới 200k\ntìm các món ngon ở quán KaffirLime\ntìm các món ngon ở quán KaffirLime\ntìm các món ngon ở quán KaffirLime\ntìm các món ngon ở quán KaffirLime\ntìm các món ngon ở quán KaffirLime\nChỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.\n\nTin nhắn cần phân loại:\ntìm các món ngon ở quán KaffirLime",
+    "system_prompt": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.",
+    "enable_thinking": false,
+    "max_new_tokens": 2,
+    "temperature": 0.0,
+    "top_p": 1.0
+  },
+  "input_to_qwen": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "tìm Món bán chạy dưới 200k"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "tìm các món ngon ở quán KaffirLime"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "tìm Món bán chạy dưới 200k"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "tìm Món bán chạy dưới 200k"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "tìm các món ngon ở quán KaffirLime"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "tìm các món ngon ở quán KaffirLime"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "tìm các món ngon ở quán KaffirLime"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "tìm các món ngon ở quán KaffirLime"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "tìm các món ngon ở quán KaffirLime"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      },
+      {
+        "role": "user",
+        "content": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.\n\nTin nhắn cần phân loại:\ntìm các món ngon ở quán KaffirLime"
+      }
+    ],
+    "prompt_text": "<|im_start|>user\ntìm Món bán chạy dưới 200k<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\ntìm các món ngon ở quán KaffirLime<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\ntìm Món bán chạy dưới 200k<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\ntìm Món bán chạy dưới 200k<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\ntìm các món ngon ở quán KaffirLime<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\ntìm các món ngon ở quán KaffirLime<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\ntìm các món ngon ở quán KaffirLime<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\ntìm các món ngon ở quán KaffirLime<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\ntìm các món ngon ở quán KaffirLime<|im_end|>\n<|im_start|>assistant\n<|im_end|>\n<|im_start|>user\nChỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.\n\nTin nhắn cần phân loại:\ntìm các món ngon ở quán KaffirLime<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "generation": {
+      "enable_thinking": false,
+      "max_new_tokens": 2,
+      "temperature": 0.0,
+      "top_p": 1.0
+    }
+  }
+}

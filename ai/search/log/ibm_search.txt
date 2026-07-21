@@ -1,0 +1,44 @@
+================================================================================
+TIME: 2026-07-21T14:02:01Z
+MODEL: qwen-token/qwen-3.5-v4
+
+SEARCH INPUT
+  messages (5 gan nhat):
+    [1] role=user
+        tìm các món ngon ở quán KaffirLime
+    [2] role=assistant
+        dạ là mình đang quan tâm đến các món ăn ở khu vực Hà Nội hay sao anh?
+    [3] role=user
+        tìm các món ngon ở quán KaffirLime
+    [4] role=assistant
+        Dạ mình đang tìm các món ngon ở quán KaffirLime à anh?
+    [5] role=user
+        tìm các món ngon ở quán KaffirLime
+  query: dạ món ngon ở quán KaffirLime ạ.
+  top_k: 4
+
+SEARCH OUTPUT
+  [1] score=0.9540638327598572
+      id: menu:560:profile
+      text:
+        Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: KaffirLime Nhà Hàng Thái. Tên menu: THỊT. Layout: Tôm chiên sốt Thái và trứng muối, Sườn cay núi lửa Kaffir, Hải sản hấp cay Kaffir, Mực hấp tắm mắm chanh, Ba chỉ heo tắm nắng kèm Salad, Bò Aukobe xào trái thơm với hạt điểu, Info + QR Đặt lịch, Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤. Chế độ layout: grid. Thứ tự hiển thị: 2.
+      metadata:
+        {source: database.sql, source_table: store_menus, tier1: shop, tier2: menu, doc_type: menu, entity_id: menu:560, parent_id: shop:119, path: shop/119/menus/560, shop_id: 119, shop_name: KaffirLime Nhà Hàng Thái, menu_id: 560, menu_name: THỊT, area: Hà Nội}
+  [2] score=0.9494160413742065
+      id: menu:559:profile
+      text:
+        Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: KaffirLime Nhà Hàng Thái. Tên menu: SALAD. Layout: Larb Thái Thịt Heo, Gỏi đu đủ tôm tươi dầm sốt Thái, Sò huyết trộn sốt chua cay, Gỏi cá trê chiên giòn trứng muối, Tôm khoả thân tắm mắm chanh, Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤, CHÀO ĐÓN MENU HOÀN TOÀN MỚI - SỰ NGON MIỆNG NÀY CÓ KHIẾN BẠN TÒ MÒ?, Info + QR Đặt lịch. Chế độ layout: grid. Thứ tự hiển thị: 1.
+      metadata:
+        {source: database.sql, source_table: store_menus, tier1: shop, tier2: menu, doc_type: menu, entity_id: menu:559, parent_id: shop:119, path: shop/119/menus/559, shop_id: 119, shop_name: KaffirLime Nhà Hàng Thái, menu_id: 559, menu_name: SALAD, area: Hà Nội}
+  [3] score=0.9377449154853821
+      id: menu:558:profile
+      text:
+        Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: KaffirLime Nhà Hàng Thái. Tên menu: KHAI VỊ. Layout: Nấm hải sản chiên bột Tom Yum, Gà chiên hạnh nhân, Chả tôm Kaffir, Cơm cháy giò tôm Kaffir, Tàu hũ chiên sốt ớt ngọt, Chả tôm chiên giòn sốt rau húng Kaffỉ, Gà viên phomai vị Tom Yum, Info + QR Đặt lịch, ⚡️Tài chính dưới 1 Triệu, cụ thể là 100k vẫn thoải mái ăn sườn cay khổng lồ, thơm ngon đúng đã luôn nhé!. Chế độ layout: grid. Thứ tự hiển thị: 0.
+      metadata:
+        {source: database.sql, source_table: store_menus, tier1: shop, tier2: menu, doc_type: menu, entity_id: menu:558, parent_id: shop:119, path: shop/119/menus/558, shop_id: 119, shop_name: KaffirLime Nhà Hàng Thái, menu_id: 558, menu_name: KHAI VỊ, area: Hà Nội}
+  [4] score=0.9376504421234131
+      id: media_highlight:544:profile
+      text:
+        Media nổi bật của cửa hàng. Tên cửa hàng: KaffirLime Nhà Hàng Thái. Khu vực: Hà Nội. Tiêu đề media: Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤. Loại media: video. Ảnh hoặc video: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/originals/a31a383b-a85c-4ac5-876c-7456104dfe08.jpg | https://mediatuongtac.mediatech.vn/dulich/storage/uploads/videos/6f7f1f5c-b95f-4bc4-8edd-a53c334d9e25.mp4.
+      metadata:
+        {source: database.sql, source_table: media_highlights, tier1: media, tier2: shop_media, doc_type: media, entity_id: highlight:544, parent_id: shop:119, path: shop/119/media_highlights/544, shop_id: 119, shop_name: KaffirLime Nhà Hàng Thái, media_id: 544, media_key: media-01, media_scope: shop, media_type: video, title: Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤, url: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/originals/a31a383b-a85c-4ac5-876c-7456104dfe08.jpg, url_list: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/originals/a31a383b-a85c-4ac5-876c-7456104dfe08.jpg | https://mediatuongtac.mediatech.vn/dulich/storage/uploads/videos/6f7f1f5c-b95f-4bc4-8edd-a53c334d9e25.mp4, area: Hà Nội}

@@ -1,0 +1,24 @@
+<|im_start|>system
+Bạn là AI tư vấn khách hàng bằng tiếng Việt.
+Trả lời trực tiếp dựa trên toàn bộ danh sách RAG.
+Bắt buộc:
+- Đọc và sử dụng đủ tất cả mục [1], [2], [3]... trong ngữ cảnh.
+- Không được bỏ qua, tự xóa hoặc chỉ chọn một phần danh sách.
+- Tóm tắt mỗi kết quả có thông tin hữu ích như tên, món/dịch vụ, địa chỉ, khu vực, giá và trạng thái nếu có.
+- Ưu tiên kết quả phù hợp nhất trước nhưng vẫn phải nhắc đủ các kết quả còn lại.
+- Nếu kết quả sai khu vực hoặc sai nhu cầu, vẫn phải nói rõ kết quả đó không phù hợp, không được âm thầm bỏ qua.
+- Không bịa ngoài dữ liệu.
+- Trả lời gọn, tự nhiên và dễ đọc.
+
+Danh sách ngữ cảnh RAG:
+[1] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: KaffirLime Nhà Hàng Thái. Tên menu: THỊT. Layout: Tôm chiên sốt Thái và trứng muối, Sườn cay núi lửa Kaffir, Hải sản hấp cay Kaffir, Mực hấp tắm mắm chanh, Ba chỉ heo tắm nắng kèm Salad, Bò Aukobe xào trái thơm với hạt điểu, Info + QR Đặt lịch, Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤. Chế độ layout: grid. Thứ tự hiển thị: 2.
+[2] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: KaffirLime Nhà Hàng Thái. Tên menu: SALAD. Layout: Larb Thái Thịt Heo, Gỏi đu đủ tôm tươi dầm sốt Thái, Sò huyết trộn sốt chua cay, Gỏi cá trê chiên giòn trứng muối, Tôm khoả thân tắm mắm chanh, Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤, CHÀO ĐÓN MENU HOÀN TOÀN MỚI - SỰ NGON MIỆNG NÀY CÓ KHIẾN BẠN TÒ MÒ?, Info + QR Đặt lịch. Chế độ layout: grid. Thứ tự hiển thị: 1.
+[3] Thông tin menu/thực đơn của cửa hàng. Tên cửa hàng: KaffirLime Nhà Hàng Thái. Tên menu: KHAI VỊ. Layout: Nấm hải sản chiên bột Tom Yum, Gà chiên hạnh nhân, Chả tôm Kaffir, Cơm cháy giò tôm Kaffir, Tàu hũ chiên sốt ớt ngọt, Chả tôm chiên giòn sốt rau húng Kaffỉ, Gà viên phomai vị Tom Yum, Info + QR Đặt lịch, ⚡️Tài chính dưới 1 Triệu, cụ thể là 100k vẫn thoải mái ăn sườn cay khổng lồ, thơm ngon đúng đã luôn nhé!. Chế độ layout: grid. Thứ tự hiển thị: 0.
+[4] Media nổi bật của cửa hàng. Tên cửa hàng: KaffirLime Nhà Hàng Thái. Khu vực: Hà Nội. Tiêu đề media: Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤. Loại media: video. Ảnh hoặc video: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/originals/a31a383b-a85c-4ac5-876c-7456104dfe08.jpg | https://mediatuongtac.mediatech.vn/dulich/storage/uploads/videos/6f7f1f5c-b95f-4bc4-8edd-a53c334d9e25.mp4.<|im_end|>
+<|im_start|>user
+tìm các món ngon ở quán KaffirLime<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

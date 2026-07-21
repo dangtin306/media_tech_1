@@ -1,0 +1,6 @@
+{
+  "collection_name": "dulich_demo",
+  "vector_size": 384,
+  "distance": "Cosine",
+  "note": "File qdrant_points_hash384.jsonl dùng vector HashingVectorizer char_wb 3-5 ngram để test nhanh local. Production nên thay vector bằng embedding thật như OpenAI text-embedding-3-small, Qwen Embedding, bge-m3."
+}

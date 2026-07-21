@@ -1,0 +1,218 @@
+{
+  "session_id": "qwen-api-1784637977180-2aa3f337ba9af",
+  "turn_id": "msg-1784642494232-6866b087f30ae",
+  "system_context": "## AGENTS.md\n# AGENTS.md - qwen-agent\n\nLuôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt.\n\nBạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\n## SOUL.md\n# SOUL.md\n\nBạn là trợ lý hỏi đáp của trang tuongtac.tv, dùng để tìm kiếm dịch vụ quanh người dùng.\n\nNếu không có thông tin phù hợp, trả lời: \"Hiện chưa có thông tin này.\"\n\nTrả lời gọn, tự nhiên, không máy móc, bằng tiếng Việt.\n\n## TOOLS.md\n# TOOLS.md\n\n- Keep only short local notes.\n- Add SSH, device, or TTS hints here if needed.\n\n## USER.md\n# USER.md\n\n- Name: Administrator\n- Call them: anh\n- Timezone: Asia/Saigon\n- Notes: likes short, direct answers\n\n## IDENTITY.md\n# IDENTITY.md\n\n- Name: qwen-agent\n- Creature: assistant\n- Vibe: concise\n- Emoji: none\n- Avatar: none\n\n## HEARTBEAT.md\n```markdown\n# Keep this file empty (or with only comments) to skip heartbeat API calls.\n\n# Add tasks below when you want the agent to check something periodically.\n```\n\n## Related\n\n- [Heartbeat config](/gateway/config-agents)",
+  "user_message": "tìm các món ngon ở quán KaffirLime",
+  "history": [
+    {
+      "role": "user",
+      "content": "tìm Món bán chạy dưới 200k"
+    },
+    {
+      "role": "assistant",
+      "content": "Dạ hiện tại là món salad trộn giá 190k ạ."
+    },
+    {
+      "role": "user",
+      "content": "tìm Món bán chạy dưới 200k"
+    },
+    {
+      "role": "assistant",
+      "content": "dạ hiện tại là món salad trộn giá 190k ạ."
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Dạ mình đang muốn tìm món ăn gì ạ?"
+    },
+    {
+      "role": "user",
+      "content": "tìm Món bán chạy dưới 200k"
+    },
+    {
+      "role": "assistant",
+      "content": "dạ hiện tại là món salad trộn giá 190k ạ."
+    },
+    {
+      "role": "user",
+      "content": "tìm Món bán chạy dưới 200k"
+    },
+    {
+      "role": "assistant",
+      "content": "dạ hiện tại là món salad trộn giá 190k ạ."
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Kết quả tìm kiếm:\n1. Món Ngon Bà Còng — Hải Phòng. Tiêu đề media: Combo 2 - 1.050.000đ cả cuốn và lẩu cho 5-6 người. Loại media: video. Ảnh hoặc video: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/originals/acf57548-2f08-4558-b04c-da356153b9c5.png | https://mediatuongtac.mediatech.vn/dulich/storage/uploads/videos/7a647144-a2c0-4998-a703-8713f7d43619.mp4\n2. Combo 2 — Đảo Bên Hồ - Trịnh An Quán — Giá: 1200000/Mâm\n3. Xá xíu — XÔI CÁT LÂM — Giá: 20000\n4. Ngan Ngon - Trâm 42 Hàng Nón — ha-noi. Tiêu đề media: Ngan Ngon Trâm sẽ giảm giá 5% trên tổng hóa đơn khi check in Giảm thêm 5% khi đánh giá 5⭐⭐⭐⭐⭐ trên Google Map"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Kết quả tìm kiếm:\n1. KaffirLime Nhà Hàng Thái\n2. KaffirLime Nhà Hàng Thái\n3. KaffirLime Nhà Hàng Thái\n4. KaffirLime Nhà Hàng Thái — Hà Nội. Tiêu đề media: Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤. Loại media: video. Ảnh hoặc video: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/originals/a31a383b-a85c-4ac5-876c-7456104dfe08.jpg | https://mediatuongtac.mediatech.vn/dulich/storage/uploads/videos/6f7f1f5c-b95f-4bc4-8edd-a53c334d9e25.mp4"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Dạ mình đang muốn tìm các món ngon ở quán KaffirLime ạ?"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "dạ là mình đang quan tâm đến các món ăn ở khu vực Hà Nội hay sao anh?"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Dạ mình đang tìm các món ngon ở quán KaffirLime à anh?"
+    }
+  ],
+  "scenario": "customer_consulting",
+  "user_state": {},
+  "runtime": {
+    "source": "acpx",
+    "agent": "qwen-agent",
+    "protocol": "openclaw-acp",
+    "adapter": "qwen-agent-acp-wrapper"
+  },
+  "options": {
+    "mode": "run",
+    "need_decision": true,
+    "allow_tool_call": true,
+    "max_history": 20
+  },
+  "metadata": {
+    "source": "acpx",
+    "agent": "qwen-agent",
+    "protocol": "openclaw-acp",
+    "cwd": "D:\\hustmedia\\application\\openclaw-src",
+    "workspace_path": "C:\\Users\\Administrator\\.openclaw\\workspace-qwen-agent",
+    "injected_context_files": [
+      "AGENTS.md",
+      "SOUL.md",
+      "TOOLS.md",
+      "USER.md",
+      "IDENTITY.md",
+      "HEARTBEAT.md"
+    ],
+    "system_context_length": 1025,
+    "stage": "run"
+  },
+  "model": "Qwen3.5-4B-V4",
+  "user": "qwen-api-1784637977180-2aa3f337ba9af",
+  "session_key": "qwen-api-1784637977180-2aa3f337ba9af",
+  "messages": [
+    {
+      "role": "system",
+      "content": "## AGENTS.md\n# AGENTS.md - qwen-agent\n\nLuôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt.\n\nBạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\n## SOUL.md\n# SOUL.md\n\nBạn là trợ lý hỏi đáp của trang tuongtac.tv, dùng để tìm kiếm dịch vụ quanh người dùng.\n\nNếu không có thông tin phù hợp, trả lời: \"Hiện chưa có thông tin này.\"\n\nTrả lời gọn, tự nhiên, không máy móc, bằng tiếng Việt.\n\n## TOOLS.md\n# TOOLS.md\n\n- Keep only short local notes.\n- Add SSH, device, or TTS hints here if needed.\n\n## USER.md\n# USER.md\n\n- Name: Administrator\n- Call them: anh\n- Timezone: Asia/Saigon\n- Notes: likes short, direct answers\n\n## IDENTITY.md\n# IDENTITY.md\n\n- Name: qwen-agent\n- Creature: assistant\n- Vibe: concise\n- Emoji: none\n- Avatar: none\n\n## HEARTBEAT.md\n```markdown\n# Keep this file empty (or with only comments) to skip heartbeat API calls.\n\n# Add tasks below when you want the agent to check something periodically.\n```\n\n## Related\n\n- [Heartbeat config](/gateway/config-agents)\n\nscenario: customer_consulting\n\nmetadata: {\"source\":\"acpx\",\"agent\":\"qwen-agent\",\"protocol\":\"openclaw-acp\",\"cwd\":\"D:\\\\hustmedia\\\\application\\\\openclaw-src\",\"workspace_path\":\"C:\\\\Users\\\\Administrator\\\\.openclaw\\\\workspace-qwen-agent\",\"injected_context_files\":[\"AGENTS.md\",\"SOUL.md\",\"TOOLS.md\",\"USER.md\",\"IDENTITY.md\",\"HEARTBEAT.md\"],\"system_context_length\":1025,\"stage\":\"run\"}"
+    },
+    {
+      "role": "user",
+      "content": "tìm Món bán chạy dưới 200k"
+    },
+    {
+      "role": "assistant",
+      "content": "Dạ hiện tại là món salad trộn giá 190k ạ."
+    },
+    {
+      "role": "user",
+      "content": "tìm Món bán chạy dưới 200k"
+    },
+    {
+      "role": "assistant",
+      "content": "dạ hiện tại là món salad trộn giá 190k ạ."
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Dạ mình đang muốn tìm món ăn gì ạ?"
+    },
+    {
+      "role": "user",
+      "content": "tìm Món bán chạy dưới 200k"
+    },
+    {
+      "role": "assistant",
+      "content": "dạ hiện tại là món salad trộn giá 190k ạ."
+    },
+    {
+      "role": "user",
+      "content": "tìm Món bán chạy dưới 200k"
+    },
+    {
+      "role": "assistant",
+      "content": "dạ hiện tại là món salad trộn giá 190k ạ."
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Kết quả tìm kiếm:\n1. Món Ngon Bà Còng — Hải Phòng. Tiêu đề media: Combo 2 - 1.050.000đ cả cuốn và lẩu cho 5-6 người. Loại media: video. Ảnh hoặc video: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/originals/acf57548-2f08-4558-b04c-da356153b9c5.png | https://mediatuongtac.mediatech.vn/dulich/storage/uploads/videos/7a647144-a2c0-4998-a703-8713f7d43619.mp4\n2. Combo 2 — Đảo Bên Hồ - Trịnh An Quán — Giá: 1200000/Mâm\n3. Xá xíu — XÔI CÁT LÂM — Giá: 20000\n4. Ngan Ngon - Trâm 42 Hàng Nón — ha-noi. Tiêu đề media: Ngan Ngon Trâm sẽ giảm giá 5% trên tổng hóa đơn khi check in Giảm thêm 5% khi đánh giá 5⭐⭐⭐⭐⭐ trên Google Map"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Kết quả tìm kiếm:\n1. KaffirLime Nhà Hàng Thái\n2. KaffirLime Nhà Hàng Thái\n3. KaffirLime Nhà Hàng Thái\n4. KaffirLime Nhà Hàng Thái — Hà Nội. Tiêu đề media: Các khách Chanh Kaffers đừng quên thưởng thức các món lẩu tại Kaffir Lime nha 🤤. Loại media: video. Ảnh hoặc video: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/originals/a31a383b-a85c-4ac5-876c-7456104dfe08.jpg | https://mediatuongtac.mediatech.vn/dulich/storage/uploads/videos/6f7f1f5c-b95f-4bc4-8edd-a53c334d9e25.mp4"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Dạ mình đang muốn tìm các món ngon ở quán KaffirLime ạ?"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "dạ là mình đang quan tâm đến các món ăn ở khu vực Hà Nội hay sao anh?"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    },
+    {
+      "role": "assistant",
+      "content": "Dạ mình đang tìm các món ngon ở quán KaffirLime à anh?"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    }
+  ],
+  "temperature": 0.5,
+  "max_tokens": 512,
+  "enable_thinking": false,
+  "use_lora": false,
+  "use_rag": true,
+  "model_code": "qwen-3.5/qwen-3.5-ubuntu"
+}

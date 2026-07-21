@@ -1,0 +1,29 @@
+{
+  "model": "gpt-5.4-nano",
+  "vector_store_id": "vs_6a3e29672c648191bc495bcdb8ce404e",
+  "system_prompt": "Bạn là trợ lý hỏi đáp của trang tuongtac.tv dùng để Tìm kiểm dịch vụ quanh bạn. Nếu không có phù hợp, trả lời: Hiện chưa có thông tin này. Trả lời ngắn gọn, tự nhiên không máy móc bằng tiếng Việt.",
+  "sample_message": "Mình cần kiếm dịch vụ?",
+  "fallback_answer": "Hiện dữ liệu chưa có thông tin này.",
+  "store": true,
+  "temperature": 1,
+  "top_p": 0.98,
+  "text": {
+    "format": {
+      "type": "text"
+    },
+    "verbosity": "medium"
+  },
+  "tools": {
+    "file_search": {
+      "type": "file_search",
+      "vector_store_ids": [
+        "vs_6a3e29672c648191bc495bcdb8ce404e"
+      ],
+      "ranking_options": {
+        "ranker": "auto",
+        "score_threshold": 0
+      },
+      "max_num_results": 20
+    }
+  }
+}

@@ -1,0 +1,92 @@
+2026-07-20 22:01:06 [startup] lora_loaded
+2026-07-20 22:02:38 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-20 22:06:28 [generate] request_received
+2026-07-20 22:06:28 [generate] build_messages_before
+2026-07-20 22:06:28 [generate] build_messages_after
+2026-07-20 22:06:28 [generate] use_lora_off
+2026-07-20 22:06:28 [generate] outbound_json {"enable_thinking": false, "max_new_tokens": 512, "messages": [{"content": "bạn là ai", "role": "user"}], "rag_top_k": 4, "temperature": 0.5, "top_p": 0.9, "use_lora": false, "use_rag": false}
+2026-07-20 22:06:28 [generate] thinking_off
+2026-07-20 22:06:28 [generate] generate_before
+2026-07-20 22:06:49 [startup] server_boot
+2026-07-20 22:07:00 [startup] model_loaded
+2026-07-20 22:07:01 [startup] lora_loaded
+2026-07-20 22:08:30 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 08:45:03 [startup] server_boot
+2026-07-21 08:45:14 [startup] server_boot
+2026-07-21 08:46:01 [startup] model_loaded
+2026-07-21 08:46:02 [startup] lora_loaded
+2026-07-21 08:47:36 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 09:18:57 [run] use_lora_off
+2026-07-21 09:18:57 [run] outbound_json {"enable_thinking": false, "max_tokens": 8, "messages": [{"content": "xin chao", "role": "user"}], "model": "Qwen3.5-4B-V4", "rag_top_k": 4, "temperature": 0.1, "top_p": 0.8, "use_lora": false, "use_rag": false}
+2026-07-21 11:03:31 [generate] request_received
+2026-07-21 11:03:31 [generate] build_messages_before
+2026-07-21 11:03:31 [generate] build_messages_after
+2026-07-21 11:03:31 [generate] use_lora_off
+2026-07-21 11:03:31 [generate] outbound_json {"enable_thinking": false, "max_new_tokens": 512, "messages": [{"content": "đúng rồi", "role": "user"}], "rag_top_k": 4, "temperature": 0.5, "top_p": 0.9, "use_lora": false, "use_rag": false}
+2026-07-21 11:03:31 [generate] thinking_off
+2026-07-21 11:03:31 [generate] generate_before
+2026-07-21 11:03:34 [generate] generate_after
+2026-07-21 11:03:34 [generate] response_ready
+2026-07-21 12:07:48 [startup] server_boot
+2026-07-21 12:08:00 [startup] model_loaded
+2026-07-21 12:08:01 [startup] lora_loaded
+2026-07-21 12:09:43 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 13:54:28 [startup] server_boot
+2026-07-21 13:54:39 [startup] model_loaded
+2026-07-21 13:54:40 [startup] lora_loaded
+2026-07-21 13:56:20 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 14:19:52 [startup] server_boot
+2026-07-21 14:20:03 [startup] model_loaded
+2026-07-21 14:20:04 [startup] lora_loaded
+2026-07-21 14:21:40 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 14:28:01 [startup] server_boot
+2026-07-21 14:28:12 [startup] model_loaded
+2026-07-21 14:28:13 [startup] lora_loaded
+2026-07-21 14:29:46 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 14:30:08 [startup] server_boot
+2026-07-21 14:30:18 [startup] model_loaded
+2026-07-21 14:30:19 [startup] lora_loaded
+2026-07-21 14:31:54 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 14:35:04 [startup] server_boot
+2026-07-21 14:35:16 [startup] model_loaded
+2026-07-21 14:35:17 [startup] lora_loaded
+2026-07-21 14:36:50 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 14:37:33 [startup] server_boot
+2026-07-21 14:37:44 [startup] model_loaded
+2026-07-21 14:37:45 [startup] lora_loaded
+2026-07-21 14:39:19 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 14:40:57 [startup] server_boot
+2026-07-21 14:41:08 [startup] model_loaded
+2026-07-21 14:41:09 [startup] lora_loaded
+2026-07-21 14:42:43 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 14:44:01 [startup] server_boot
+2026-07-21 14:44:12 [startup] model_loaded
+2026-07-21 14:44:13 [startup] lora_loaded
+2026-07-21 14:45:47 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 14:46:48 [startup] server_boot
+2026-07-21 14:46:59 [startup] model_loaded
+2026-07-21 14:47:00 [startup] lora_loaded
+2026-07-21 14:48:34 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 20:52:14 [startup] server_boot
+2026-07-21 20:52:25 [startup] server_boot
+2026-07-21 20:52:36 [startup] model_loaded
+2026-07-21 20:52:37 [startup] lora_loaded
+2026-07-21 20:54:16 [startup] rag_warmup_done model=Qwen3.5-4B-V4
+2026-07-21 20:56:50 [run_rag] use_lora_off
+2026-07-21 20:56:50 [run_rag] rag_stage=start
+2026-07-21 20:57:01 [run_rag] rag_stage=done query={"query": "dạ món ăn Thái tại KaffirLime Nhà Hàng Thái gồm có: Thịt, Salad, Khai vị, và các món lẩu."}
+2026-07-21 20:57:36 [run_rag] use_lora_off
+2026-07-21 20:57:36 [run_rag] rag_stage=start
+2026-07-21 20:57:54 [run_rag] rag_stage=done query={"query": "dạ món ăn Thái tại KaffirLime Nhà Hàng Thái gồm có: Thịt, Salad, Khai vị, và các món lẩu."}
+2026-07-21 20:58:29 [run_rag] use_lora_off
+2026-07-21 20:58:29 [run_rag] rag_stage=start
+2026-07-21 20:58:44 [run_rag] rag_stage=done query={"query": "dạ món ăn Thái tại KaffirLime Nhà Hàng Thái gồm có: Thịt, Salad, Khai vị, và các món lẩu."}
+2026-07-21 20:59:16 [run_rag] use_lora_off
+2026-07-21 20:59:16 [run_rag] rag_stage=start
+2026-07-21 20:59:34 [run_rag] rag_stage=done query={"query": "dạ món ăn Thái tại KaffirLime Nhà Hàng Thái gồm có: Thịt, Salad, Khai vị, và các món lẩu."}
+2026-07-21 21:00:27 [run_rag] use_lora_off
+2026-07-21 21:00:27 [run_rag] rag_stage=start
+2026-07-21 21:00:40 [run_rag] rag_stage=done query={"query": "dạ món ngon ở quán KaffirLime ạ."}
+2026-07-21 21:01:43 [run_rag] use_lora_off
+2026-07-21 21:01:43 [run_rag] rag_stage=start
+2026-07-21 21:02:01 [run_rag] rag_stage=done query={"query": "dạ món ngon ở quán KaffirLime ạ."}

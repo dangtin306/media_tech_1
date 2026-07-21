@@ -1,0 +1,18 @@
+{
+  "base_url": "http://localhost:8796/v1",
+  "qwen_url": "http://localhost:8005",
+  "api_key": "f6bfb72ea03d77e1b855fe1d2ca0d82714ac8193b54f80be",
+  "session_key": "agent:qwen-agent",
+  "session_demo": "agent:qwen-agent:test_1",
+  "model": "Qwen3.5-4B-V4",
+  "x_openclaw_model": "qwen-token/qwen-3.5-v4",
+  "ubuntu_model": "Qwen3.5-4B-V4",
+  "ubuntu_ssh_remote_url": "http://127.0.0.1:8005/chat/completions",
+  "qwen_win": false,
+  "sample_message": "xin chao",
+  "use_lora": false,
+  "reasoning_effort": "minimal",
+  "temperature": 0.5,
+  "max_tokens": 512,
+  "enable_thinking": false
+}

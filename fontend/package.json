@@ -1,0 +1,22 @@
+{
+  "name": "media-tech-fontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "clean": "if exist .nuxt rmdir /s /q .nuxt & if exist .output rmdir /s /q .output & if exist node_modules\\.cache\\nuxt rmdir /s /q node_modules\\.cache\\nuxt & if exist 0.0.0.0 rmdir /s /q 0.0.0.0",
+    "dev": "if exist .output\\server\\index.mjs (set PORT=8008&& set HOST=0.0.0.0&& node .output/server/index.mjs) else (npm run build && set PORT=8008&& set HOST=0.0.0.0&& node .output/server/index.mjs)",
+    "start": "set PORT=8008&& set HOST=0.0.0.0&& node .output/server/index.mjs",
+    "build": "npm run clean && nuxt build",
+    "preview": "nuxt preview --host 0.0.0.0 --port 8008"
+  },
+  "dependencies": {
+    "nuxt": "^4.1.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.19"
+  }
+}

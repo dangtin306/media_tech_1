@@ -1,0 +1,26 @@
+**/.git
+**/__pycache__
+**/node_modules
+**/.nuxt
+**/.output
+**/logs
+**/*.log
+**/*.pyc
+tmp_transfer_test
+
+# Never publish credentials in a public image.
+**/.env
+**/.env.*
+server/ubuntu/config.json
+server/ubuntu/guide_docker/config.js
+backend/openclaw/config.json
+
+# Large or machine-specific runtime data is not part of the application image.
+**/.venv
+**/venv
+**/envs
+**/model
+**/models
+**/checkpoints
+ai/qwen/**/server/offload
+ai/qwen/**/server/log_api

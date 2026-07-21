@@ -1,0 +1,16 @@
+transformers==5.12.1
+accelerate==1.14.0
+peft==0.19.1
+bitsandbytes==0.49.2
+datasets==5.0.0
+tiktoken==0.13.0
+sentencepiece==0.2.1
+sentence-transformers
+deepspeed==0.19.2
+huggingface_hub
+flask==3.1.3
+chromadb
+pandas==3.0.3
+pyarrow==24.0.0
+scikit-learn==1.9.0
+scipy==1.17.1

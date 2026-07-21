@@ -1,0 +1,567 @@
+[
+  {
+    "user_id": 8,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào bạn",
+        "response_id": null,
+        "created_at": "2026-06-26T07:29:40.322Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn 👋 Bạn muốn tìm dịch vụ quanh bạn theo lĩnh vực nào trên tươngtac.tv (ví dụ: làm tóc, truyền thông/livestream, spa, ăn uống…)?",
+        "response_id": "resp_0cfff0c9676aa189006a3e2a609d2081969b7736073503d663",
+        "created_at": "2026-06-26T07:29:40.322Z"
+      },
+      {
+        "role": "user",
+        "content": "vâng mình cần dịch vụ ăn uống",
+        "response_id": null,
+        "created_at": "2026-06-26T07:31:18.247Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ mình có một số gợi ý dịch vụ ăn uống trên tươngtac.tv như sau:\n\n- Nhà Hàng Chay Phương Mai (Quận 1, TP.HCM) – giờ 09:00 - 21:30   \n- Bếp Tuổi Thơ (Xuân Đỉnh, Hà Nội) – giờ 08:00 - 22:00   \n- SSACK SSRI BBQ – Nhà Hàng Nướng Hàn Quốc (Quận 1, TP.HCM)   \n- Heo Bán Bò Hà Nội (Thanh Xuân, Hà Nội)   \n- d’LIONS Restaurant (Văn Miếu, Hà Nội) – 10:00 - 22:00   \n- Nhà Hàng Bắc Đỉnh (Hà Nội) – 10h - 22h30   \n\nBạn cho mình biết bạn đang ở **khu vực/quận nào** và muốn ăn **chay hay mặn**, hoặc kiểu **lẩu/nướng/cơm/trà sữa** để mình lọc đúng hơn nhé.",
+        "response_id": "resp_0cfff0c9676aa189006a3e2ac02b388196b81146338936c956",
+        "created_at": "2026-06-26T07:31:18.247Z"
+      },
+      {
+        "role": "user",
+        "content": "t ở quận long biên",
+        "response_id": null,
+        "created_at": "2026-06-26T07:37:21.576Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Ở **quận Long Biên (Hà Nội)** mình thấy có gợi ý sau về dịch vụ ăn uống:\n\n- **T Specar** (Cà phê/Trà/Matcha + canh, rau xanh, cơm chiên - xôi - mì xào)  \n  Địa chỉ: **08 TTA HC Golden City Hồng Tiến, Long Biên, Hà Nội** | SĐT: **082 900 0000** | Giờ mở cửa: **07:00 - 23:00** \n\nBạn muốn mình lọc tiếp theo kiểu ăn **cơm - xôi - mì**, hay **đồ uống (cà phê/trà/matcha)**, hoặc **ăn trưa/ăn tối**?",
+        "response_id": "resp_0cfff0c9676aa189006a3e2c2c63b4819684997f23ecdbe436",
+        "created_at": "2026-06-26T07:37:21.576Z"
+      },
+      {
+        "role": "user",
+        "content": "vâng cảm ơn bạn nhiều",
+        "response_id": null,
+        "created_at": "2026-06-26T07:38:54.694Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Không có gì đâu bạn 😊 Khi nào bạn cần tìm thêm quán ăn uống ở **Long Biên** theo món (cơm, bún, lẩu, nướng…) hoặc theo **giờ ăn**, bạn nói mình biết nhé.",
+        "response_id": "resp_0cfff0c9676aa189006a3e2c8cdea48196928e0d1a4d8c367a",
+        "created_at": "2026-06-26T07:38:54.694Z"
+      },
+      {
+        "role": "user",
+        "content": "thế long biên ăn gì",
+        "response_id": null,
+        "created_at": "2026-06-26T07:39:44.217Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình hiện chỉ thấy **T Specar** ở **Long Biên** (Hà Nội) trong dữ liệu ăn uống, với các nhóm món: **canh**, **rau xanh**, **món đặt trước**, **cơm chiên - xôi - mì xào**, kèm **cà phê/trà/matcha/đồ uống**. \n\nBạn muốn ăn **mặn (cơm/xôi/mì xào, canh, rau)** hay muốn **đồ uống (cà phê/trà/matcha)**?",
+        "response_id": "resp_0cfff0c9676aa189006a3e2cbde83c8196ba936be02437443c",
+        "created_at": "2026-06-26T07:39:44.217Z"
+      },
+      {
+        "role": "user",
+        "content": "chào",
+        "response_id": null,
+        "created_at": "2026-06-26T07:39:53.828Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn 👋 Bạn muốn mình tìm **dịch vụ ăn uống** ở khu vực nào (ví dụ: Long Biên)?",
+        "response_id": "resp_0cfff0c9676aa189006a3e2cc8014c8196b2652c3180964684",
+        "created_at": "2026-06-26T07:39:53.828Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn ơi",
+        "response_id": null,
+        "created_at": "2026-06-26T07:40:12.217Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ bạn ơi, mình giúp gì được cho bạn ạ? Bạn muốn tìm **dịch vụ ăn uống** quanh **Long Biên** theo món nào (cơm, bún, lẩu, nướng, chay…) không?",
+        "response_id": "resp_0cfff0c9676aa189006a3e2cda23308196b42ddb5cddbcf255",
+        "created_at": "2026-06-26T07:40:12.217Z"
+      }
+    ]
+  },
+  {
+    "user_id": 9,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào",
+        "response_id": null,
+        "created_at": "2026-06-26T07:57:28.047Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Mình có thể giúp bạn tìm dịch vụ/địa điểm quanh bạn trên tươngtac.tv. Bạn đang muốn tìm loại dịch vụ nào (ví dụ: tóc, spa, ăn uống, cà phê…)?",
+        "response_id": "resp_0e9c3a25f393e061006a3e30e349988194a47f33fe1d210953",
+        "created_at": "2026-06-26T07:57:28.047Z"
+      },
+      {
+        "role": "user",
+        "content": "đúng rồi",
+        "response_id": null,
+        "created_at": "2026-06-26T07:57:52.647Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bạn muốn tìm dịch vụ thuộc nhóm nào trên tươngtac.tv? (ví dụ: làm tóc, spa/massage, ăn uống, cà phê/trà sữa…)",
+        "response_id": "resp_0e9c3a25f393e061006a3e30fed2108194b4a168cc8805bd22",
+        "created_at": "2026-06-26T07:57:52.647Z"
+      },
+      {
+        "role": "user",
+        "content": "vâng mình cần làm đẹp",
+        "response_id": null,
+        "created_at": "2026-06-26T07:58:50.165Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bạn cần dịch vụ làm đẹp, trên tươngtac.tv mình thấy các lựa chọn như sau:\n\n- **Tĩnh Uyên Spa (Spa/Massage, Hà Nội)**: có *Massage Body Dưỡng Sinh*, *Massage chân thảo dược*, *Gội đầu dưỡng sinh*, *Trà đạo*…   \n- **Anh Hoà Hair & Beauty Salon (Làm tóc, Hà Nội)**: các dịch vụ *Uốn/Duỗi/Nhuộm*, *Dịch vụ chân tóc*, *Cắt gội tạo kiểu*, *Điều trị tóc*, *Nối tóc*…   \n- **Lyn Hair Salon (Làm tóc, Hà Nội)**: có *Duỗi*, *Uốn*, *Nhuộm*, *Cắt gội tạo kiểu*, *Điều trị tóc*, *Nối tóc*…   \n- **Chika Hair Salon (Làm tóc/Chăm sóc tóc, HCM)**: có các nhóm như *Điều trị tóc*, *Massage cổ vai gáy*…   \n\nBạn cho mình biết bạn **đang ở quận/khu vực nào** (hoặc thành phố) và bạn muốn **làm tóc hay spa/massage** để mình lọc đúng chỗ gần bạn hơn nhé?",
+        "response_id": "resp_0e9c3a25f393e061006a3e313439e081948e117eb8c8663202",
+        "created_at": "2026-06-26T07:58:50.165Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-06-26T08:04:54.001Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình là trợ lý hỏi đáp của trang tuongtac.tv, hỗ trợ bạn tìm kiếm dịch vụ/địa điểm quanh bạn dựa trên dữ liệu có sẵn trong hệ thống.",
+        "response_id": "resp_0e9c3a25f393e061006a3e32a295c4819494180b75f1bfd599",
+        "created_at": "2026-06-26T08:04:54.001Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-06-26T08:07:03.123Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình là trợ lý hỏi đáp của tuongtac.tv, giúp bạn tìm dịch vụ/địa điểm (ví dụ làm đẹp, spa, làm tóc…) quanh bạn dựa trên dữ liệu có sẵn.",
+        "response_id": "resp_0e9c3a25f393e061006a3e332545548194bb8cb3b839b30f67",
+        "created_at": "2026-06-26T08:07:03.123Z"
+      }
+    ]
+  },
+  {
+    "user_id": 11,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào bạn",
+        "response_id": null,
+        "created_at": "2026-06-26T08:07:33.719Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Bạn muốn tìm dịch vụ truyền thông/giải pháp nào trên tuongtac.tv (ví dụ: Livestream tương tác, Truyền thông KOL, làm catalogue điện tử, hay các gói dịch vụ)?",
+        "response_id": "resp_0551842428ccb3d0006a3e3340f3848196810e244821d66cfd",
+        "created_at": "2026-06-26T08:07:33.719Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-06-26T08:07:48.494Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình là trợ lý hỏi đáp của tuongtac.tv, hỗ trợ bạn tìm kiếm các dịch vụ truyền thông (ví dụ: Livestream tương tác, Truyền thông KOL, catalogue điện tử và các gói dịch vụ) dựa trên dữ liệu có sẵn.",
+        "response_id": "resp_0551842428ccb3d0006a3e335197188196a81d2d7860ba86de",
+        "created_at": "2026-06-26T08:07:48.494Z"
+      }
+    ]
+  },
+  {
+    "user_id": 12,
+    "history": [
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-06-26T08:09:46.154Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình là trợ lý hỏi đáp của tuongtac.tv. Mình giúp bạn tìm kiếm dịch vụ truyền thông quanh bạn và hỗ trợ liên hệ/tư vấn các nhu cầu liên quan.",
+        "response_id": "resp_04bd318cff3327bc006a3e33c8b990819bade0dd5c93544e65",
+        "created_at": "2026-06-26T08:09:46.154Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-06-26T08:10:17.579Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình là trợ lý hỏi đáp của tuongtac.tv, hỗ trợ bạn tìm kiếm và kết nối với các dịch vụ quanh bạn.",
+        "response_id": "resp_04bd318cff3327bc006a3e33e7ddf8819bbc495a451bc5f0fa",
+        "created_at": "2026-06-26T08:10:17.579Z"
+      },
+      {
+        "role": "user",
+        "content": "vâng cảm ơn bạn",
+        "response_id": null,
+        "created_at": "2026-06-26T08:12:08.729Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Không có gì đâu! Nếu bạn cần tìm dịch vụ quanh bạn trên tuongtac.tv, cứ nói mình biết nhu cầu (khu vực + loại dịch vụ) nhé.",
+        "response_id": "resp_04bd318cff3327bc006a3e3456ee60819ba0398ca11f9d614f",
+        "created_at": "2026-06-26T08:12:08.729Z"
+      }
+    ]
+  },
+  {
+    "user_id": 13,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào bạn",
+        "response_id": null,
+        "created_at": "2026-06-26T08:27:32.310Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Bạn đang cần tìm dịch vụ gì quanh khu vực của bạn trên tuongtac.tv?",
+        "response_id": "resp_09ba89920d3fccd9006a3e37f28dc0819a90ee57a951fce4d1",
+        "created_at": "2026-06-26T08:27:32.310Z"
+      }
+    ]
+  },
+  {
+    "user_id": 14,
+    "history": [
+      {
+        "role": "user",
+        "content": "mình đói quá",
+        "response_id": null,
+        "created_at": "2026-06-26T08:33:44.140Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bạn đang ở khu vực nào (quận/huyện hoặc địa chỉ gần đúng) và bạn muốn ăn món gì (cơm, bún, phở, đồ ăn nhanh…)? Mình sẽ gợi ý dịch vụ gần bạn.",
+        "response_id": "resp_09310746fbf225ba006a3e3966ad94819aad8ea7a0cd056ac5",
+        "created_at": "2026-06-26T08:33:44.140Z"
+      },
+      {
+        "role": "user",
+        "content": "mình cần ăn phở hà nội",
+        "response_id": null,
+        "created_at": "2026-06-26T08:33:57.841Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bạn có thể ăn phở Hà Nội tại **Nhà Hàng Hải Béo** (Hà Nội):  \n- Địa chỉ: **Số 05 Lô TT2A - Ngõ 622 Minh Khai - Time City - Hà Nội**  \n- SĐT: **098 806 67 33**  \n- Giờ mở cửa: **08:00 - 23:30**  \n- Có menu **Phở** \n\nBạn đang ở khu vực quận/huyện nào để mình lọc thêm quán phở gần nhất?",
+        "response_id": "resp_09310746fbf225ba006a3e39717eb8819aacdc724c50d929c7",
+        "created_at": "2026-06-26T08:33:57.841Z"
+      }
+    ]
+  },
+  {
+    "user_id": 15,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào bạn bạn là ai",
+        "response_id": null,
+        "created_at": "2026-06-26T08:45:23.040Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Mình là trợ lý AI của tuongtac.tv, có nhiệm vụ giúp bạn tìm kiếm và hỏi đáp về các dịch vụ quanh bạn.",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3c2133c88199acc7bb53fa4bdab5",
+        "created_at": "2026-06-26T08:45:23.040Z"
+      },
+      {
+        "role": "user",
+        "content": "của hàng tuongtac.tv có gì",
+        "response_id": null,
+        "created_at": "2026-06-26T08:46:25.004Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Cửa hàng tuongtac.tv (TUONGTACTV) cung cấp các dịch vụ truyền thông/marketing như: **Livestream tương tác**, **Truyền thông KOL**, **Catalogue điện tử**, và **Sản xuất hình ảnh**. \n\nNgoài ra còn có các gói dịch vụ như **Gói cơ bản** và **Gói nâng cao**.",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3c5d1b68819986b6dcb70228f589",
+        "created_at": "2026-06-26T08:46:25.004Z"
+      },
+      {
+        "role": "user",
+        "content": "tôi cần tìm món ăn",
+        "response_id": null,
+        "created_at": "2026-06-26T08:46:53.432Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bạn muốn tìm món ăn ở khu vực nào (tỉnh/thành phố, quận/huyện) và loại món gì (ví dụ: cơm, bún/phở, đồ nướng, dim sum, trà/sinh tố…)?",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3c7bfb1881998fa3ccb8eac3a474",
+        "created_at": "2026-06-26T08:46:53.432Z"
+      },
+      {
+        "role": "user",
+        "content": "tôi ở hà nội",
+        "response_id": null,
+        "created_at": "2026-06-26T08:47:04.304Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Ở Hà Nội, bạn có thể tham khảo vài quán/món ăn có trong tuongtac.tv như sau:\n\n- **Nhà hàng Phú Lâm (Vĩnh Tuy, Hai Bà Trưng)** – các món **dim sum**: *Há cảo bó xôi*, *Bánh bao kim sa*, *Chân gà ngâm thuốc bắc*, *Cháo hải sản*…   \n- **Nhà Hàng Hương Hội An (Hai Bà Trưng)** – các món **xôi/bún/phở**: *Xôi xá xíu (40.000đ)*, *Phở gà nước (55.000đ)*, *Xôi gà (đùi+5k) (40.000đ)*…   \n- **Nhà hàng Phương Nam (Đống Đa)** – món “cơm nhà” miền Nam: *Canh chua cá lóc (128.000đ)*, *Thịt kho cái dừa (128.000đ)*, *Cơm trắng (28.000đ)*…   \n- **Bếp Tuổi Thơ (Xuân Đỉnh)** – đồ ăn tuổi thơ, có các suất ăn và tráng miệng như *Chè đậu đỏ*…   \n\nBạn muốn ăn **món gì** (ví dụ: phở, bún, xôi, dim sum, cơm gà, lẩu…) và ở khu vực nào của Hà Nội (quận/huyện)? Mình sẽ gợi ý sát hơn.",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3c826e4c8199979f6b728b6eae8e",
+        "created_at": "2026-06-26T08:47:04.304Z"
+      },
+      {
+        "role": "user",
+        "content": "t muốn ăn phở",
+        "response_id": null,
+        "created_at": "2026-06-26T08:47:19.343Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bạn muốn ăn phở ở khu vực nào tại Hà Nội (quận/huyện)?  \n\nHiện trong dữ liệu tuongtac.tv mình thấy có **Nhà Hàng Hương Hội An (Hai Bà Trưng)** với món **Phở gà nước (55.000đ)**.",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3c9578d081998437149f552ef31c",
+        "created_at": "2026-06-26T08:47:19.343Z"
+      },
+      {
+        "role": "user",
+        "content": "có món phở nào ngon rẻ ko",
+        "response_id": null,
+        "created_at": "2026-06-26T08:47:35.288Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Hiện mình chưa thấy dữ liệu “phở” giá rẻ cụ thể trong tuongtac.tv ngoài món **Phở gà nước 55.000đ** ở **Nhà Hàng Hương Hội An (Hai Bà Trưng)**. \n\nBạn muốn phở **gà** hay **bò**, và bạn ở **quận nào** để mình lọc món rẻ/đang có sẵn hơn?",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3ca5bb48819980bfd87508d41e35",
+        "created_at": "2026-06-26T08:47:35.288Z"
+      },
+      {
+        "role": "user",
+        "content": "ăn gà",
+        "response_id": null,
+        "created_at": "2026-06-26T08:47:51.457Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Ở Hà Nội, món **phở gà** (rẻ) mình thấy trong tuongtac.tv có:\n\n- **Phở gà nước – 55.000đ** tại **Nhà Hàng Hương Hội An (Hai Bà Trưng)** \n\nBạn cho mình biết bạn ở **quận nào** để mình gợi ý thêm chỗ gần bạn nhất không?",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3cb341088199996f5058e5a3f6c2",
+        "created_at": "2026-06-26T08:47:51.457Z"
+      },
+      {
+        "role": "user",
+        "content": "Uốn phồng chân bao tiền",
+        "response_id": null,
+        "created_at": "2026-06-26T08:49:41.085Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Uốn phồng chân hiện có giá **300.000 – 500.000đ**.",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3d20efe48199a396b4d5ee8f533b",
+        "created_at": "2026-06-26T08:49:41.085Z"
+      },
+      {
+        "role": "user",
+        "content": "Sữa Chua Dâu Kem Phô Mai bao nhiêu",
+        "response_id": null,
+        "created_at": "2026-06-26T08:49:54.352Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Sữa Chua Dâu Kem Phô Mai giá **55.000đ**.",
+        "response_id": "resp_0a1d2d284fd6c0c6006a3e3d2e0b0c81999094964612d26769",
+        "created_at": "2026-06-26T08:49:54.352Z"
+      }
+    ]
+  },
+  {
+    "user_id": 16,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào",
+        "response_id": null,
+        "created_at": "2026-06-26T09:37:09.495Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Mình có thể giúp gì cho bạn hôm nay?",
+        "response_id": "resp_09c435f0d4e0abee006a3e48446cf4819a8a32422f3aa89d80",
+        "created_at": "2026-06-26T09:37:09.495Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-06-26T09:37:19.936Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình là trợ lý hỏi đáp của tuongtac.tv, chuyên hỗ trợ bạn tìm kiếm dịch vụ quanh bạn.",
+        "response_id": "resp_09c435f0d4e0abee006a3e484e67a0819aa007e55af6a0e168",
+        "created_at": "2026-06-26T09:37:19.936Z"
+      },
+      {
+        "role": "user",
+        "content": "mình cần ăn phở quận long biên",
+        "response_id": null,
+        "created_at": "2026-06-26T09:38:01.296Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình thấy có quán có phở ở Long Biên là T Specar, địa chỉ 08 TTA HC Golden City Hồng Tiến, Long Biên, Hà Nội, mở cửa 07:00 - 23:00, đánh giá 4.5 sao. \n\nNếu bạn muốn, mình có thể tìm tiếp quán phở khác gần khu Long Biên nữa.",
+        "response_id": "resp_09c435f0d4e0abee006a3e48757c60819abdfba1fb6c1d81c9",
+        "created_at": "2026-06-26T09:38:01.296Z"
+      }
+    ]
+  },
+  {
+    "user_id": 17,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào bạn bạn là ai",
+        "response_id": null,
+        "created_at": "2026-06-26T10:54:29.289Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn, mình là trợ lý hỏi đáp của tuongtac.tv, hỗ trợ bạn tìm kiếm dịch vụ quanh bạn. Nếu bạn cần, cứ nói mình sẽ giúp nhé.",
+        "response_id": "resp_025f152bf3e7ee9f006a3e5a6366c4819ba9fb4b2b3b718da6",
+        "created_at": "2026-06-26T10:54:29.289Z"
+      },
+      {
+        "role": "user",
+        "content": "tôi muốn tìm 1 quán ăn ở hà nội",
+        "response_id": null,
+        "created_at": "2026-06-26T10:55:19.406Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình gợi ý vài quán ăn ở Hà Nội cho bạn nhé:\n\n- Cơm Niêu Làng Tôi — 62 Tuệ Tĩnh, Hai Bà Trưng, Hà Nội, 10:00 - 22:00, 4.9 sao \n- Nhà hàng Phương Nam — Số 2 ngõ 69 Chùa Láng, Đống Đa, Hà Nội, 08:00 - 22:00, 4.8 sao \n- Nhà hàng Phú Lâm 富臨 — 505 Minh Khai, Vĩnh Tuy, Hà Nội, 10:00 - 22:00, 4.9 sao \n- MONO - Nướng Than Hoa — 109 Trích Sài, Tây Hồ, Hà Nội, 10:00 - 23:00, 4.8 sao \n- Nhà hàng Hương Hội An — 213 Thanh Nhàn, Hai Bà Trưng, Hà Nội, 10:00 - 22:00, 4.9 sao \n\nNếu bạn muốn, mình có thể lọc theo khu vực hoặc món bạn thích.",
+        "response_id": "resp_025f152bf3e7ee9f006a3e5a928168819b9fe75a4951206929",
+        "created_at": "2026-06-26T10:55:19.406Z"
+      }
+    ]
+  },
+  {
+    "user_id": 1,
+    "history": [
+      {
+        "role": "user",
+        "content": "xin chào",
+        "response_id": null,
+        "created_at": "2026-06-29T10:40:23.421Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Xin chào! Mình có thể giúp gì cho bạn?",
+        "response_id": "resp_0ec1f29eca17326b006a424b958c94819abb397d614945f7b6",
+        "created_at": "2026-06-29T10:40:23.421Z"
+      },
+      {
+        "role": "user",
+        "content": "xin chào",
+        "response_id": null,
+        "created_at": "2026-06-29T10:41:22.095Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Xin chào! Mình có thể giúp gì cho bạn?",
+        "response_id": "resp_0ec1f29eca17326b006a424bd112fc819a9928e6af5a6eef5f",
+        "created_at": "2026-06-29T10:41:22.095Z"
+      },
+      {
+        "role": "user",
+        "content": "xin chào",
+        "response_id": null,
+        "created_at": "2026-06-29T10:41:26.199Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Xin chào! Mình có thể giúp gì cho bạn?",
+        "response_id": "resp_0ec1f29eca17326b006a424bd58084819a91cc591b8e73ce55",
+        "created_at": "2026-06-29T10:41:26.199Z"
+      },
+      {
+        "role": "user",
+        "content": "xin chào",
+        "response_id": null,
+        "created_at": "2026-06-29T10:47:24.568Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Hi bạn, bạn đang cần tìm dịch vụ gì quanh khu vực của mình ạ? (Ví dụ: sửa điện, làm tóc, khám bệnh, gia sư…)",
+        "response_id": "resp_0ec1f29eca17326b006a424d3b6244819aa533a9a35945e9f8",
+        "created_at": "2026-06-29T10:47:24.568Z"
+      },
+      {
+        "role": "user",
+        "content": "xin chào",
+        "response_id": null,
+        "created_at": "2026-06-29T10:48:10.647Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Hi bạn, bạn muốn tìm dịch vụ gì quanh khu vực mình ạ? Bạn cho mình biết tên dịch vụ và khu vực/quận giúp mình nhé.",
+        "response_id": "resp_0ec1f29eca17326b006a424d68c00c819aa76e201c1ace6948",
+        "created_at": "2026-06-29T10:48:10.647Z"
+      },
+      {
+        "role": "user",
+        "content": "xin chào",
+        "response_id": null,
+        "created_at": "2026-06-29T10:53:48.430Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Hi bạn! Bạn muốn tìm dịch vụ gì quanh khu vực của mình ạ? Bạn cho mình biết tên dịch vụ và quận/khu vực nhé.",
+        "response_id": "resp_0ec1f29eca17326b006a424ebb5434819aabcbc59b12d11763",
+        "created_at": "2026-06-29T10:53:48.430Z"
+      },
+      {
+        "role": "user",
+        "content": "xin chào",
+        "response_id": null,
+        "created_at": "2026-06-29T10:54:00.641Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Hi bạn! Bạn đang muốn tìm dịch vụ gì quanh khu vực của bạn ạ? Bạn cho mình xin tên dịch vụ và quận/khu vực nhé.",
+        "response_id": "resp_0ec1f29eca17326b006a424ec6a8d4819a97f56ed31513c337",
+        "created_at": "2026-06-29T10:54:00.641Z"
+      },
+      {
+        "role": "user",
+        "content": "xin ch�o",
+        "response_id": null,
+        "created_at": "2026-06-29T10:56:09.504Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Hi bạn! Bạn muốn tìm dịch vụ gì quanh khu vực của mình ạ? Cho mình xin tên dịch vụ và quận/khu vực nhé.",
+        "response_id": "resp_0ec1f29eca17326b006a424f483528819aac62bbd1f279de07",
+        "created_at": "2026-06-29T10:56:09.504Z"
+      },
+      {
+        "role": "user",
+        "content": "xin ch�o",
+        "created_at": "2026-06-29T10:59:27.298Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Hi bạn! Bạn muốn tìm dịch vụ gì quanh khu vực của mình ạ? Bạn cho mình xin tên dịch vụ và quận/khu vực nhé.",
+        "response_id": "resp_0ec1f29eca17326b006a42500e65e4819abcdfe46a8bfc9fa7",
+        "created_at": "2026-06-29T10:59:27.298Z"
+      }
+    ]
+  }
+]

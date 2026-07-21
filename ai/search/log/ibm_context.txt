@@ -1,0 +1,34 @@
+================================================================================
+TIME: 2026-07-21T04:03:34Z
+MODEL: Qwen3.5-4B-V3
+
+MESSAGES
+  [1] role=system
+      content:
+        Trả lời ngắn gọn, trực tiếp, không trình bày quá trình suy nghĩ. Chỉ đưa ra câu trả lời cuối cùng.
+  [2] role=user
+      content:
+        đúng rồi
+
+SYSTEM
+  list_search:
+    <empty>
+  prompt_guide:
+    Dùng ngữ cảnh nếu hữu ích. Trả lời ngắn gọn, không bịa.
+
+USER
+  last_user:
+    đúng rồi
+
+PROMPT
+  prompt:
+    SYSTEM list_search: prompt_guide: Dùng ngữ cảnh nếu hữu ích. Trả lời ngắn gọn, không bịa. USER last_user: đúng rồi
+  prompt_raw:
+    <|im_start|>system Trả lời ngắn gọn, trực tiếp, không trình bày quá trình suy nghĩ. Chỉ đưa ra câu trả lời cuối cùng.<|im_end|> <|im_start|>user đúng rồi<|im_end|> <|im_start|>assistant <think> </think>
+
+OUTPUT
+  response:
+    dạ vâng ạ.
+  prompt_tokens: 45
+  completion_tokens: 7
+  total_tokens: 52

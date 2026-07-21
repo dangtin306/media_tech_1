@@ -1,0 +1,105 @@
+[
+  {
+    "user_id": 8,
+    "latest_response_id": "resp_0cfff0c9676aa189006a3e2cda23308196b42ddb5cddbcf255",
+    "previous_response_ids": [
+      "resp_0cfff0c9676aa189006a3e2a609d2081969b7736073503d663",
+      "resp_0cfff0c9676aa189006a3e2ac02b388196b81146338936c956",
+      "resp_0cfff0c9676aa189006a3e2c2c63b4819684997f23ecdbe436",
+      "resp_0cfff0c9676aa189006a3e2c8cdea48196928e0d1a4d8c367a",
+      "resp_0cfff0c9676aa189006a3e2cbde83c8196ba936be02437443c",
+      "resp_0cfff0c9676aa189006a3e2cc8014c8196b2652c3180964684",
+      "resp_0cfff0c9676aa189006a3e2cda23308196b42ddb5cddbcf255"
+    ]
+  },
+  {
+    "user_id": 9,
+    "latest_response_id": "resp_0e9c3a25f393e061006a3e332545548194bb8cb3b839b30f67",
+    "previous_response_ids": [
+      "resp_0e9c3a25f393e061006a3e30e349988194a47f33fe1d210953",
+      "resp_0e9c3a25f393e061006a3e30fed2108194b4a168cc8805bd22",
+      "resp_0e9c3a25f393e061006a3e313439e081948e117eb8c8663202",
+      "resp_0e9c3a25f393e061006a3e32a295c4819494180b75f1bfd599",
+      "resp_0e9c3a25f393e061006a3e332545548194bb8cb3b839b30f67"
+    ]
+  },
+  {
+    "user_id": 11,
+    "latest_response_id": "resp_0551842428ccb3d0006a3e335197188196a81d2d7860ba86de",
+    "previous_response_ids": [
+      "resp_0551842428ccb3d0006a3e3340f3848196810e244821d66cfd",
+      "resp_0551842428ccb3d0006a3e335197188196a81d2d7860ba86de"
+    ]
+  },
+  {
+    "user_id": 12,
+    "latest_response_id": "resp_04bd318cff3327bc006a3e3456ee60819ba0398ca11f9d614f",
+    "previous_response_ids": [
+      "resp_04bd318cff3327bc006a3e33c8b990819bade0dd5c93544e65",
+      "resp_04bd318cff3327bc006a3e33e7ddf8819bbc495a451bc5f0fa",
+      "resp_04bd318cff3327bc006a3e3456ee60819ba0398ca11f9d614f"
+    ]
+  },
+  {
+    "user_id": 13,
+    "latest_response_id": "resp_09ba89920d3fccd9006a3e37f28dc0819a90ee57a951fce4d1",
+    "previous_response_ids": [
+      "resp_09ba89920d3fccd9006a3e37f28dc0819a90ee57a951fce4d1"
+    ]
+  },
+  {
+    "user_id": 14,
+    "latest_response_id": "resp_09310746fbf225ba006a3e39717eb8819aacdc724c50d929c7",
+    "previous_response_ids": [
+      "resp_09310746fbf225ba006a3e3966ad94819aad8ea7a0cd056ac5",
+      "resp_09310746fbf225ba006a3e39717eb8819aacdc724c50d929c7"
+    ]
+  },
+  {
+    "user_id": 15,
+    "latest_response_id": "resp_0a1d2d284fd6c0c6006a3e3d2e0b0c81999094964612d26769",
+    "previous_response_ids": [
+      "resp_0a1d2d284fd6c0c6006a3e3c2133c88199acc7bb53fa4bdab5",
+      "resp_0a1d2d284fd6c0c6006a3e3c5d1b68819986b6dcb70228f589",
+      "resp_0a1d2d284fd6c0c6006a3e3c7bfb1881998fa3ccb8eac3a474",
+      "resp_0a1d2d284fd6c0c6006a3e3c826e4c8199979f6b728b6eae8e",
+      "resp_0a1d2d284fd6c0c6006a3e3c9578d081998437149f552ef31c",
+      "resp_0a1d2d284fd6c0c6006a3e3ca5bb48819980bfd87508d41e35",
+      "resp_0a1d2d284fd6c0c6006a3e3cb341088199996f5058e5a3f6c2",
+      "resp_0a1d2d284fd6c0c6006a3e3d20efe48199a396b4d5ee8f533b",
+      "resp_0a1d2d284fd6c0c6006a3e3d2e0b0c81999094964612d26769"
+    ]
+  },
+  {
+    "user_id": 16,
+    "latest_response_id": "resp_09c435f0d4e0abee006a3e48757c60819abdfba1fb6c1d81c9",
+    "previous_response_ids": [
+      "resp_09c435f0d4e0abee006a3e48446cf4819a8a32422f3aa89d80",
+      "resp_09c435f0d4e0abee006a3e484e67a0819aa007e55af6a0e168",
+      "resp_09c435f0d4e0abee006a3e48757c60819abdfba1fb6c1d81c9"
+    ]
+  },
+  {
+    "user_id": 17,
+    "latest_response_id": "resp_025f152bf3e7ee9f006a3e5a928168819b9fe75a4951206929",
+    "previous_response_ids": [
+      "resp_025f152bf3e7ee9f006a3e5a6366c4819ba9fb4b2b3b718da6",
+      "resp_025f152bf3e7ee9f006a3e5a928168819b9fe75a4951206929"
+    ]
+  },
+  {
+    "user_id": 1,
+    "latest_response_id": "resp_0ec1f29eca17326b006a42500e65e4819abcdfe46a8bfc9fa7",
+    "previous_response_ids": [
+      "resp_0ec1f29eca17326b006a424b958c94819abb397d614945f7b6",
+      "resp_0ec1f29eca17326b006a424bd112fc819a9928e6af5a6eef5f",
+      "resp_0ec1f29eca17326b006a424bd58084819a91cc591b8e73ce55",
+      "resp_0ec1f29eca17326b006a424d3b6244819aa533a9a35945e9f8",
+      "resp_0ec1f29eca17326b006a424d68c00c819aa76e201c1ace6948",
+      "resp_0ec1f29eca17326b006a424ebb5434819aabcbc59b12d11763",
+      "resp_0ec1f29eca17326b006a424ec6a8d4819a97f56ed31513c337",
+      "resp_0ec1f29eca17326b006a424f483528819aac62bbd1f279de07",
+      "resp_0ec1f29eca17326b006a42500e65e4819abcdfe46a8bfc9fa7"
+    ]
+  }
+]

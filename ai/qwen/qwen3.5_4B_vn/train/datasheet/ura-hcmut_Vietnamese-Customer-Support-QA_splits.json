@@ -1,0 +1,20 @@
+﻿{
+    "splits":  [
+                   {
+                       "dataset":  "ura-hcmut/Vietnamese-Customer-Support-QA",
+                       "config":  "default",
+                       "split":  "train"
+                   },
+                   {
+                       "dataset":  "ura-hcmut/Vietnamese-Customer-Support-QA",
+                       "config":  "default",
+                       "split":  "test"
+                   }
+               ],
+    "pending":  [
+
+                ],
+    "failed":  [
+
+               ]
+}

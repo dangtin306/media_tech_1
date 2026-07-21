@@ -1,0 +1,19 @@
+{
+  "name": "media-tech-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon --legacy-watch --watch server.js --watch openclaw --watch process --watch open_ai --ext js,json --ignore openclaw/api_log/request_input.json --ignore openclaw/api_log/qwen_run_input.json --ignore openclaw/api_log/qwen_run_output.json --ignore openclaw/api_log/qwen_level_input.json --ignore openclaw/api_log/qwen_level_output.json --ignore openclaw/api_log/webservice.json --ignore openclaw/users/users_chat.json --ignore openclaw/users/users_response_id.json --ignore openclaw/users/users_token.json --ignore openclaw/users/openclaw_request_log.jsonl server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "^4.84.0",
+    "ssh2": "^1.17.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

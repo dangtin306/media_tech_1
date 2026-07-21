@@ -1,0 +1,36 @@
+{
+  "system_context": "Luôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt. Bạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.",
+  "user_message": "tìm các món ngon ở quán KaffirLime",
+  "history": [],
+  "scenario": "customer_consulting",
+  "user_state": {},
+  "runtime": {},
+  "options": {
+    "mode": "run",
+    "need_decision": true,
+    "allow_tool_call": true,
+    "max_history": 20
+  },
+  "metadata": {},
+  "model": "Qwen3.5-4B-V4",
+  "user": "media_tech:request",
+  "session_key": "agent:media_tech:ubuntu",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Luôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt. Bạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\nscenario: customer_consulting"
+    },
+    {
+      "role": "user",
+      "content": "tìm các món ngon ở quán KaffirLime"
+    }
+  ],
+  "temperature": 0.5,
+  "max_tokens": 512,
+  "top_p": 0.9,
+  "enable_thinking": false,
+  "use_lora": false,
+  "use_rag": true,
+  "rag_top_k": 4,
+  "model_code": "qwen-3.5/qwen-3.5-ubuntu"
+}

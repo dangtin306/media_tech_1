@@ -1,0 +1,74 @@
+[
+  {
+    "chat_token": "abc123",
+    "user_id": 1
+  },
+  {
+    "chat_token": "demo_token_001_abcdxxxxokokthank",
+    "user_id": 2
+  },
+  {
+    "chat_token": "qCAUHHAZmZ4YPzfbihy4",
+    "user_id": 3
+  },
+  {
+    "chat_token": "yfLCfPH0WUACsOSoSUtF",
+    "user_id": 4
+  },
+  {
+    "chat_token": "sYRqgHzrPmxiBtJU6pjH",
+    "user_id": 5
+  },
+  {
+    "chat_token": "rYmsUSfbfcFqk0SVIM89",
+    "user_id": 6
+  },
+  {
+    "chat_token": "ehkRhPSsvpLcwhD88mmj",
+    "user_id": 7
+  },
+  {
+    "chat_token": "JlWtdN0PJsy5zWG437Vi",
+    "user_id": 8
+  },
+  {
+    "chat_token": "VSfiiK6Rv2dxvgUncoYy",
+    "user_id": 9
+  },
+  {
+    "chat_token": "aCadPRPcE6R7aq1AShiQ",
+    "user_id": 10
+  },
+  {
+    "chat_token": "hWMD59lQu9cipr2KRb9F",
+    "user_id": 11
+  },
+  {
+    "chat_token": "iUVGGtQ5IddqP07Y1rFR",
+    "user_id": 12
+  },
+  {
+    "chat_token": "pYTKyz5pIVoK0oveSwjp",
+    "user_id": 13
+  },
+  {
+    "chat_token": "GOK8rO6HIOWhlxQC2UiH",
+    "user_id": 14
+  },
+  {
+    "chat_token": "mBwVvTI3jxlVbqy15sFR",
+    "user_id": 15
+  },
+  {
+    "chat_token": "1iviR8RywaFyFj7k1MGT",
+    "user_id": 16
+  },
+  {
+    "chat_token": "vu1H3fT7gnGnWl9ltMn3",
+    "user_id": 17
+  },
+  {
+    "chat_token": "demo_token_001_123456",
+    "user_id": 18
+  }
+]

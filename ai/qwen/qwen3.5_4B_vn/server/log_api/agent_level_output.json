@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-07-21T14:01:40.913080Z",
+  "route": "level",
+  "response_from_qwen": {
+    "id": "chatcmpl-level-20260721140140",
+    "object": "chat.completion",
+    "created": 1784617300,
+    "model": "Qwen3.5-4B-V4",
+    "output_text": "3",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "3"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": null,
+    "use_lora": false,
+    "enable_thinking": false,
+    "use_rag": false,
+    "rag_top_k": 4,
+    "normalized_level": "3",
+    "reply": "3",
+    "raw_output": "3."
+  },
+  "response": {
+    "id": "chatcmpl-level-20260721140140",
+    "object": "chat.completion",
+    "created": 1784617300,
+    "model": "Qwen3.5-4B-V4",
+    "output_text": "3",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "3"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": null,
+    "use_lora": false,
+    "enable_thinking": false,
+    "use_rag": false,
+    "rag_top_k": 4,
+    "normalized_level": "3",
+    "reply": "3",
+    "raw_output": "3."
+  }
+}

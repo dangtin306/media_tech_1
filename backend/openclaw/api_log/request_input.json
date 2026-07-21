@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-07-21T14:51:00.298Z",
+  "path": "/openclaw/agent/run",
+  "method": "POST",
+  "payload": {
+    "model": "Qwen3.5-4B-V4",
+    "model_code": "qwen-3.5/qwen-3.5-ubuntu",
+    "system_context": "Luôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt. Bạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.",
+    "user_message": "tìm các món ngon ở quán KaffirLime",
+    "history": [],
+    "scenario": "customer_consulting",
+    "options": {
+      "mode": "run",
+      "need_decision": true,
+      "allow_tool_call": true,
+      "max_history": 20
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "Luôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt. Bạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ."
+      },
+      {
+        "role": "user",
+        "content": "tìm các món ngon ở quán KaffirLime"
+      }
+    ],
+    "enable_thinking": false,
+    "use_lora": false,
+    "use_rag": true,
+    "rag_top_k": 4,
+    "max_tokens": 512,
+    "temperature": 0.5,
+    "top_p": 0.9
+  }
+}
