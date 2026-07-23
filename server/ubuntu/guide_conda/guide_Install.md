@@ -115,18 +115,11 @@ thi bo qua.
 Neu chua co:
 
 ```bash
-mkdir -p /root/media_tech/ai/qwen/qwen3.5_4B_vn
+rm -rf /root/media_tech
+git clone --depth 1 https://github.com/dangtin306/media_tech_1.git /root/media_tech
 ```
 
-Sau do copy toan bo code vao:
-
-```text
-/root/media_tech/ai/qwen/qwen3.5_4B_vn
-```
-
-Khuyen nghi:
-- copy truc tiep bang `scp -r` hoac `rsync`
-- khong zip kieu Windows neu de sinh loi ten file hoac encoding
+Neu can cap nhat lai code, dung `git pull` trong `/root/media_tech`.
 
 ## 6. Kiem tra nhanh
 
