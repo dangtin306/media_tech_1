@@ -51,6 +51,14 @@ apt-get install -y build-essential gcc g++ curl
 
 ## Torch CUDA
 
+Neu GPU tu doi 5x tro len, vi du RTX 50xx / 60xx / 80xx / 90xx:
+
+```bash
+python -m pip install torch==2.12.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
+```
+
+Neu GPU doi cu hon, vi du 40xx / 20xx / 30xx:
+
 ```bash
 python -m pip install torch==2.6.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 ```
@@ -137,7 +145,8 @@ Dung khi can download tu Hugging Face on dinh hon.
 ## Stack da dung duoc thuc te
 
 ```text
-torch 2.6.0+cu124
+Neu GPU doi 5x tro len: torch 2.12.1+cu130
+Neu GPU doi cu hon: torch 2.6.0+cu124
 transformers 5.12.1
 accelerate 1.14.0
 peft 0.19.1

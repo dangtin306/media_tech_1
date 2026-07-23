@@ -1,5 +1,3 @@
-{"timestamp":"2026-07-22T10:51:53.946Z","event":"disconnected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
-{"timestamp":"2026-07-22T10:52:24.503Z","event":"connected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
 {"timestamp":"2026-07-22T13:58:57.326Z","event":"disconnected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
 {"timestamp":"2026-07-22T13:59:28.051Z","event":"connected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
 {"timestamp":"2026-07-22T15:15:35.249Z","event":"disconnected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
@@ -18,3 +16,5 @@
 {"timestamp":"2026-07-22T23:29:07.319Z","event":"connected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
 {"timestamp":"2026-07-23T01:58:56.355Z","event":"disconnected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
 {"timestamp":"2026-07-23T01:59:26.622Z","event":"connected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
+{"timestamp":"2026-07-23T03:49:25.191Z","event":"starting","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}
+{"timestamp":"2026-07-23T03:49:25.410Z","event":"connected","wsUrl":"wss://oc.hust.media/chatbot/gpu","device":"gpu"}

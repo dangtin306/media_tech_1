@@ -166,6 +166,7 @@ def build_start_command(cfg: UbuntuSSHConfig) -> str:
         f"cd {remote_dir}; "
         f"source {conda_sh}; "
         f"conda activate {conda_env}; "
+        "export LD_LIBRARY_PATH=/root/miniconda3/envs/qwen/lib:/root/miniconda3/envs/qwen/lib/python3.11/site-packages/nvidia/cu13/lib:${LD_LIBRARY_PATH:-}; "
         f"export PYTHONUNBUFFERED=1; "
         f": > {remote_log}; "
         f"nohup python {remote_main} >> {remote_log} 2>&1 < /dev/null & "
