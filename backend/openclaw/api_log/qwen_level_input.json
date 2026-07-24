@@ -1,8 +1,8 @@
 {
-  "session_id": "qwen-api-1784804568145-a3fade9f18e03",
-  "turn_id": "msg-1784804568156-247abba061cb7",
+  "session_id": "qwen-api-1784867220990-79b28e5bc4bdc",
+  "turn_id": "msg-1784867221002-6477456f4eb23",
   "system_context": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.",
-  "user_message": "quán Garden có món gì",
+  "user_message": "chào bạn",
   "history": [],
   "scenario": "customer_consulting",
   "user_state": {},
@@ -29,8 +29,8 @@
     "stage": "level"
   },
   "model": "Qwen3.5-4B-V4",
-  "user": "qwen-api-1784804568145-a3fade9f18e03",
-  "session_key": "qwen-api-1784804568145-a3fade9f18e03",
+  "user": "qwen-api-1784867220990-79b28e5bc4bdc",
+  "session_key": "qwen-api-1784867220990-79b28e5bc4bdc",
   "messages": [
     {
       "role": "system",
@@ -38,7 +38,7 @@
     },
     {
       "role": "user",
-      "content": "quán Garden có món gì"
+      "content": "chào bạn"
     }
   ],
   "temperature": 0.5,

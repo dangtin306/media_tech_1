@@ -1,6 +1,6 @@
 {
-  "ubuntu_ssh_host": "n1.msk.cloreai.ru",
-  "ubuntu_ssh_port": 1547,
+  "ubuntu_ssh_host": "n1.de.clorecloud.net",
+  "ubuntu_ssh_port": 1590,
   "ubuntu_ssh_user": "root",
   "ubuntu_ssh_password": "Matkhau@abc",
   "clore_key" : "pf7cV9CR5XszaWrg78AV0urKdpM8NGxS",

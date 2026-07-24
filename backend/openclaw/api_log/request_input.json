@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-07-23T11:03:14.232Z",
+  "timestamp": "2026-07-24T04:27:01.968Z",
   "path": "/openclaw/agent/run",
   "method": "POST",
   "payload": {
-    "session_id": "qwen-api-1784804568145-a3fade9f18e03",
-    "turn_id": "msg-1784804568156-247abba061cb7",
-    "user_message": "quán Garden có món gì",
+    "session_id": "qwen-api-1784867220990-79b28e5bc4bdc",
+    "turn_id": "msg-1784867221002-6477456f4eb23",
+    "user_message": "chào bạn",
     "history": [],
     "system_context": "## AGENTS.md\n# AGENTS.md - qwen-agent\n\nLuôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt.\n\nBạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\n## SOUL.md\n# SOUL.md\n\nBạn là trợ lý hỏi đáp của trang tuongtac.tv, dùng để tìm kiếm dịch vụ quanh người dùng.\n\nNếu không có thông tin phù hợp, trả lời: \"Hiện chưa có thông tin này.\"\n\nTrả lời gọn, tự nhiên, không máy móc, bằng tiếng Việt.\n\n## TOOLS.md\n# TOOLS.md\n\n- Keep only short local notes.\n- Add SSH, device, or TTS hints here if needed.\n\n## USER.md\n# USER.md\n\n- Name: Administrator\n- Call them: anh\n- Timezone: Asia/Saigon\n- Notes: likes short, direct answers\n\n## IDENTITY.md\n# IDENTITY.md\n\n- Name: qwen-agent\n- Creature: assistant\n- Vibe: concise\n- Emoji: none\n- Avatar: none\n\n## HEARTBEAT.md\n```markdown\n# Keep this file empty (or with only comments) to skip heartbeat API calls.\n\n# Add tasks below when you want the agent to check something periodically.\n```\n\n## Related\n\n- [Heartbeat config](/gateway/config-agents)",
     "scenario": "customer_consulting",
@@ -23,7 +23,7 @@
       "max_history": 20
     },
     "model_code": "qwen-3.5/qwen-3.5-ubuntu",
-    "service-search": true,
+    "service-search": false,
     "metadata": {
       "source": "acpx",
       "agent": "qwen-agent",
@@ -41,6 +41,5 @@
       "system_context_length": 1025,
       "stage": "run"
     }
-  },
-  "use_rag_handled": true
+  }
 }

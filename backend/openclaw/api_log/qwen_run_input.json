@@ -1,8 +1,8 @@
 {
-  "session_id": "qwen-api-1784804568145-a3fade9f18e03",
-  "turn_id": "msg-1784804568156-247abba061cb7",
+  "session_id": "qwen-api-1784867220990-79b28e5bc4bdc",
+  "turn_id": "msg-1784867221002-6477456f4eb23",
   "system_context": "## AGENTS.md\n# AGENTS.md - qwen-agent\n\nLuôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt.\n\nBạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\n## SOUL.md\n# SOUL.md\n\nBạn là trợ lý hỏi đáp của trang tuongtac.tv, dùng để tìm kiếm dịch vụ quanh người dùng.\n\nNếu không có thông tin phù hợp, trả lời: \"Hiện chưa có thông tin này.\"\n\nTrả lời gọn, tự nhiên, không máy móc, bằng tiếng Việt.\n\n## TOOLS.md\n# TOOLS.md\n\n- Keep only short local notes.\n- Add SSH, device, or TTS hints here if needed.\n\n## USER.md\n# USER.md\n\n- Name: Administrator\n- Call them: anh\n- Timezone: Asia/Saigon\n- Notes: likes short, direct answers\n\n## IDENTITY.md\n# IDENTITY.md\n\n- Name: qwen-agent\n- Creature: assistant\n- Vibe: concise\n- Emoji: none\n- Avatar: none\n\n## HEARTBEAT.md\n```markdown\n# Keep this file empty (or with only comments) to skip heartbeat API calls.\n\n# Add tasks below when you want the agent to check something periodically.\n```\n\n## Related\n\n- [Heartbeat config](/gateway/config-agents)",
-  "user_message": "quán Garden có món gì",
+  "user_message": "chào bạn",
   "history": [],
   "scenario": "customer_consulting",
   "user_state": {},
@@ -36,8 +36,8 @@
     "stage": "run"
   },
   "model": "Qwen3.5-4B-V4",
-  "user": "qwen-api-1784804568145-a3fade9f18e03",
-  "session_key": "qwen-api-1784804568145-a3fade9f18e03",
+  "user": "qwen-api-1784867220990-79b28e5bc4bdc",
+  "session_key": "qwen-api-1784867220990-79b28e5bc4bdc",
   "messages": [
     {
       "role": "system",
@@ -45,13 +45,13 @@
     },
     {
       "role": "user",
-      "content": "quán Garden có món gì"
+      "content": "chào bạn"
     }
   ],
   "temperature": 0.5,
   "max_tokens": 512,
   "enable_thinking": false,
   "use_lora": false,
-  "use_rag": true,
+  "use_rag": false,
   "model_code": "qwen-3.5/qwen-3.5-ubuntu"
 }

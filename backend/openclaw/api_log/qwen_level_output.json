@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-07-23T11:02:49.532Z",
+  "timestamp": "2026-07-24T04:27:01.950Z",
   "request": {
-    "session_id": "qwen-api-1784804568145-a3fade9f18e03",
-    "turn_id": "msg-1784804568156-247abba061cb7",
+    "session_id": "qwen-api-1784867220990-79b28e5bc4bdc",
+    "turn_id": "msg-1784867221002-6477456f4eb23",
     "system_context": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.",
-    "user_message": "quán Garden có món gì",
+    "user_message": "chào bạn",
     "history": [],
     "scenario": "customer_consulting",
     "user_state": {},
@@ -31,8 +31,8 @@
       "stage": "level"
     },
     "model": "Qwen3.5-4B-V4",
-    "user": "qwen-api-1784804568145-a3fade9f18e03",
-    "session_key": "qwen-api-1784804568145-a3fade9f18e03",
+    "user": "qwen-api-1784867220990-79b28e5bc4bdc",
+    "session_key": "qwen-api-1784867220990-79b28e5bc4bdc",
     "messages": [
       {
         "role": "system",
@@ -40,7 +40,7 @@
       },
       {
         "role": "user",
-        "content": "quán Garden có món gì"
+        "content": "chào bạn"
       }
     ],
     "temperature": 0.5,
@@ -58,26 +58,26 @@
           "finish_reason": "stop",
           "index": 0,
           "message": {
-            "content": "3",
+            "content": "1",
             "role": "assistant"
           }
         }
       ],
-      "created": 1784804576,
+      "created": 1784867229,
       "enable_thinking": false,
-      "id": "chatcmpl-level-20260723110256",
+      "id": "chatcmpl-level-20260724042709",
       "model": "Qwen3.5-4B-V4",
-      "normalized_level": "3",
+      "normalized_level": "1",
       "object": "chat.completion",
-      "output_text": "3",
+      "output_text": "1",
       "rag_top_k": 4,
-      "raw_output": "3.",
-      "reply": "3",
+      "raw_output": "1",
+      "reply": "1",
       "usage": null,
       "use_lora": false,
       "use_rag": false
     },
-    "reply": "3",
+    "reply": "1",
     "state_patch": {},
     "tool_calls": [],
     "usage": null
