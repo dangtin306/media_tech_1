@@ -473,6 +473,7 @@ class IBMSearchIndex:
         self._state: Dict[str, Any] = {}
         self._rows: List[dict[str, Any]] = []
         self._embeddings: torch.Tensor | None = None
+        self._query_embedding_cache: Dict[str, torch.Tensor] = {}
         self.refresh(force=True)
 
     def refresh(self, force: bool = False) -> None:
@@ -483,30 +484,41 @@ class IBMSearchIndex:
         rows = _load_corpus(self.corpus_path)
         texts = [row["text"] for row in rows]
         embeddings = _embed(texts, self.device).detach().cpu().float()
+        embeddings = _normalize_tensor(embeddings)
         self._rows = rows
         self._embeddings = embeddings
         self._state = current_state
+        self._query_embedding_cache.clear()
+
+    def _get_query_embedding(self, query: str) -> torch.Tensor:
+        cache_key = query.strip()
+        cached = self._query_embedding_cache.get(cache_key)
+        if cached is not None:
+            return cached
+
+        query_embedding = _embed([query], self.device)[0].detach().cpu().float()
+        query_embedding = _normalize_tensor(query_embedding.unsqueeze(0))[0]
+        self._query_embedding_cache[cache_key] = query_embedding
+        return query_embedding
 
     def retrieve(self, query: str, top_k: int = 4) -> RetrievalResult:
         self.refresh()
         if self._embeddings is None or not self._rows:
             return RetrievalResult(query=query, contexts=[])
 
-        query_embedding = _embed([query], self.device)[0].detach().cpu().float()
-        scored: List[tuple[float, dict[str, Any]]] = []
-        for row, row_embedding in zip(self._rows, self._embeddings):
-            score = _cosine(query_embedding, row_embedding)
-            scored.append((score, row))
-        scored.sort(key=lambda item: item[0], reverse=True)
-
+        query_embedding = self._get_query_embedding(query)
+        scores = torch.matmul(self._embeddings, query_embedding)
+        limit = min(max(1, top_k), scores.shape[0])
+        top_scores, top_indices = torch.topk(scores, k=limit, largest=True, sorted=True)
         contexts: List[Dict[str, Any]] = []
-        for score, row in scored[: max(1, top_k)]:
+        for score, index in zip(top_scores.tolist(), top_indices.tolist()):
+            row = self._rows[index]
             contexts.append(
                 {
                     "id": row["id"],
                     "text": row["text"],
                     "metadata": row["metadata"],
-                    "score": score,
+                    "score": float(score),
                 }
             )
         return RetrievalResult(query=query, contexts=contexts)

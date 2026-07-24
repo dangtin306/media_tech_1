@@ -1,37 +1,12 @@
 {
-  "timestamp": "2026-07-22T04:20:14.377Z",
+  "timestamp": "2026-07-23T11:03:14.232Z",
   "path": "/openclaw/agent/run",
   "method": "POST",
   "payload": {
-    "session_id": "qwen-api-1784693907431-d8338faf64f1d",
-    "turn_id": "msg-1784693997462-efe99dc036562",
-    "user_message": "Nướng hấp",
-    "history": [
-      {
-        "role": "user",
-        "content": "Hi"
-      },
-      {
-        "role": "assistant",
-        "content": "Xin chào! Mình là trợ lý của trang tuongtac.tv. Bạn cần tìm dịch vụ, quán ăn hay địa điểm nào xung quanh không?"
-      },
-      {
-        "role": "user",
-        "content": "Bà Trưng"
-      },
-      {
-        "role": "assistant",
-        "content": "Xin chào! Mình là trợ lý của trang **tuongtac.tv**.\n\nBạn đang cần tìm **dịch vụ**, **quán ăn**, hay **địa điểm** nào ở quanh đây không? Hãy nói rõ nhu cầu để mình hỗ trợ nhé."
-      },
-      {
-        "role": "user",
-        "content": "quán ăn"
-      },
-      {
-        "role": "assistant",
-        "content": "Chào bạn, dưới đây là danh sách các món ăn và cửa hàng phù hợp với nhu cầu \"quán ăn\" dựa trên dữ liệu có sẵn:\n\n**1. Nhà Hàng Hải Béo**\n*   **Tên món:** Trứng trần\n*   **Menu:** Phở\n*   **Địa chỉ:** (Không rõ trong dữ liệu)\n*   **Khu vực:** (Không rõ trong dữ liệu)\n*   **Giá:** 10.000đ/quả\n*   **Trạng thái:** Đang có trong menu.\n\n**2. Nhà hàng Quang Long - Thắng Cố Lào Cai**\n*   **Tên món:** Cải mèo luộc chấm trứng\n*   **Menu:** Rau theo mùa\n*   **Địa chỉ:** Thắng Cố, Lào Cai\n*   **Khu vực:** Lào Cai\n*   **Giá:** 65.000đ\n*   **Trạng thái:** Đang có trong menu.\n\n**3. Cơm Bà Ngoại**\n*   **Tên món:** Trứng rán hành\n*   **Menu:** Món chính\n*   **Địa chỉ:** (Không rõ trong dữ liệu)\n*   **Khu vực:** (Không rõ trong dữ liệu)\n*   **Giá:** 40.000đ\n*   **Trạng thái:** Đang có trong menu.\n\n**4. Trâu Ngon Quán**\n*   **Tên món:** Đuôi trâu hấp tương gừng, Sườn trâu tiến vua, Trâu Chiên Hoàng Kim, Trâu nướng lá lốt, Trâu nướng tảng, Trâu rang muối, Sách trâu xào khế.\n*   **Menu:** Nướng hấp\n*   **Địa chỉ:** (Không rõ trong dữ liệu)\n*   **Khu vực:** (Không rõ trong dữ liệu)\n*   **Giá:** (Không rõ trong dữ liệu)\n*   **Trạng thái:** Đang có trong menu.\n*   **Lưu ý:** Quán này có 1 nồi lẩu Sườn Trâu Kim Chi.\n\nTất cả các kết quả trên đều là các món ăn tại các nhà hàng, đáp ứng tiêu chí \"quán ăn\"."
-      }
-    ],
+    "session_id": "qwen-api-1784804568145-a3fade9f18e03",
+    "turn_id": "msg-1784804568156-247abba061cb7",
+    "user_message": "quán Garden có món gì",
+    "history": [],
     "system_context": "## AGENTS.md\n# AGENTS.md - qwen-agent\n\nLuôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt.\n\nBạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\n## SOUL.md\n# SOUL.md\n\nBạn là trợ lý hỏi đáp của trang tuongtac.tv, dùng để tìm kiếm dịch vụ quanh người dùng.\n\nNếu không có thông tin phù hợp, trả lời: \"Hiện chưa có thông tin này.\"\n\nTrả lời gọn, tự nhiên, không máy móc, bằng tiếng Việt.\n\n## TOOLS.md\n# TOOLS.md\n\n- Keep only short local notes.\n- Add SSH, device, or TTS hints here if needed.\n\n## USER.md\n# USER.md\n\n- Name: Administrator\n- Call them: anh\n- Timezone: Asia/Saigon\n- Notes: likes short, direct answers\n\n## IDENTITY.md\n# IDENTITY.md\n\n- Name: qwen-agent\n- Creature: assistant\n- Vibe: concise\n- Emoji: none\n- Avatar: none\n\n## HEARTBEAT.md\n```markdown\n# Keep this file empty (or with only comments) to skip heartbeat API calls.\n\n# Add tasks below when you want the agent to check something periodically.\n```\n\n## Related\n\n- [Heartbeat config](/gateway/config-agents)",
     "scenario": "customer_consulting",
     "user_state": {},
