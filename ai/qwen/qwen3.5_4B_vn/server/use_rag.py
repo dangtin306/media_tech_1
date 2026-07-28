@@ -280,13 +280,12 @@ def build_v4_rag_system_prompt(
         "Bắt buộc:\n"
         "- Đọc và sử dụng đủ tất cả mục [1], [2], [3]... trong ngữ cảnh.\n"
         "- Không được bỏ qua, tự xóa hoặc chỉ chọn một phần danh sách.\n"
-        "- Tóm tắt mỗi kết quả có thông tin hữu ích như tên, món/dịch vụ, "
-        "địa chỉ, khu vực, giá và trạng thái nếu có.\n"
-        "- Ưu tiên kết quả phù hợp nhất trước nhưng vẫn phải nhắc đủ các kết quả còn lại.\n"
+        "- Trả lời lại full danh sách, mỗi mục bắt buộc nêu đầy đủ các thông tin có trong danh sách.\n"
+        "- Ưu tiên kết quả phù hợp nhất trước nhưng vẫn phải nhắc đủ các mục còn lại.\n"
         "- Nếu kết quả sai khu vực hoặc sai nhu cầu, vẫn phải nói rõ kết quả đó "
         "không phù hợp, không được âm thầm bỏ qua.\n"
         "- Không bịa ngoài dữ liệu.\n"
-        "- Trả lời gọn, tự nhiên và dễ đọc.\n\n"
+        "- Trả lời gọn, tự nhiên, dễ đọc.\n\n"
         "Danh sách ngữ cảnh RAG:\n"
         f"{context_text}"
     )
@@ -312,7 +311,7 @@ def build_v4_rag_user_prompt(
 
     return (
         f"{base_prompt}\n\n"
-        "Câu hỏi của người dùng:\n"
+        "Trả lời ib dưới:\n"
         f"{user_content}"
     )
 

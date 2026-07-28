@@ -810,10 +810,12 @@
   },
   {
     "user_id": 42,
-    "latest_response_id": "chatcmpl_5744398c-c48e-4ec3-803b-e132919f5ea8",
+    "latest_response_id": "chatcmpl_af9dcba1-c0de-433e-8043-1d0fa4865f65",
     "previous_response_ids": [
       "chatcmpl_4b61c4bf-1b38-45f7-8c5a-35829b4c814d",
-      "chatcmpl_5744398c-c48e-4ec3-803b-e132919f5ea8"
+      "chatcmpl_5744398c-c48e-4ec3-803b-e132919f5ea8",
+      "chatcmpl_3df2bfb3-b840-4ee1-af8c-98eba69714c1",
+      "chatcmpl_af9dcba1-c0de-433e-8043-1d0fa4865f65"
     ]
   }
 ]
