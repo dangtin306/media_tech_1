@@ -1,45 +1,13 @@
 {
-  "timestamp": "2026-07-28T02:41:47.952Z",
+  "timestamp": "2026-07-28T04:06:33.563Z",
   "endpoint": "http://127.0.0.1:8005/openclaw/agent/run",
   "transport": "gpu_websocket",
   "request": {
     "session_id": "qwen-api-1785204987086-30b90d17d6678",
-    "turn_id": "msg-1785206500526-de83fbdf1e945",
+    "turn_id": "msg-1785211592749-4727b964c64d5",
     "system_context": "## AGENTS.md\n# AGENTS.md - qwen-agent\n\nLuôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt.\n\nBạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\n## SOUL.md\n# SOUL.md\n\nBạn là trợ lý hỏi đáp của trang tuongtac.tv, dùng để tìm kiếm dịch vụ quanh người dùng.\n\nNếu không có thông tin phù hợp, trả lời: \"Hiện chưa có thông tin này.\"\n\nTrả lời gọn, tự nhiên, không máy móc, bằng tiếng Việt.\n\n## TOOLS.md\n# TOOLS.md\n\n- Keep only short local notes.\n- Add SSH, device, or TTS hints here if needed.\n\n## USER.md\n# USER.md\n\n- Name: Administrator\n- Call them: anh\n- Timezone: Asia/Saigon\n- Notes: likes short, direct answers\n\n## IDENTITY.md\n# IDENTITY.md\n\n- Name: qwen-agent\n- Creature: assistant\n- Vibe: concise\n- Emoji: none\n- Avatar: none\n\n## HEARTBEAT.md\n```markdown\n# Keep this file empty (or with only comments) to skip heartbeat API calls.\n\n# Add tasks below when you want the agent to check something periodically.\n```\n\n## Related\n\n- [Heartbeat config](/gateway/config-agents)",
-    "user_message": "Note: The previous agent run was aborted by the user. Resume carefully or ask for clarification.\n\nNướng & Lẩu - Tiệm Nhà Bi.",
+    "user_message": "hi",
     "history": [
-      {
-        "role": "user",
-        "content": "gà chiên"
-      },
-      {
-        "role": "assistant",
-        "content": "dạ hiện tại không có món gà chiên trong danh sách sản phẩm ạ."
-      },
-      {
-        "role": "user",
-        "content": "gà chiên giá bao nhiêu"
-      },
-      {
-        "role": "assistant",
-        "content": "dạ gà chiên là 129k/1cô ạ."
-      },
-      {
-        "role": "user",
-        "content": "gà chiên giá bao nhiêu"
-      },
-      {
-        "role": "assistant",
-        "content": "dạ gà chiên là 129k/1cô ạ."
-      },
-      {
-        "role": "user",
-        "content": "gà chiên giá bao nhiêu"
-      },
-      {
-        "role": "assistant",
-        "content": "dạ gà chiên là 129k/1cốc ạ."
-      },
       {
         "role": "user",
         "content": "quận hai bà trưng có món gì"
@@ -87,6 +55,38 @@
       {
         "role": "assistant",
         "content": "Chào bạn, đây là thông tin chi tiết về các món ăn của **Nướng & Lẩu - Tiệm Nhà Bi** dựa trên dữ liệu có sẵn:\n\n*   **[2] Combo Nhà Bi 2 (Ảnh thumbnail):**\n    *   **Tên cửa hàng:** Nướng & Lẩu - Tiệm Nhà Bi\n    *   **Menu:** Nướng và Lẩu Menu\n    *   **Sản phẩm:** Combo Nhà Bi 2\n    *   **Nội dung:** Bao gồm Tôm, ba chỉ bò cuộn nấm, nạc dăm; Dồi sụn, xúc xích; 2 ly trà; rau, manchan ăn kèm.\n    *   **Giá:** 199.000 VNĐ.\n\n*   **[3] Combo Nhà Bi 2 (Ảnh sản phẩm):**\n    *   **Tên cửa hàng:** Nướng & Lẩu - Tiệm Nhà Bi\n    *   **Menu:** Nướng và Lẩu Menu\n    *   **Sản phẩm:** Combo Nhà Bi 2\n    *   **Nội dung:** Bao gồm Tôm, ba chỉ bò cuộn nấm, nạc dăm; Dồi sụn, xúc xích; 2 ly trà; rau, manchan ăn kèm.\n    *   **Giá:** 199.000 VNĐ.\n\n*   **Lưu ý về các mục khác:**\n    *   Các mục **[1]** và **[4]** thuộc về cửa hàng **Cơm Bà Ngoại**, không phải Nướng & Lẩu - Tiệm Nhà Bi. Vì vậy, thông tin trong 2 mục này không phù hợp với nhu cầu tìm món ăn của bạn.\n\nTóm lại, tại **Nướng & Lẩu - Tiệm Nhà Bi**, bạn chỉ có thể tìm thấy sản phẩm là **Combo Nhà Bi 2** với giá **199.000 VNĐ** bao gồm các món như Tôm, ba chỉ bò, Dồi sụn, xúc xích, 2 ly trà và rau manchan."
+      },
+      {
+        "role": "user",
+        "content": "Note: The previous agent run was aborted by the user. Resume carefully or ask for clarification.\n\nNướng & Lẩu - Tiệm Nhà Bi."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh, tại **Nướng & Lẩu - Tiệm Nhà Bi**, hiện có món chính là:\n\n*   **Combo Nhà Bi 2** (Giá: 199.000 VNĐ)\n    *   **Gồm:** Tôm, ba chỉ bò cuộn nấm, nạc dăm, dồi sụn, xúc xích.\n    *   **Kèm:** 2 ly trà, rau và manchan ăn kèm.\n\nAnh cần tư vấn thêm về món nướng hay lẩu cụ thể nào khác không?"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
       }
     ],
     "scenario": "customer_consulting",
@@ -127,38 +127,6 @@
       {
         "role": "system",
         "content": "## AGENTS.md\n# AGENTS.md - qwen-agent\n\nLuôn trả lời ngắn gọn, tự nhiên, bằng tiếng Việt.\n\nBạn là trợ lý trang tuongtac.tv hỗ trợ người dùng tìm dịch vụ, quán, sản phẩm hoặc địa điểm phù hợp quanh họ.\n\n## SOUL.md\n# SOUL.md\n\nBạn là trợ lý hỏi đáp của trang tuongtac.tv, dùng để tìm kiếm dịch vụ quanh người dùng.\n\nNếu không có thông tin phù hợp, trả lời: \"Hiện chưa có thông tin này.\"\n\nTrả lời gọn, tự nhiên, không máy móc, bằng tiếng Việt.\n\n## TOOLS.md\n# TOOLS.md\n\n- Keep only short local notes.\n- Add SSH, device, or TTS hints here if needed.\n\n## USER.md\n# USER.md\n\n- Name: Administrator\n- Call them: anh\n- Timezone: Asia/Saigon\n- Notes: likes short, direct answers\n\n## IDENTITY.md\n# IDENTITY.md\n\n- Name: qwen-agent\n- Creature: assistant\n- Vibe: concise\n- Emoji: none\n- Avatar: none\n\n## HEARTBEAT.md\n```markdown\n# Keep this file empty (or with only comments) to skip heartbeat API calls.\n\n# Add tasks below when you want the agent to check something periodically.\n```\n\n## Related\n\n- [Heartbeat config](/gateway/config-agents)\n\nscenario: customer_consulting\n\nmetadata: {\"source\":\"acpx\",\"agent\":\"qwen-agent\",\"protocol\":\"openclaw-acp\",\"cwd\":\"D:\\\\hustmedia\\\\application\\\\openclaw-src\",\"workspace_path\":\"C:\\\\Users\\\\Administrator\\\\.openclaw\\\\workspace-qwen-agent\",\"injected_context_files\":[\"AGENTS.md\",\"SOUL.md\",\"TOOLS.md\",\"USER.md\",\"IDENTITY.md\",\"HEARTBEAT.md\"],\"system_context_length\":1025,\"stage\":\"run\"}"
-      },
-      {
-        "role": "user",
-        "content": "gà chiên"
-      },
-      {
-        "role": "assistant",
-        "content": "dạ hiện tại không có món gà chiên trong danh sách sản phẩm ạ."
-      },
-      {
-        "role": "user",
-        "content": "gà chiên giá bao nhiêu"
-      },
-      {
-        "role": "assistant",
-        "content": "dạ gà chiên là 129k/1cô ạ."
-      },
-      {
-        "role": "user",
-        "content": "gà chiên giá bao nhiêu"
-      },
-      {
-        "role": "assistant",
-        "content": "dạ gà chiên là 129k/1cô ạ."
-      },
-      {
-        "role": "user",
-        "content": "gà chiên giá bao nhiêu"
-      },
-      {
-        "role": "assistant",
-        "content": "dạ gà chiên là 129k/1cốc ạ."
       },
       {
         "role": "user",
@@ -211,6 +179,38 @@
       {
         "role": "user",
         "content": "Note: The previous agent run was aborted by the user. Resume carefully or ask for clarification.\n\nNướng & Lẩu - Tiệm Nhà Bi."
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh, tại **Nướng & Lẩu - Tiệm Nhà Bi**, hiện có món chính là:\n\n*   **Combo Nhà Bi 2** (Giá: 199.000 VNĐ)\n    *   **Gồm:** Tôm, ba chỉ bò cuộn nấm, nạc dăm, dồi sụn, xúc xích.\n    *   **Kèm:** 2 ly trà, rau và manchan ăn kèm.\n\nAnh cần tư vấn thêm về món nướng hay lẩu cụ thể nào khác không?"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
+      },
+      {
+        "role": "user",
+        "content": "hi"
       }
     ],
     "temperature": 0.5,
@@ -220,43 +220,15 @@
     "use_rag": false,
     "model_code": "qwen-3.5/qwen-3.5-ubuntu"
   },
-  "response_text": "{\"decision\":{},\"raw\":{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"Chào anh, tại **Nướng & Lẩu - Tiệm Nhà Bi**, hiện có món chính là:\\n\\n*   **Combo Nhà Bi 2** (Giá: 199.000 VNĐ)\\n    *   **Gồm:** Tôm, ba chỉ bò cuộn nấm, nạc dăm, dồi sụn, xúc xích.\\n    *   **Kèm:** 2 ly trà, rau và manchan ăn kèm.\\n\\nAnh cần tư vấn thêm về món nướng hay lẩu cụ thể nào khác không?\",\"role\":\"assistant\"}}],\"created\":1785206511,\"enable_thinking\":false,\"id\":\"chatcmpl-07a3db62987748858baf34d9920e0143\",\"model\":\"Qwen3.5-4B-V4\",\"object\":\"chat.completion\",\"output_text\":\"Chào anh, tại **Nướng & Lẩu - Tiệm Nhà Bi**, hiện có món chính là:\\n\\n*   **Combo Nhà Bi 2** (Giá: 199.000 VNĐ)\\n    *   **Gồm:** Tôm, ba chỉ bò cuộn nấm, nạc dăm, dồi sụn, xúc xích.\\n    *   **Kèm:** 2 ly trà, rau và manchan ăn kèm.\\n\\nAnh cần tư vấn thêm về món nướng hay lẩu cụ thể nào khác không?\",\"rag_top_k\":4,\"retrieved_context\":\"\",\"usage\":{\"completion_tokens\":113,\"prompt_tokens\":1241,\"total_tokens\":1354},\"use_lora\":false,\"use_rag\":false},\"reply\":\"Chào anh, tại **Nướng & Lẩu - Tiệm Nhà Bi**, hiện có món chính là:\\n\\n*   **Combo Nhà Bi 2** (Giá: 199.000 VNĐ)\\n    *   **Gồm:** Tôm, ba chỉ bò cuộn nấm, nạc dăm, dồi sụn, xúc xích.\\n    *   **Kèm:** 2 ly trà, rau và manchan ăn kèm.\\n\\nAnh cần tư vấn thêm về món nướng hay lẩu cụ thể nào khác không?\",\"state_patch\":{},\"tool_calls\":[],\"usage\":{\"completion_tokens\":113,\"prompt_tokens\":1241,\"total_tokens\":1354}}",
+  "response_text": "{\"decision\":{},\"raw\":{\"error\":\"CUDA error: unspecified launch failure\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n\"},\"reply\":\"Lỗi GPU server: CUDA error: unspecified launch failure\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n\",\"state_patch\":{},\"tool_calls\":[],\"usage\":null}",
   "response": {
     "decision": {},
     "raw": {
-      "choices": [
-        {
-          "finish_reason": "stop",
-          "index": 0,
-          "message": {
-            "content": "Chào anh, tại **Nướng & Lẩu - Tiệm Nhà Bi**, hiện có món chính là:\n\n*   **Combo Nhà Bi 2** (Giá: 199.000 VNĐ)\n    *   **Gồm:** Tôm, ba chỉ bò cuộn nấm, nạc dăm, dồi sụn, xúc xích.\n    *   **Kèm:** 2 ly trà, rau và manchan ăn kèm.\n\nAnh cần tư vấn thêm về món nướng hay lẩu cụ thể nào khác không?",
-            "role": "assistant"
-          }
-        }
-      ],
-      "created": 1785206511,
-      "enable_thinking": false,
-      "id": "chatcmpl-07a3db62987748858baf34d9920e0143",
-      "model": "Qwen3.5-4B-V4",
-      "object": "chat.completion",
-      "output_text": "Chào anh, tại **Nướng & Lẩu - Tiệm Nhà Bi**, hiện có món chính là:\n\n*   **Combo Nhà Bi 2** (Giá: 199.000 VNĐ)\n    *   **Gồm:** Tôm, ba chỉ bò cuộn nấm, nạc dăm, dồi sụn, xúc xích.\n    *   **Kèm:** 2 ly trà, rau và manchan ăn kèm.\n\nAnh cần tư vấn thêm về món nướng hay lẩu cụ thể nào khác không?",
-      "rag_top_k": 4,
-      "retrieved_context": "",
-      "usage": {
-        "completion_tokens": 113,
-        "prompt_tokens": 1241,
-        "total_tokens": 1354
-      },
-      "use_lora": false,
-      "use_rag": false
+      "error": "CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n"
     },
-    "reply": "Chào anh, tại **Nướng & Lẩu - Tiệm Nhà Bi**, hiện có món chính là:\n\n*   **Combo Nhà Bi 2** (Giá: 199.000 VNĐ)\n    *   **Gồm:** Tôm, ba chỉ bò cuộn nấm, nạc dăm, dồi sụn, xúc xích.\n    *   **Kèm:** 2 ly trà, rau và manchan ăn kèm.\n\nAnh cần tư vấn thêm về món nướng hay lẩu cụ thể nào khác không?",
+    "reply": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n",
     "state_patch": {},
     "tool_calls": [],
-    "usage": {
-      "completion_tokens": 113,
-      "prompt_tokens": 1241,
-      "total_tokens": 1354
-    }
+    "usage": null
   }
 }

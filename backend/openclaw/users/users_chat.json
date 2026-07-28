@@ -7136,6 +7136,7 @@
       {
         "role": "user",
         "content": "hà nội có quán gì ăn không",
+        "response_id": null,
         "created_at": "2026-07-28T02:22:39.575Z"
       },
       {
@@ -7143,6 +7144,41 @@
         "content": "dạ hiện tại phần mềm đang không hỗ trợ tìm kiếm theo khu vực ạ.",
         "response_id": "chatcmpl_af9dcba1-c0de-433e-8043-1d0fa4865f65",
         "created_at": "2026-07-28T02:22:39.575Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không",
+        "response_id": null,
+        "created_at": "2026-07-28T04:03:57.306Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.",
+        "response_id": "chatcmpl_b5e9274f-7bb1-4afb-910a-e06b41eb88ba",
+        "created_at": "2026-07-28T04:03:57.306Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không",
+        "response_id": null,
+        "created_at": "2026-07-28T04:04:05.479Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.",
+        "response_id": "chatcmpl_ff2331ac-e98e-4d5f-ad7e-d269674217b9",
+        "created_at": "2026-07-28T04:04:05.479Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không",
+        "created_at": "2026-07-28T04:04:19.973Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.",
+        "response_id": "chatcmpl_8ff7dbd7-cd91-4cb8-b843-3358e792bdcf",
+        "created_at": "2026-07-28T04:04:19.973Z"
       }
     ]
   }
