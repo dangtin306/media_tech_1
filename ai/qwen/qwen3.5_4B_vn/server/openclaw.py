@@ -17,7 +17,11 @@ LOG_API_RUN_INPUT_PATH = os.path.join(LOG_API_DIR, "agent_run_input.json")
 LOG_API_LEVEL_INPUT_PATH = os.path.join(LOG_API_DIR, "agent_level_input.json")
 
 
-def write_level_or_run_input_log(payload: Dict[str, Any], messages: List[Dict[str, str]]) -> None:
+def write_level_or_run_input_log(
+    payload: Dict[str, Any],
+    messages: List[Dict[str, str]],
+    use_lora: bool | None = None,
+) -> None:
     try:
         os.makedirs(LOG_API_DIR, exist_ok=True)
         mode = str(payload.get("options", {}).get("mode", "")).strip().lower()
@@ -27,10 +31,14 @@ def write_level_or_run_input_log(payload: Dict[str, Any], messages: List[Dict[st
             "request_to_qwen": {
                 **payload,
                 "messages": messages,
+                "use_lora_input": payload.get("use_lora"),
+                "use_lora_effective": use_lora,
             },
             "request": {
                 **payload,
                 "messages": messages,
+                "use_lora_input": payload.get("use_lora"),
+                "use_lora_effective": use_lora,
             },
         }
         with open(file_path, "w", encoding="utf-8") as f:
@@ -109,7 +117,7 @@ def create_openclaw_handler(
         else:
             rag_prompt = ""
 
-        write_level_or_run_input_log(payload, messages)
+        write_level_or_run_input_log(payload, messages, use_lora=use_lora)
 
         generation = qwen_context.generate_rag_response(
             messages=messages,

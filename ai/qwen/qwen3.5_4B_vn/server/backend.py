@@ -295,7 +295,10 @@ def unwrap_request_payload(payload: Dict[str, Any]) -> Dict[str, Any]:
 
     inner_payload = payload.get("request")
     if isinstance(inner_payload, dict):
-        return inner_payload
+        merged_payload = dict(payload)
+        merged_payload.pop("request", None)
+        merged_payload.update(inner_payload)
+        return merged_payload
 
     return payload
 
@@ -464,9 +467,6 @@ def register_backend_routes(
                     "raw": {"error": str(exc)},
                 }
             ), 500
-
-
-
 
 
 

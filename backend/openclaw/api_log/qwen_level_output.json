@@ -1,11 +1,20 @@
 {
-  "timestamp": "2026-07-24T04:27:01.950Z",
+  "timestamp": "2026-07-28T02:16:43.168Z",
   "request": {
-    "session_id": "qwen-api-1784867220990-79b28e5bc4bdc",
-    "turn_id": "msg-1784867221002-6477456f4eb23",
+    "session_id": "qwen-api-1785204987086-30b90d17d6678",
+    "turn_id": "msg-1785205002114-d9f010875901d",
     "system_context": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.",
-    "user_message": "chào bạn",
-    "history": [],
+    "user_message": "hà nội có quán gì ăn không",
+    "history": [
+      {
+        "role": "user",
+        "content": "chào bạn yêu"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ vâng ạ."
+      }
+    ],
     "scenario": "customer_consulting",
     "user_state": {},
     "runtime": {
@@ -31,8 +40,8 @@
       "stage": "level"
     },
     "model": "Qwen3.5-4B-V4",
-    "user": "qwen-api-1784867220990-79b28e5bc4bdc",
-    "session_key": "qwen-api-1784867220990-79b28e5bc4bdc",
+    "user": "qwen-api-1785204987086-30b90d17d6678",
+    "session_key": "qwen-api-1785204987086-30b90d17d6678",
     "messages": [
       {
         "role": "system",
@@ -40,7 +49,15 @@
       },
       {
         "role": "user",
-        "content": "chào bạn"
+        "content": "chào bạn yêu"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ vâng ạ."
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không"
       }
     ],
     "temperature": 0.5,
@@ -58,26 +75,26 @@
           "finish_reason": "stop",
           "index": 0,
           "message": {
-            "content": "1",
+            "content": "3",
             "role": "assistant"
           }
         }
       ],
-      "created": 1784867229,
+      "created": 1785205006,
       "enable_thinking": false,
-      "id": "chatcmpl-level-20260724042709",
+      "id": "chatcmpl-level-20260728021646",
       "model": "Qwen3.5-4B-V4",
-      "normalized_level": "1",
+      "normalized_level": "3",
       "object": "chat.completion",
-      "output_text": "1",
+      "output_text": "3",
       "rag_top_k": 4,
-      "raw_output": "1",
-      "reply": "1",
+      "raw_output": "3.",
+      "reply": "3",
       "usage": null,
       "use_lora": false,
       "use_rag": false
     },
-    "reply": "1",
+    "reply": "3",
     "state_patch": {},
     "tool_calls": [],
     "usage": null

@@ -4557,6 +4557,7 @@
       {
         "role": "user",
         "content": "chào bạn",
+        "response_id": null,
         "created_at": "2026-07-24T04:27:04.936Z"
       },
       {
@@ -4564,6 +4565,42 @@
         "content": "Chào anh! Mình là trợ lý của trang tuongtac.tv. Anh cần tìm dịch vụ, quán ăn hay địa điểm nào ở quanh đây không?",
         "response_id": "chatcmpl_3b731a56-471b-43a9-9856-bd9c83e34ac6",
         "created_at": "2026-07-24T04:27:04.936Z"
+      },
+      {
+        "role": "user",
+        "content": "chào bạn nhiều nhé",
+        "response_id": null,
+        "created_at": "2026-07-27T04:34:46.781Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ vâng ạ.",
+        "response_id": "chatcmpl_d74d141b-f13f-483f-b649-fba5cd45e0da",
+        "created_at": "2026-07-27T04:34:46.781Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-27T04:35:00.708Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ em là Qwen32B, một mô hình ngôn ngữ lớn được phát triển bởi Alibaba Cloud.",
+        "response_id": "chatcmpl_34fc77ac-c40e-4514-808b-790f0cdb6c83",
+        "created_at": "2026-07-27T04:35:00.708Z"
+      },
+      {
+        "role": "user",
+        "content": "tôi vừa nhắn gì",
+        "response_id": null,
+        "created_at": "2026-07-27T04:35:12.922Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ anh có thể xem nội dung tin nhắn mới nhất anh đã gửi đi ở đây ạ.",
+        "response_id": "chatcmpl_61e53f49-91ba-4161-921c-db520c003de0",
+        "created_at": "2026-07-27T04:35:12.922Z"
       }
     ]
   },
@@ -6900,6 +6937,188 @@
         "content": "Dựa trên danh sách menu của **Nhà Hàng Hương Hội An** (khu vực Hà Nội), đây là các món ăn nổi bật được cung cấp:\n\n**1. Các món Lẩu & Gà (Thứ tự hiển thị: 2)**\n*   **Lẩu gà tiềm ớt**\n*   **Lẩu bò nhúng ớt**\n*   **Mẹt gà đặc biệt**\n*   **Gà nướng lá chanh**\n*   **Mẹt đồ nướng Miền Trung**\n*   **Gà chặt 1/4 lườn**\n\n**2. Khai vị (Thứ tự hiển thị: 0)**\n*   **Gỏi chân gà rút xương**\n*   **Bò cuốn lá lốt**\n*   **Nem lụi**\n*   **Cánh gà chiên mắm**\n*   **Nem gà nấm**\n*   **Chân gà chiên mắm**\n*   **Tràng trứng cháy tỏi**\n*   *(Lưu ý: Bún trộn thịt nướng, Cơm Xá Xíu Hội An, Bò nướng lá Lốt cũng được liệt kê chung trong layout này nhưng thường là món chính).*\n\n**3. Các món Cơm (Thứ tự hiển thị: 1)**\n*   **Cơm Thịt Heo Nướng Ngũ Vị**\n*   **Cơm cánh gà sốt Rôti**\n*   **Cơm xá xíu Hội An**\n*   **Cơm gà xào nấm**\n*   **Cơm gà cuộn sốt nấm**\n*   **Cơm gà Hội An đặc biệt**\n*   **Cơm gà Hội An thường**\n\n**4. Thông tin bổ sung**\n*   **Tên cửa hàng:** Nhà Hàng Hương Hội An.\n*   **Khu vực:** Hà Nội.\n*   **Đặc điểm nổi bật:** Được quảng bá là nơi mang \"Hương vị Hội An thu nhỏ ngay giữa lòng Hà Nội\", nổi tiếng với cơm gà Hội An và bún thịt nướng.\n*   **Trạng thái:** Các món đều nằm trong menu hiện có.\n\nTất cả các món trên đều phù hợp với nhu cầu ăn uống tại Nhà Hàng Hương Hội An và không có thông tin nào bị loại bỏ.",
         "response_id": "chatcmpl_33a7655f-2283-441c-aeb0-f9bbadfe2919",
         "created_at": "2026-07-24T02:47:37.915Z"
+      }
+    ]
+  },
+  {
+    "user_id": 40,
+    "history": [
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-27T04:35:48.148Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ mình đang liên hệ tới phần mềm hỗ trợ quản lý bán hàng đa kênh online DooPage ạ.",
+        "response_id": "chatcmpl_87c890e7-d053-4f83-bbf3-e385a94f249b",
+        "created_at": "2026-07-27T04:35:48.148Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-27T04:36:24.403Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ mình đang liên hệ tới phần mềm hỗ trợ quản lý bán hàng đa kênh online DooPage ạ.",
+        "response_id": "chatcmpl_b1d0bc65-fc3b-4421-b098-d31be2c726e2",
+        "created_at": "2026-07-27T04:36:24.403Z"
+      },
+      {
+        "role": "user",
+        "content": "vâng cảm ơn",
+        "response_id": null,
+        "created_at": "2026-07-27T04:36:48.671Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ vâng ạ.",
+        "response_id": "chatcmpl_cbfe6de8-0756-4241-af31-0bf48a077d56",
+        "created_at": "2026-07-27T04:36:48.671Z"
+      }
+    ]
+  },
+  {
+    "user_id": 41,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-27T05:04:23.386Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ em là phần mềm hỗ trợ tìm kiếm dịch vụ, sản phẩm và địa điểm quanh người dùng trên trang <liên kết>.",
+        "response_id": "chatcmpl_181f648f-73f2-4991-87aa-23d25ea905e4",
+        "created_at": "2026-07-27T05:04:23.386Z"
+      },
+      {
+        "role": "user",
+        "content": "dạ cảm ơn",
+        "response_id": null,
+        "created_at": "2026-07-27T05:04:36.096Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ vâng ạ.",
+        "response_id": "chatcmpl_6cb15500-6965-4aec-87f1-24bf3119f3b9",
+        "created_at": "2026-07-27T05:04:36.096Z"
+      },
+      {
+        "role": "user",
+        "content": "t vừa nói gì",
+        "response_id": null,
+        "created_at": "2026-07-27T05:04:48.796Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ chị vừa nhắn tin cho DooPage để được hỗ trợ thêm thông tin ạ.",
+        "response_id": "chatcmpl_aad984e6-7885-4ba3-bbc1-8ef71fc7ec8a",
+        "created_at": "2026-07-27T05:04:48.796Z"
+      },
+      {
+        "role": "user",
+        "content": "t vừa hỏi gì",
+        "response_id": null,
+        "created_at": "2026-07-27T05:05:17.540Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ chị vừa nhắn tin cho DooPage để được hỗ trợ thêm thông tin ạ.",
+        "response_id": "chatcmpl_0a14fa1f-14fb-4bde-b4eb-3a7e51b24c95",
+        "created_at": "2026-07-27T05:05:17.540Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có món gì ngon",
+        "response_id": null,
+        "created_at": "2026-07-27T05:06:27.454Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ hiện tại phần mềm đang không có thông tin về món ăn ở hà nội ạ.",
+        "response_id": "chatcmpl_420d3ec7-e044-4c9d-abe3-9a7c21ec3202",
+        "created_at": "2026-07-27T05:06:27.454Z"
+      },
+      {
+        "role": "user",
+        "content": "chào",
+        "response_id": null,
+        "created_at": "2026-07-28T01:59:45.459Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ vâng ạ.",
+        "response_id": "chatcmpl_8cddf744-17c1-4d2d-ae67-cbfb013a6d59",
+        "created_at": "2026-07-28T01:59:45.459Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-28T02:00:11.045Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ em là phần mềm hỗ trợ tìm kiếm dịch vụ, sản phẩm, địa điểm quanh người dùng trên trang <liên kết> ạ.",
+        "response_id": "chatcmpl_5554c333-1204-4453-a2ee-14df5e7d00ef",
+        "created_at": "2026-07-28T02:00:11.045Z"
+      },
+      {
+        "role": "user",
+        "content": "Hà Nội có món gì ngon ko",
+        "response_id": null,
+        "created_at": "2026-07-28T02:01:04.554Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ bên em có thể hỗ trợ gì cho anh ạ?",
+        "response_id": "chatcmpl_af4c9b09-7bdb-44e2-aadb-05e7b0353d61",
+        "created_at": "2026-07-28T02:01:04.554Z"
+      },
+      {
+        "role": "user",
+        "content": "Hà Nội có món gì ngon ko",
+        "response_id": null,
+        "created_at": "2026-07-28T02:05:24.514Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ Hà Nội có rất nhiều món ngon ạ. Một số món nổi tiếng như phở, bánh cuốn, bún đậu, nem nướng, thịt kho tàu, gỏi cá, và nhiều món nữa ạ.",
+        "response_id": "chatcmpl_8b528a7d-7776-446a-b1b9-eed9a5a64c57",
+        "created_at": "2026-07-28T02:05:24.514Z"
+      }
+    ]
+  },
+  {
+    "user_id": 42,
+    "history": [
+      {
+        "role": "user",
+        "content": "chào bạn yêu",
+        "response_id": null,
+        "created_at": "2026-07-28T02:16:29.556Z"
+      },
+      {
+        "role": "assistant",
+        "content": "dạ vâng ạ.",
+        "response_id": "chatcmpl_4b61c4bf-1b38-45f7-8c5a-35829b4c814d",
+        "created_at": "2026-07-28T02:16:29.556Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không",
+        "created_at": "2026-07-28T02:16:58.003Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Dạ hiện tại DooPage không có thông tin về các quán ăn tại Hà Nội ạ.",
+        "response_id": "chatcmpl_5744398c-c48e-4ec3-803b-e132919f5ea8",
+        "created_at": "2026-07-28T02:16:58.003Z"
       }
     ]
   }

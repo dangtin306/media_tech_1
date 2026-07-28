@@ -296,6 +296,27 @@ def build_v4_rag_prompt(context_text: str) -> str:
     return build_v4_rag_system_prompt(context_text)
 
 
+def build_v4_rag_user_prompt(
+    context_text: str,
+    user_content: str,
+    enable_thinking: bool = False,
+) -> str:
+    base_prompt = build_v4_rag_system_prompt(
+        context_text=context_text,
+        enable_thinking=enable_thinking,
+    )
+    user_content = stringify_content(user_content)
+
+    if not user_content:
+        user_content = "Xin chào"
+
+    return (
+        f"{base_prompt}\n\n"
+        "Câu hỏi của người dùng:\n"
+        f"{user_content}"
+    )
+
+
 def prepare_v4_rag_context(
     messages: List[Dict[str, str]],
     top_k: int,
@@ -440,7 +461,11 @@ def generate_v4_rag_answer(
         },
         {
             "role": "user",
-            "content": last_user_content,
+            "content": build_v4_rag_user_prompt(
+                context_text=context_text,
+                user_content=last_user_content,
+                enable_thinking=enable_thinking,
+            ),
         },
     ]
 
