@@ -1,0 +1,39 @@
+services:
+  backend:
+    image: n8nio/n8n:latest
+    container_name: media_tech_ai_backend
+    working_dir: /workspace/backend
+    volumes:
+      - ../../..:/workspace
+    environment:
+      PORT: "8006"
+    entrypoint: ["node"]
+    command: ["server.js"]
+
+  openclaw:
+    image: n8nio/n8n:latest
+    container_name: media_tech_ai_openclaw
+    working_dir: /workspace/server/docker/cloud_model
+    volumes:
+      - ../../..:/workspace
+    environment:
+      PORT: "8796"
+      WS_PATH: "/chatbot/gpu"
+    entrypoint: ["node"]
+    command: ["openclaw.js"]
+
+  frontend:
+    image: n8nio/n8n:latest
+    container_name: media_tech_ai_fontend
+    working_dir: /workspace/fontend
+    volumes:
+      - ../../..:/workspace
+    environment:
+      PORT: "8008"
+      HOST: "0.0.0.0"
+      CHAT_API_URL: "http://backend:8006/chat_bot/api"
+      NUXT_PUBLIC_CHAT_API_URL: "http://backend:8006/chat_bot/api"
+    entrypoint: ["node"]
+    command: [".output/server/index.mjs"]
+    ports:
+      - "8008:8008"

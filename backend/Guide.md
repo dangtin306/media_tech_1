@@ -1,4 +1,4 @@
-# Media Tech Backend Guide
+﻿# Media Tech Backend Guide
 
 ## Run
 
@@ -18,7 +18,7 @@ Biến đang dùng:
 - `OPENAI_API_KEY`
 - `PORT` mặc định là `8006`
 - `QDRANT_URL` mặc định là `http://localhost:6333`
-- `QDRANT_COLLECTION` mặc định lấy từ `llms\media_tech\ai\qdrant\data_1\qdrant_collection_config.json`
+- `QDRANT_COLLECTION` mặc định lấy từ `llms\media_tech_ai\ai\qdrant\data_1\qdrant_collection_config.json`
 - `QDRANT_PYTHON_BIN` mặc định là `python`
 
 ## Base URL
@@ -49,7 +49,7 @@ curl http://localhost:8006/health
 
 Vai trò:
 - nếu không có `query`: trả info collection từ Qdrant
-- nếu có `query`: search text trên collection Qdrant bằng logic hash 384 của bộ `llms\media_tech\ai\qdrant\data_1`
+- nếu có `query`: search text trên collection Qdrant bằng logic hash 384 của bộ `llms\media_tech_ai\ai\qdrant\data_1`
 
 Ví dụ lấy info collection:
 
@@ -202,3 +202,4 @@ Các route test đang tồn tại:
 - `open_ai/users/users_token.json`: mapping `chat_token -> user_id`
 - `open_ai/users/test_ai_2.json`: state test cho `/test_ai_2`
 - `open_ai/users/test_ai_3.json`: state test cho `/test_ai_3`
+

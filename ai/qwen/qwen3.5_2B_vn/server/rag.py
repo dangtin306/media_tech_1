@@ -1,4 +1,4 @@
-import json
+﻿import json
 import os
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
@@ -25,8 +25,8 @@ def _resolve_corpus_path() -> str:
     base_dir = os.path.dirname(__file__)
     candidates = [
         os.path.abspath(os.path.join(base_dir, "..", "train_vn", "datasheet", "rag_corpus.jsonl")),
-        r"D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_2B_vn\train_vn\datasheet\rag_corpus.jsonl",
-        "/root/media_tech/ai/qwen/qwen3.5_2B_vn/train_vn/datasheet/rag_corpus.jsonl",
+        r"D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_2B_vn\train_vn\datasheet\rag_corpus.jsonl",
+        "/root/media_tech_ai/ai/qwen/qwen3.5_2B_vn/train_vn/datasheet/rag_corpus.jsonl",
     ]
     for candidate in candidates:
         if os.path.isfile(candidate):
@@ -182,3 +182,6 @@ def get_rag_index() -> RagIndex:
 
 def retrieve_context(question: str, top_k: int = TOP_K_DEFAULT) -> RetrievalResult:
     return get_rag_index().retrieve(question, top_k=top_k)
+
+
+

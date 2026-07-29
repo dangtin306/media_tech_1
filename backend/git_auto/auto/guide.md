@@ -1,31 +1,32 @@
-## Git Auto Guide
+﻿## Git Auto Guide
 
-Script chính:
-
-```powershell
-python D:\hustmedia\python\llms\media_tech\backend\git_auto\auto\test.py --repo D:\hustmedia\python\llms\media_tech\backend\git_auto\project_test -m "auto push"
-```
-
-Nếu đang đứng ngay trong repo cần đẩy:
+Script chĂ­nh:
 
 ```powershell
-python D:\hustmedia\python\llms\media_tech\backend\git_auto\auto\test.py
+python D:\hustmedia\python\llms\media_tech_ai\backend\git_auto\auto\test.py --repo D:\hustmedia\python\llms\media_tech_ai\backend\git_auto\project_test -m "auto push"
 ```
 
-Lệnh này sẽ:
+Náº¿u Ä‘ang Ä‘á»©ng ngay trong repo cáº§n Ä‘áº©y:
 
-1. Tìm root repo Git.
-2. Dọn cache phổ biến như `__pycache__`, `.pytest_cache`, `*.pyc`.
+```powershell
+python D:\hustmedia\python\llms\media_tech_ai\backend\git_auto\auto\test.py
+```
+
+Lá»‡nh nĂ y sáº½:
+
+1. TĂ¬m root repo Git.
+2. Dá»n cache phá»• biáº¿n nhÆ° `__pycache__`, `.pytest_cache`, `*.pyc`.
 3. `git add .`
-4. Commit nếu có thay đổi.
-5. Push lên `origin`.
+4. Commit náº¿u cĂ³ thay Ä‘á»•i.
+5. Push lĂªn `origin`.
 
-Gợi ý quy trình thủ công nếu cần:
+Gá»£i Ă½ quy trĂ¬nh thá»§ cĂ´ng náº¿u cáº§n:
 
 ```powershell
-cd D:\hustmedia\python\llms\media_tech\backend\git_auto\project_test
+cd D:\hustmedia\python\llms\media_tech_ai\backend\git_auto\project_test
 git status
 git add .
 git commit -m "update"
 git push
 ```
+

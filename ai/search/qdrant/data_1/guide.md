@@ -1,11 +1,11 @@
-# Guide `llms/media_tech/ai/search/qdrant/data_1`
+﻿# Guide `llms/media_tech_ai/ai/search/qdrant/data_1`
 
-Tài liệu này mô tả bộ file Qdrant trong thư mục `D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1` và các lệnh chạy tương ứng.
+TĂ i liá»‡u nĂ y mĂ´ táº£ bá»™ file Qdrant trong thÆ° má»¥c `D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1` vĂ  cĂ¡c lá»‡nh cháº¡y tÆ°Æ¡ng á»©ng.
 
-## 1) Cấu trúc file
+## 1) Cáº¥u trĂºc file
 
 ```text
-D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\
+D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\
   qdrant_collection_config.json
   qdrant_documents_payload.jsonl
   qdrant_id_mapping.jsonl
@@ -15,102 +15,104 @@ D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\
   guide.md
 ```
 
-## 2) Ý nghĩa từng file
+## 2) Ă nghÄ©a tá»«ng file
 
 - `qdrant_collection_config.json`
-  - cấu hình collection, hiện dùng:
+  - cáº¥u hĂ¬nh collection, hiá»‡n dĂ¹ng:
     - `collection_name`: `dulich_demo`
     - `vector_size`: `384`
     - `distance`: `Cosine`
 - `qdrant_documents_payload.jsonl`
-  - dữ liệu payload gốc của document/store
+  - dá»¯ liá»‡u payload gá»‘c cá»§a document/store
 - `qdrant_id_mapping.jsonl`
-  - mapping giữa `qdrant_int_id`, `point_uid`, `source_table`, `source_id`
+  - mapping giá»¯a `qdrant_int_id`, `point_uid`, `source_table`, `source_id`
 - `qdrant_points_intid_hash384.jsonl`
-  - danh sách point đã có `id`, `vector`, `payload` để upsert vào Qdrant
+  - danh sĂ¡ch point Ä‘Ă£ cĂ³ `id`, `vector`, `payload` Ä‘á»ƒ upsert vĂ o Qdrant
 - `qdrant_upsert_hash384_fixed.py`
-  - script tạo collection và upsert dữ liệu
+  - script táº¡o collection vĂ  upsert dá»¯ liá»‡u
 - `qdrant_query_hash384.py`
-  - script query/search Qdrant bằng cùng logic vector hóa
+  - script query/search Qdrant báº±ng cĂ¹ng logic vector hĂ³a
 
-## 3) Chuẩn chạy local
+## 3) Chuáº©n cháº¡y local
 
-Yêu cầu:
-- Qdrant đang chạy tại `http://localhost:6333`
-- Python đã cài `scikit-learn`
+YĂªu cáº§u:
+- Qdrant Ä‘ang cháº¡y táº¡i `http://localhost:6333`
+- Python Ä‘Ă£ cĂ i `scikit-learn`
 
-Cài dependency nếu thiếu:
+CĂ i dependency náº¿u thiáº¿u:
 
 ```powershell
 pip install scikit-learn
 ```
 
-## 4) Lệnh tạo collection và upsert
+## 4) Lá»‡nh táº¡o collection vĂ  upsert
 
-### 4.1 Upsert mặc định
-
-```powershell
-python "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_upsert_hash384_fixed.py" --url "http://localhost:6333" --collection "dulich_demo" --file "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_points_intid_hash384.jsonl"
-```
-
-### 4.2 Xóa collection cũ rồi tạo lại
+### 4.1 Upsert máº·c Ä‘á»‹nh
 
 ```powershell
-python "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_upsert_hash384_fixed.py" --url "http://localhost:6333" --collection "dulich_demo" --file "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_points_intid_hash384.jsonl" --recreate
+python "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_upsert_hash384_fixed.py" --url "http://localhost:6333" --collection "dulich_demo" --file "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_points_intid_hash384.jsonl"
 ```
 
-### 4.3 Đổi batch size khi upsert
+### 4.2 XĂ³a collection cÅ© rá»“i táº¡o láº¡i
 
 ```powershell
-python "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_upsert_hash384_fixed.py" --url "http://localhost:6333" --collection "dulich_demo" --file "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_points_intid_hash384.jsonl" --batch-size 256
+python "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_upsert_hash384_fixed.py" --url "http://localhost:6333" --collection "dulich_demo" --file "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_points_intid_hash384.jsonl" --recreate
 ```
 
-## 5) Lệnh query/search
-
-### 5.1 Query cơ bản
+### 4.3 Äá»•i batch size khi upsert
 
 ```powershell
-python "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_query_hash384.py" --url "http://localhost:6333" --collection "dulich_demo" --query "quán trà sữa ở hải phòng"
+python "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_upsert_hash384_fixed.py" --url "http://localhost:6333" --collection "dulich_demo" --file "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_points_intid_hash384.jsonl" --batch-size 256
 ```
 
-### 5.2 Query với số kết quả trả về tùy chỉnh
+## 5) Lá»‡nh query/search
+
+### 5.1 Query cÆ¡ báº£n
 
 ```powershell
-python "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_query_hash384.py" --url "http://localhost:6333" --collection "dulich_demo" --query "spa ở hà nội" --limit 10
+python "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_query_hash384.py" --url "http://localhost:6333" --collection "dulich_demo" --query "quĂ¡n trĂ  sá»¯a á»Ÿ háº£i phĂ²ng"
 ```
 
-## 6) Quy trình chạy đầy đủ
-
-1. Kiểm tra Qdrant đang chạy tại `http://localhost:6333`.
-2. Chạy script upsert để tạo collection và nạp dữ liệu.
-3. Chạy script query để kiểm tra kết quả tìm kiếm.
-
-Ví dụ:
+### 5.2 Query vá»›i sá»‘ káº¿t quáº£ tráº£ vá» tĂ¹y chá»‰nh
 
 ```powershell
-python "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_upsert_hash384_fixed.py" --url "http://localhost:6333" --collection "dulich_demo" --file "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_points_intid_hash384.jsonl" --recreate
-python "D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\qdrant_query_hash384.py" --url "http://localhost:6333" --collection "dulich_demo" --query "hair salon ở hà nội"
+python "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_query_hash384.py" --url "http://localhost:6333" --collection "dulich_demo" --query "spa á»Ÿ hĂ  ná»™i" --limit 10
 ```
 
-## 7) Ghi chú kỹ thuật
+## 6) Quy trĂ¬nh cháº¡y Ä‘áº§y Ä‘á»§
 
-- Vector được tạo bằng `HashingVectorizer` với:
+1. Kiá»ƒm tra Qdrant Ä‘ang cháº¡y táº¡i `http://localhost:6333`.
+2. Cháº¡y script upsert Ä‘á»ƒ táº¡o collection vĂ  náº¡p dá»¯ liá»‡u.
+3. Cháº¡y script query Ä‘á»ƒ kiá»ƒm tra káº¿t quáº£ tĂ¬m kiáº¿m.
+
+VĂ­ dá»¥:
+
+```powershell
+python "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_upsert_hash384_fixed.py" --url "http://localhost:6333" --collection "dulich_demo" --file "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_points_intid_hash384.jsonl" --recreate
+python "D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\qdrant_query_hash384.py" --url "http://localhost:6333" --collection "dulich_demo" --query "hair salon á»Ÿ hĂ  ná»™i"
+```
+
+## 7) Ghi chĂº ká»¹ thuáº­t
+
+- Vector Ä‘Æ°á»£c táº¡o báº±ng `HashingVectorizer` vá»›i:
   - `n_features=384`
   - `analyzer="char_wb"`
   - `ngram_range=(3,5)`
   - `alternate_sign=False`
   - `norm="l2"`
-- Đây là cách test nhanh local.
-- Nếu chuyển sang production, nên thay bằng embedding thật như:
+- ÄĂ¢y lĂ  cĂ¡ch test nhanh local.
+- Náº¿u chuyá»ƒn sang production, nĂªn thay báº±ng embedding tháº­t nhÆ°:
   - `OpenAI text-embedding-3-small`
   - `Qwen Embedding`
   - `bge-m3`
 
-## 8) Lỗi thường gặp
+## 8) Lá»—i thÆ°á»ng gáº·p
 
 - `Connection refused`:
-  - Qdrant chưa chạy hoặc sai `--url`
+  - Qdrant chÆ°a cháº¡y hoáº·c sai `--url`
 - `HTTP 404` khi search/upsert:
-  - collection chưa được tạo hoặc sai tên collection
+  - collection chÆ°a Ä‘Æ°á»£c táº¡o hoáº·c sai tĂªn collection
 - `ModuleNotFoundError: sklearn`:
-  - chạy `pip install scikit-learn`
+  - cháº¡y `pip install scikit-learn`
+
+

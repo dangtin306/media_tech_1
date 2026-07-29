@@ -5803,6 +5803,18 @@
         "content": "dạ mình cần tìm quán ăn trong khu vực quận hai bà trưng hả anh?",
         "response_id": "chatcmpl_028e8f8a-1464-494d-8403-df0a3c28f49a",
         "created_at": "2026-07-21T09:23:59.990Z"
+      },
+      {
+        "role": "user",
+        "content": "Chào",
+        "response_id": null,
+        "created_at": "2026-07-29T02:45:59.749Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh! Mình là trợ lý của trang **tuongtac.tv**. Anh cần tìm dịch vụ, quán ăn, sản phẩm hay địa điểm nào quanh đây không?",
+        "response_id": "chatcmpl_9dc9a2f7-98f7-4c15-9631-d41e4048cb2d",
+        "created_at": "2026-07-29T02:45:59.749Z"
       }
     ]
   },
@@ -6937,6 +6949,29 @@
         "content": "Dựa trên danh sách menu của **Nhà Hàng Hương Hội An** (khu vực Hà Nội), đây là các món ăn nổi bật được cung cấp:\n\n**1. Các món Lẩu & Gà (Thứ tự hiển thị: 2)**\n*   **Lẩu gà tiềm ớt**\n*   **Lẩu bò nhúng ớt**\n*   **Mẹt gà đặc biệt**\n*   **Gà nướng lá chanh**\n*   **Mẹt đồ nướng Miền Trung**\n*   **Gà chặt 1/4 lườn**\n\n**2. Khai vị (Thứ tự hiển thị: 0)**\n*   **Gỏi chân gà rút xương**\n*   **Bò cuốn lá lốt**\n*   **Nem lụi**\n*   **Cánh gà chiên mắm**\n*   **Nem gà nấm**\n*   **Chân gà chiên mắm**\n*   **Tràng trứng cháy tỏi**\n*   *(Lưu ý: Bún trộn thịt nướng, Cơm Xá Xíu Hội An, Bò nướng lá Lốt cũng được liệt kê chung trong layout này nhưng thường là món chính).*\n\n**3. Các món Cơm (Thứ tự hiển thị: 1)**\n*   **Cơm Thịt Heo Nướng Ngũ Vị**\n*   **Cơm cánh gà sốt Rôti**\n*   **Cơm xá xíu Hội An**\n*   **Cơm gà xào nấm**\n*   **Cơm gà cuộn sốt nấm**\n*   **Cơm gà Hội An đặc biệt**\n*   **Cơm gà Hội An thường**\n\n**4. Thông tin bổ sung**\n*   **Tên cửa hàng:** Nhà Hàng Hương Hội An.\n*   **Khu vực:** Hà Nội.\n*   **Đặc điểm nổi bật:** Được quảng bá là nơi mang \"Hương vị Hội An thu nhỏ ngay giữa lòng Hà Nội\", nổi tiếng với cơm gà Hội An và bún thịt nướng.\n*   **Trạng thái:** Các món đều nằm trong menu hiện có.\n\nTất cả các món trên đều phù hợp với nhu cầu ăn uống tại Nhà Hàng Hương Hội An và không có thông tin nào bị loại bỏ.",
         "response_id": "chatcmpl_33a7655f-2283-441c-aeb0-f9bbadfe2919",
         "created_at": "2026-07-24T02:47:37.915Z"
+      },
+      {
+        "role": "user",
+        "content": "chào",
+        "response_id": null,
+        "created_at": "2026-07-29T09:05:20.074Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh! Cần tìm dịch vụ, quán ăn hay địa điểm nào quanh anh không?",
+        "response_id": "chatcmpl_eac94556-9a4b-458b-a998-1a93d24d6508",
+        "created_at": "2026-07-29T09:05:20.074Z"
+      },
+      {
+        "role": "user",
+        "content": "chào",
+        "created_at": "2026-07-29T09:18:43.430Z"
+      },
+      {
+        "role": "assistant",
+        "content": "{\"ok\":true,\"source\":\"gpu-sim\",\"response\":\"SIMULATED GPU RESPONSE: xin chao\",\"output_text\":\"SIMULATED GPU RESPONSE: xin chao\",\"echo\":null}",
+        "response_id": "gpu-sim-1785316723411",
+        "created_at": "2026-07-29T09:18:43.430Z"
       }
     ]
   },
@@ -7244,6 +7279,7 @@
       {
         "role": "user",
         "content": "cảm ơn",
+        "response_id": null,
         "created_at": "2026-07-28T11:15:07.727Z"
       },
       {
@@ -7251,6 +7287,30 @@
         "content": "Bạn có cần tôi hỗ trợ gì thêm không?",
         "response_id": "chatcmpl_1581227e-acd3-479f-bae4-5cf917cb4fe6",
         "created_at": "2026-07-28T11:15:07.727Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có món gì ngon ko",
+        "response_id": null,
+        "created_at": "2026-07-29T03:05:02.706Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi khi gọi API Qwen backend: HTTP 500: {\"ok\":false,\"error\":\"GPU websocket response timeout after 40000ms\"}",
+        "response_id": "chatcmpl_b44ea496-fca1-4f77-a2de-fea7a50c8607",
+        "created_at": "2026-07-29T03:05:02.706Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có món gì ngon ko",
+        "response_id": null,
+        "created_at": "2026-07-29T03:05:56.256Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn, dưới đây là thông tin về các món ngon tại các nhà hàng trong khu vực Hà Nội dựa trên dữ liệu đã cung cấp:\n\n**1. Nhà Hàng Chay Phương Mai (Phù hợp nhất cho nhu cầu tìm quán cơm Việt ấm áp giữa Hà Nội):**\nĐây là lựa chọn nổi bật nếu bạn đang tìm kiếm không gian và hương vị gợi nhớ về \"Bếp tuổi thơ\". Menu món ăn nhẹ tại đây bao gồm: Cá ngừ kho tộ, Bò xào dưa cải chua, Rau muống xào tỏi, Gà ta kho gừng, Bánh tráng cuốn thịt heo, Mỳ quảng gà đặc biệt, Gỏi bưởi tôm thịt, Cá nục cuốn rau muống, Thịt kho tàu, Ba chỉ luộc, Trứng chiên hành, Thịt rim.\n*   **Đặc điểm:** Suất mẹ nấu 1 người, chế độ hiển thị grid.\n\n**2. Nhà Hàng Hương Hội An (Phù hợp cho các món ăn giải ngấy sau Tết hoặc món đặc trưng miền Trung):**\nNhà hàng này cung cấp nhiều lựa chọn đa dạng, đặc biệt là các món cơm và lẩu.\n*   **Menu Cơm gà Hội An:** Bao gồm Cơm Xá Xíu Hội An, Cơm Thịt Heo Nướng Ngũ Vị, Cơm cánh gà sốt Rôti, Cơm xá xíu Hội An, Cơm gà xào nấm, Cơm gà cuộn sốt nấm, Cơm gà Hội An đặc biệt, Cơm gà Hội An thường (lẫn).\n*   **Menu Các món lẩu - Gà:** Bao gồm Lẩu gà tiềm ớt, Lẩu bò nhúng ớt, Mẹt gà đặc biệt, Gà nướng lá chanh, Mẹt đồ nướng Miền Trung, Gà chặt 1/4 lườn.\n*   **Các món khác:** Bún trộn thịt nướng, Bò nướng lá Lốt.\n*   **Đặc điểm:** Chế độ hiển thị grid.\n\n**3. NHÀ HÀNG TRÚC AN (Phù hợp cho các món ăn chính đậm đà):**\nNếu bạn muốn thưởng thức các món nướng và ăn chính truyền thống, nhà hàng này có menu: Gà nướng mật ong, Chim câu xúc phồng tôm, Cá lăng hấp bia, Gà rang muối, Combo chân giò, Cá dầm xanh nướng.\n*   **Đặc điểm:** Chế độ hiển thị grid.\n\n**Tóm lại:**\n*   Nếu muốn tìm **quán cơm Việt ấm áp** với nhiều",
+        "response_id": "chatcmpl_8b1661ab-fca9-4691-be69-6d5a944d9d54",
+        "created_at": "2026-07-29T03:05:56.256Z"
       }
     ]
   },

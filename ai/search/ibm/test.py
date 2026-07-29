@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import json
@@ -24,8 +24,8 @@ def _resolve_corpus_path() -> Path:
     base_dir = Path(__file__).resolve().parents[2]
     candidates = [
         base_dir / "datasheet" / "rag_media_tech.jsonl",
-        Path(r"D:\hustmedia\python\llms\media_tech\ai\datasheet\rag_media_tech.jsonl"),
-        Path("/root/media_tech/ai/datasheet/rag_media_tech.jsonl"),
+        Path(r"D:\hustmedia\python\llms\media_tech_ai\ai\datasheet\rag_media_tech.jsonl"),
+        Path("/root/media_tech_ai/ai/datasheet/rag_media_tech.jsonl"),
     ]
     for candidate in candidates:
         if candidate.is_file():
@@ -131,7 +131,7 @@ def main() -> None:
     parser.add_argument("--device", default="", help="cpu, cuda, mps, or empty for auto")
     parser.add_argument(
         "--query",
-        default="Cafe Mộc có trà đào không?",
+        default="Cafe Má»™c cĂ³ trĂ  Ä‘Ă o khĂ´ng?",
         help="Query text to search in the corpus",
     )
     parser.add_argument(
@@ -203,3 +203,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+

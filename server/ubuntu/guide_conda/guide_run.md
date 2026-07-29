@@ -51,13 +51,13 @@ Phai thay du:
 ## Smoke test
 
 ```bash
-python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py --smoke_test
+python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py --smoke_test
 ```
 
 ## Smoke test 4bit
 
 ```bash
-python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
+python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
   --smoke_test \
   --use_4bit \
   --checkpointing \
@@ -70,13 +70,13 @@ python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
 ## Train co ban
 
 ```bash
-python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py
+python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py
 ```
 
 ## Train co ban voi 4bit
 
 ```bash
-python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
+python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
   --use_4bit
 ```
 
@@ -87,7 +87,7 @@ Windows dung de chay server va test nhanh. Neu `--use_4bit` chay on dinh thi co 
 ## Train khuyen nghi
 
 ```bash
-python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
+python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
   --use_4bit \
   --checkpointing \
   --runtime_offload deepspeed \
@@ -99,7 +99,7 @@ python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
 ## Train an toan hon neu van OOM
 
 ```bash
-python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
+python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
   --use_4bit \
   --checkpointing \
   --runtime_offload deepspeed \
@@ -111,7 +111,7 @@ python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
 ## Train cuc ngan de test
 
 ```bash
-python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
+python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
   --use_4bit \
   --checkpointing \
   --runtime_offload deepspeed \
@@ -169,5 +169,7 @@ ln -s /root/miniconda3/envs/qwen/targets/x86_64-linux/lib/libcurand.so.10 /root/
 - `--runtime_offload auto` se tu chon theo runtime, nhung tren may VRAM it van nen uu tien `deepspeed`
 - `--checkpointing` giam VRAM luc train, doi lai toc do cham hon
 - neu download model va test chung mot script thi de tuong la bi treo; nen download xong roi moi test/train
+
+
 
 

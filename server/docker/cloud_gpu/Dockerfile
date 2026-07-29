@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+﻿FROM ubuntu:22.04
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
@@ -13,9 +13,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     QWEN_BASE_MODEL=/root/model/Qwen/Qwen3.5-4B \
     QWEN_BASE_MODEL_REPO=Qwen/Qwen3.5-4B \
     QWEN_LORA_ADAPTER=/root/model/Qwen/Qwen3.5-4B_vn_1/adapter \
-    QWEN_OFFLOAD_DIR=/root/media_tech/ai/qwen/qwen3.5_4B_vn/server/offload
+    QWEN_OFFLOAD_DIR=/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/server/offload
 
-WORKDIR /root/media_tech
+WORKDIR /root/media_tech_ai
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -30,19 +30,19 @@ RUN apt-get update \
     && python -m ensurepip --upgrade \
     && rm -rf /var/lib/apt/lists/*
 
-COPY server/docker/requirements.txt /tmp/requirements.txt
+COPY server/docker/cloud_gpu/requirements.txt /tmp/requirements.txt
 
 RUN mkdir -p /root/model/Qwen \
-    /root/media_tech/ai/qwen/qwen3.5_4B_vn/server/offload
+    /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/server/offload
 
 # Package the application source in the image; models and runtime data stay external.
-COPY . /root/media_tech
-COPY server/docker/adapter /opt/media-tech/adapter
+COPY . /root/media_tech_ai
+COPY server/docker/cloud_gpu/adapter /opt/media-tech/adapter
 
-WORKDIR /root/media_tech/ai/qwen/qwen3.5_4B_vn/server
+WORKDIR /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/server
 
-COPY server/docker/entrypoint.sh /usr/local/bin/qwen-entrypoint
-COPY server/docker/bootstrap_cuda.sh /usr/local/bin/bootstrap-cuda
+COPY server/docker/cloud_gpu/entrypoint.sh /usr/local/bin/qwen-entrypoint
+COPY server/docker/cloud_gpu/bootstrap_cuda.sh /usr/local/bin/bootstrap-cuda
 RUN chmod +x /usr/local/bin/qwen-entrypoint
 RUN chmod +x /usr/local/bin/bootstrap-cuda
 
@@ -50,3 +50,5 @@ EXPOSE 8005
 
 ENTRYPOINT ["/usr/local/bin/qwen-entrypoint"]
 CMD ["main.py"]
+
+

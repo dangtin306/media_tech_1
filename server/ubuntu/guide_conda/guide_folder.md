@@ -1,17 +1,17 @@
 ﻿# guide_folder.md
 
-## Cau truc `media_tech`
+## Cau truc `media_tech_ai`
 
 ### Windows
 
 ```text
-D:\hustmedia\python\llms\media_tech
+D:\hustmedia\python\llms\media_tech_ai
 ```
 
 ### Ubuntu
 
 ```text
-/root/media_tech
+/root/media_tech_ai
 ```
 
 ## Thu muc chinh
@@ -29,57 +29,57 @@ media_tech/
 ### OpenClaw backend
 
 ```text
-Windows: D:\hustmedia\python\llms\media_tech\backend\openclaw\config.json
-Ubuntu:   /root/media_tech/backend/openclaw/config.json
+Windows: D:\hustmedia\python\llms\media_tech_ai\backend\openclaw\config.json
+Ubuntu:   /root/media_tech_ai/backend/openclaw/config.json
 ```
 
 ### Ubuntu launcher
 
 ```text
-Windows: D:\hustmedia\python\llms\media_tech\server\run\ubuntu_run.py
-Ubuntu:   /root/media_tech/server/run/ubuntu_run.py
+Windows: D:\hustmedia\python\llms\media_tech_ai\server\run\ubuntu_run.py
+Ubuntu:   /root/media_tech_ai/server/run/ubuntu_run.py
 ```
 
 ### Ubuntu trainer
 
 ```text
-Windows: D:\hustmedia\python\llms\media_tech\server\run\ubuntu_train.py
-Ubuntu:   /root/media_tech/server/run/ubuntu_train.py
+Windows: D:\hustmedia\python\llms\media_tech_ai\server\run\ubuntu_train.py
+Ubuntu:   /root/media_tech_ai/server/run/ubuntu_train.py
 ```
 
 ### Qwen 4B server
 
 ```text
-Windows: D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\main.py
-Ubuntu:   /root/media_tech/ai/qwen/qwen3.5_4B_vn/server/main.py
+Windows: D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\main.py
+Ubuntu:   /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/server/main.py
 ```
 
 ### Qwen 4B train entry
 
 ```text
-Windows: D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py
-Ubuntu:   /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py
+Windows: D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py
+Ubuntu:   /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py
 ```
 
 ### Qwen 4B datasheet
 
 ```text
-Windows: D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\datasheet
-Ubuntu:   /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/datasheet
+Windows: D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\datasheet
+Ubuntu:   /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/datasheet
 ```
 
 ### Qwen 2B server
 
 ```text
-Windows: D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_2B_vn\server\main.py
-Ubuntu:   /root/media_tech/ai/qwen/qwen3.5_2B_vn/server/main.py
+Windows: D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_2B_vn\server\main.py
+Ubuntu:   /root/media_tech_ai/ai/qwen/qwen3.5_2B_vn/server/main.py
 ```
 
 ### Qdrant guide
 
 ```text
-Windows: D:\hustmedia\python\llms\media_tech\ai\search\qdrant\data_1\guide.md
-Ubuntu:   /root/media_tech/ai/search/qdrant/data_1/guide.md
+Windows: D:\hustmedia\python\llms\media_tech_ai\ai\search\qdrant\data_1\guide.md
+Ubuntu:   /root/media_tech_ai/ai/search/qdrant/data_1/guide.md
 ```
 
 ## Moi truong Ubuntu
@@ -93,9 +93,12 @@ Ubuntu:   /root/media_tech/ai/search/qdrant/data_1/guide.md
 
 ## Ghi chu
 
-- Repo goc gio la `/root/media_tech`, khong con dung `/root/qwen3.5_4B_vn`.
+- Repo goc gio la `/root/media_tech_ai`, khong con dung `/root/qwen3.5_4B_vn`.
 - Cac script `ubuntu_run.py` va `ubuntu_train.py` da tro sang layout moi.
 - Cac file guide cua Qwen chi la tai lieu rieng cho subproject, khong phai toan bo `media_tech`.
 - Neu can doi them path model sang noi khac, nen lam qua env `QWEN_BASE_MODEL` va `QWEN_OUTPUT_DIR`.
+
+
+
 
 

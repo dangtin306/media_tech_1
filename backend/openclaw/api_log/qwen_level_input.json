@@ -1,90 +1,9 @@
 {
-  "session_id": "qwen-api-1785204987086-30b90d17d6678",
-  "turn_id": "msg-1785237300568-c2a2e57d5a82b",
+  "session_id": "qwen-api-1785315912761-90adac21342fb",
+  "turn_id": "msg-1785315912778-72e42439835ed",
   "system_context": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.",
-  "user_message": "cảm ơn",
-  "history": [
-    {
-      "role": "user",
-      "content": "hà nội có quán gì ăn không"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
-    },
-    {
-      "role": "user",
-      "content": "hà nội có quán gì ăn không"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
-    },
-    {
-      "role": "user",
-      "content": "hà nội có quán gì ăn không"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
-    },
-    {
-      "role": "user",
-      "content": "hi"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
-    },
-    {
-      "role": "user",
-      "content": "chào"
-    },
-    {
-      "role": "assistant",
-      "content": "Chào bạn! Mình là trợ lý của trang tuongtac.tv. Bạn cần tìm quán ăn, dịch vụ hay địa điểm nào ở Hà Nội không?"
-    },
-    {
-      "role": "user",
-      "content": "ok"
-    },
-    {
-      "role": "assistant",
-      "content": "Rất tốt! Anh cần mình hỗ trợ gì ngay?"
-    },
-    {
-      "role": "user",
-      "content": "bạn là ai"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)"
-    },
-    {
-      "role": "user",
-      "content": "bạn là ai"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)"
-    },
-    {
-      "role": "user",
-      "content": "cảm ơn"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)"
-    },
-    {
-      "role": "user",
-      "content": "cảm ơn"
-    },
-    {
-      "role": "assistant",
-      "content": "Không có vấn đề gì! Nếu bạn cần hỗ trợ thêm, cứ nói nhé."
-    }
-  ],
+  "user_message": "chào",
+  "history": [],
   "scenario": "customer_consulting",
   "user_state": {},
   "runtime": {
@@ -110,8 +29,8 @@
     "stage": "level"
   },
   "model": "Qwen3.5-4B-V4",
-  "user": "qwen-api-1785204987086-30b90d17d6678",
-  "session_key": "qwen-api-1785204987086-30b90d17d6678",
+  "user": "qwen-api-1785315912761-90adac21342fb",
+  "session_key": "qwen-api-1785315912761-90adac21342fb",
   "messages": [
     {
       "role": "system",
@@ -119,87 +38,7 @@
     },
     {
       "role": "user",
-      "content": "hà nội có quán gì ăn không"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
-    },
-    {
-      "role": "user",
-      "content": "hà nội có quán gì ăn không"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
-    },
-    {
-      "role": "user",
-      "content": "hà nội có quán gì ăn không"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
-    },
-    {
-      "role": "user",
-      "content": "hi"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
-    },
-    {
-      "role": "user",
       "content": "chào"
-    },
-    {
-      "role": "assistant",
-      "content": "Chào bạn! Mình là trợ lý của trang tuongtac.tv. Bạn cần tìm quán ăn, dịch vụ hay địa điểm nào ở Hà Nội không?"
-    },
-    {
-      "role": "user",
-      "content": "ok"
-    },
-    {
-      "role": "assistant",
-      "content": "Rất tốt! Anh cần mình hỗ trợ gì ngay?"
-    },
-    {
-      "role": "user",
-      "content": "bạn là ai"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)"
-    },
-    {
-      "role": "user",
-      "content": "bạn là ai"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)"
-    },
-    {
-      "role": "user",
-      "content": "cảm ơn"
-    },
-    {
-      "role": "assistant",
-      "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)"
-    },
-    {
-      "role": "user",
-      "content": "cảm ơn"
-    },
-    {
-      "role": "assistant",
-      "content": "Không có vấn đề gì! Nếu bạn cần hỗ trợ thêm, cứ nói nhé."
-    },
-    {
-      "role": "user",
-      "content": "cảm ơn"
     }
   ],
   "temperature": 0.5,

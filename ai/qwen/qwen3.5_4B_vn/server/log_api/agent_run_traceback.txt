@@ -1,4 +1,4 @@
-2026-07-17T09:47:00.836862Z run
+﻿2026-07-17T09:47:00.836862Z run
 Traceback (most recent call last):
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 141, in decode
     return self._decompress(data)
@@ -9,9 +9,9 @@ brotlicffi._api.error: brotli: decoder process called with data when 'can_accept
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 442, in _embed
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 442, in _embed
     return _embed_with_sentence_transformers(texts, device)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
     _IBM_SENTENCE_MODEL = SentenceTransformer(
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
     return func(*args, **kwargs)
@@ -67,25 +67,25 @@ brotlicffi._api.error: brotli: decoder process called with data when 'can_accept
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
     raw_result = run_handler(request_payload, None)
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
     messages, retrieved_context, _ = qwen_context.prepare_rag_context_with_query(
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
     return _load_search_main_module().prepare_rag_context_with_query(
-  File "D:\hustmedia\python\llms\media_tech\ai\search\main.py", line 371, in prepare_rag_context_with_query
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\main.py", line 371, in prepare_rag_context_with_query
     retrieval = retrieve_context_fn(
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 561, in retrieve_context
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 561, in retrieve_context
     index = _get_ibm_index()
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 519, in _get_ibm_index
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 519, in _get_ibm_index
     index = IBMSearchIndex(CORPUS_PATH)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 476, in __init__
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 476, in __init__
     self.refresh(force=True)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 485, in refresh
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 485, in refresh
     embeddings = _embed(texts, self.device).detach().cpu().float()
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 445, in _embed
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 445, in _embed
     return _embed_with_transformers(texts, device)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 408, in _embed_with_transformers
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 408, in _embed_with_transformers
     _IBM_TRANSFORMERS_TOKENIZER = AutoTokenizer.from_pretrained(
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 747, in from_pretrained
     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
@@ -126,9 +126,9 @@ brotlicffi._api.error: brotli: decoder process called with data when 'can_accept
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 442, in _embed
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 442, in _embed
     return _embed_with_sentence_transformers(texts, device)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
     _IBM_SENTENCE_MODEL = SentenceTransformer(
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
     return func(*args, **kwargs)
@@ -184,25 +184,25 @@ brotlicffi._api.error: brotli: decoder process called with data when 'can_accept
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
     raw_result = run_handler(request_payload, None)
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
     messages, retrieved_context, _ = qwen_context.prepare_rag_context_with_query(
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
     return _load_search_main_module().prepare_rag_context_with_query(
-  File "D:\hustmedia\python\llms\media_tech\ai\search\main.py", line 371, in prepare_rag_context_with_query
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\main.py", line 371, in prepare_rag_context_with_query
     retrieval = retrieve_context_fn(
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 561, in retrieve_context
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 561, in retrieve_context
     index = _get_ibm_index()
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 519, in _get_ibm_index
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 519, in _get_ibm_index
     index = IBMSearchIndex(CORPUS_PATH)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 476, in __init__
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 476, in __init__
     self.refresh(force=True)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 485, in refresh
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 485, in refresh
     embeddings = _embed(texts, self.device).detach().cpu().float()
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 445, in _embed
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 445, in _embed
     return _embed_with_transformers(texts, device)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 408, in _embed_with_transformers
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 408, in _embed_with_transformers
     _IBM_TRANSFORMERS_TOKENIZER = AutoTokenizer.from_pretrained(
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 747, in from_pretrained
     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
@@ -243,9 +243,9 @@ brotlicffi._api.error: brotli: decoder process called with data when 'can_accept
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 442, in _embed
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 442, in _embed
     return _embed_with_sentence_transformers(texts, device)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
     _IBM_SENTENCE_MODEL = SentenceTransformer(
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
     return func(*args, **kwargs)
@@ -301,25 +301,25 @@ brotlicffi._api.error: brotli: decoder process called with data when 'can_accept
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
     raw_result = run_handler(request_payload, None)
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
     messages, retrieved_context, _ = qwen_context.prepare_rag_context_with_query(
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
     return _load_search_main_module().prepare_rag_context_with_query(
-  File "D:\hustmedia\python\llms\media_tech\ai\search\main.py", line 371, in prepare_rag_context_with_query
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\main.py", line 371, in prepare_rag_context_with_query
     retrieval = retrieve_context_fn(
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 561, in retrieve_context
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 561, in retrieve_context
     index = _get_ibm_index()
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 519, in _get_ibm_index
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 519, in _get_ibm_index
     index = IBMSearchIndex(CORPUS_PATH)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 476, in __init__
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 476, in __init__
     self.refresh(force=True)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 485, in refresh
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 485, in refresh
     embeddings = _embed(texts, self.device).detach().cpu().float()
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 445, in _embed
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 445, in _embed
     return _embed_with_transformers(texts, device)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 408, in _embed_with_transformers
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 408, in _embed_with_transformers
     _IBM_TRANSFORMERS_TOKENIZER = AutoTokenizer.from_pretrained(
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 747, in from_pretrained
     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
@@ -360,9 +360,9 @@ brotlicffi._api.error: brotli: decoder process called with data when 'can_accept
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 442, in _embed
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 442, in _embed
     return _embed_with_sentence_transformers(texts, device)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 392, in _embed_with_sentence_transformers
     _IBM_SENTENCE_MODEL = SentenceTransformer(
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
     return func(*args, **kwargs)
@@ -418,25 +418,25 @@ brotlicffi._api.error: brotli: decoder process called with data when 'can_accept
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\backend.py", line 342, in run_agent_payload
     raw_result = run_handler(request_payload, None)
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\run_v4.py", line 163, in handle_run
     messages, retrieved_context, _ = qwen_context.prepare_rag_context_with_query(
-  File "D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\context.py", line 627, in prepare_rag_context_with_query
     return _load_search_main_module().prepare_rag_context_with_query(
-  File "D:\hustmedia\python\llms\media_tech\ai\search\main.py", line 371, in prepare_rag_context_with_query
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\main.py", line 371, in prepare_rag_context_with_query
     retrieval = retrieve_context_fn(
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 561, in retrieve_context
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 561, in retrieve_context
     index = _get_ibm_index()
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 519, in _get_ibm_index
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 519, in _get_ibm_index
     index = IBMSearchIndex(CORPUS_PATH)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 476, in __init__
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 476, in __init__
     self.refresh(force=True)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 485, in refresh
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 485, in refresh
     embeddings = _embed(texts, self.device).detach().cpu().float()
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 445, in _embed
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 445, in _embed
     return _embed_with_transformers(texts, device)
-  File "D:\hustmedia\python\llms\media_tech\ai\search\ibm\main.py", line 408, in _embed_with_transformers
+  File "D:\hustmedia\python\llms\media_tech_ai\ai\search\ibm\main.py", line 408, in _embed_with_transformers
     _IBM_TRANSFORMERS_TOKENIZER = AutoTokenizer.from_pretrained(
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 747, in from_pretrained
     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
@@ -465,4 +465,5 @@ Traceback (most recent call last):
   File "D:\hustmedia\conda_envs\qwen\lib\site-packages\httpx\_decoders.py", line 143, in decode
     raise DecodingError(str(exc)) from exc
 httpx.DecodingError: brotli: decoder process called with data when 'can_accept_more_data()' is False
+
 

@@ -7,7 +7,7 @@ This folder contains the LoRA training scripts for `Qwen/Qwen3.5-4B`.
 - Conda env: `D:\hustmedia\conda_envs\qwen`
 - Base model: `D:\huggingface\hub\Qwen\Qwen3.5-4B`
 - Ubuntu model: `/root/model/Qwen/Qwen3.5-4B`
-- Default dataset: `D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\datasheet\LoRA.json`
+- Default dataset: `D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\datasheet\LoRA.json`
 - Default output: `D:\huggingface\hub\Qwen\Qwen3.5-4B_vn_1`
 - Ubuntu output: `/root/model/Qwen/Qwen3.5-4B_vn_1`
 
@@ -24,7 +24,7 @@ Use `python`, not `py`.
 Run one forward pass to verify the env, dataset, tokenizer, and model load:
 
 ```powershell
-python D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --smoke_test
+python D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --smoke_test
 ```
 
 If this passes, the base model loads and the CUDA pipeline is alive.
@@ -36,31 +36,31 @@ You can switch the datasheet on each run with `--dataset` without touching code.
 Example:
 
 ```powershell
-python D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --dataset D:\path\to\new_dataset.json
+python D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --dataset D:\path\to\new_dataset.json
 ```
 
 If you pass only a file name, the script resolves it under:
 
 ```text
-D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\datasheet
+D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\datasheet
 ```
 
 So this is valid:
 
 ```powershell
-python D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --use_4bit --dataset LoRA_3.json
+python D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --use_4bit --dataset LoRA_3.json
 ```
 
 That command uses:
 
 ```text
-D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\datasheet\LoRA_3.json
+D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\datasheet\LoRA_3.json
 ```
 
 Change the output location too if needed:
 
 ```powershell
-python D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --dataset D:\path\to\new_dataset.json --output_dir D:\path\to\output_dir
+python D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --dataset D:\path\to\new_dataset.json --output_dir D:\path\to\output_dir
 ```
 
 Supported formats:
@@ -79,7 +79,7 @@ Each item must contain one of:
 Safer default for RTX 2060 6GB:
 
 ```powershell
-python D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --use_4bit --checkpointing
+python D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --use_4bit --checkpointing
 ```
 
 Current defaults in code:
@@ -95,7 +95,7 @@ Current defaults in code:
 If VRAM still overflows, reduce in this order:
 
 ```powershell
-python D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --use_4bit --checkpointing --train_batch_size 1 --max_seq_length 512 --sample_ratio 0.3
+python D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\fine_tuning\LoRA_main.py --use_4bit --checkpointing --train_batch_size 1 --max_seq_length 512 --sample_ratio 0.3
 ```
 
 Notes:
@@ -165,6 +165,9 @@ D:\hustmedia\conda_envs\qwen\python.exe ...
 
 - `device_map="auto"` and `cpu_offload` are there to reduce OOM risk.
 - Offload helps when VRAM is tight, but it also makes CPU/RAM participate more.
-- For a post-train check, use the inference script in `/root/media_tech/ai/qwen/qwen3.5_4B_vn/server/main.py` on Ubuntu, or the Windows copy under `D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\server\main.py`, or create a new inference file that points to `merged`.
+- For a post-train check, use the inference script in `/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/server/main.py` on Ubuntu, or the Windows copy under `D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\server\main.py`, or create a new inference file that points to `merged`.
+
+
+
 
 

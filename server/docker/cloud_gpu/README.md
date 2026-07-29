@@ -1,4 +1,4 @@
-# Qwen Docker image
+﻿# Qwen Docker image
 
 This image packages the Qwen 3.5 4B Flask service and the LoRA/QLoRA training
 environment. The same image can run the API on port `8005` or execute the
@@ -10,11 +10,11 @@ Docker marker `QWEN_DOCKER=1`.
 
 ## Build
 
-Build from the `media_tech` directory:
+Build from the `media_tech_ai` directory:
 
 ```powershell
-cd D:\hustmedia\python\llms\media_tech
-docker build -f server/docker/Dockerfile -t media-tech-qwen:latest .
+cd D:\hustmedia\python\llms\media_tech_ai
+docker build -f server/docker/cloud_gpu/Dockerfile -t media-tech-qwen:latest .
 ```
 
 The image build does not download CUDA. The GPU host must provide an NVIDIA
@@ -31,11 +31,11 @@ and run:
 export SOURCE_SSH_HOST=vip.tecom.pro
 export SOURCE_SSH_USER=<windows-ssh-user>
 export SOURCE_SSH_KEY=/root/.ssh/id_ed25519
-export SOURCE_SSH_PATH='D:/hustmedia/python/llms/media_tech'
+export SOURCE_SSH_PATH='D:/hustmedia/python/llms/media_tech_ai'
 export MODEL_SSH_PATH='D:/path/to/model'
 docker run --rm --gpus all \
   -p 8005:8005 \
-  -v /root/media_tech:/root/media_tech \
+  -v /root/media_tech_ai:/root/media_tech_ai \
   -v /root/model:/root/model \
   -v /root/.ssh:/root/.ssh:ro \
   -e SOURCE_SSH_HOST -e SOURCE_SSH_USER -e SOURCE_SSH_KEY \
@@ -43,7 +43,7 @@ docker run --rm --gpus all \
   media-tech-qwen:latest
 ```
 
-The entrypoint checks `/root/media_tech` and `/root/model`, synchronizes missing
+The entrypoint checks `/root/media_tech_ai` and `/root/model`, synchronizes missing
 directories over SSH, compiles the Python source, then starts the service. The
 Windows host must have OpenSSH Server enabled and the public key authorized for
 the configured user. Existing directories are not overwritten automatically.
@@ -114,7 +114,7 @@ short-lived `--rm` container will repeat the bootstrap on every start.
 The container keeps the Ubuntu-style paths used by the application:
 
 ```text
-/root/media_tech
+/root/media_tech_ai
 /root/model/Qwen/Qwen3.5-4B
 /root/model/Qwen/Qwen3.5-4B_vn_1/adapter
 ```
@@ -127,7 +127,7 @@ Run the 4B training entry point inside the same image:
 docker run --rm --gpus all \
   -v /root/model:/root/model \
   media-tech-qwen:latest \
-  python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
+  python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
   --use_4bit --checkpointing --runtime_offload deepspeed
 ```
 
@@ -137,7 +137,7 @@ For a short smoke test:
 docker run --rm --gpus all \
   -v /root/model:/root/model \
   media-tech-qwen:latest \
-  python /root/media_tech/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
+  python /root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/fine_tuning/LoRA_main.py \
   --smoke_test --use_4bit --checkpointing \
   --runtime_offload deepspeed --max_seq_length 128 --max_samples 1
 ```
@@ -150,3 +150,6 @@ docker run --rm --gpus all \
   -v /root/model:/root/model \
   media-tech-qwen:latest
 ```
+
+
+

@@ -9,9 +9,9 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DOCKERFILE = PROJECT_ROOT / "server" / "docker" / "Dockerfile"
+DOCKERFILE = PROJECT_ROOT / "server" / "docker" / "cloud_gpu" / "Dockerfile"
 ADAPTER_SOURCE = Path(r"D:\huggingface\hub\Qwen\Qwen3.5-4B_vn_1\adapter")
-ADAPTER_STAGE = PROJECT_ROOT / "server" / "docker" / "adapter"
+ADAPTER_STAGE = PROJECT_ROOT / "server" / "docker" / "cloud_gpu" / "adapter"
 DEFAULT_TAG = "media-tech-qwen:latest"
 DEFAULT_HUB_TAG = "hustmedia/media-tech-qwen:latest"
 DEFAULT_VHDX = Path(

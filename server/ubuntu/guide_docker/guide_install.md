@@ -1,4 +1,4 @@
-# Docker GPU Installation Guide
+﻿# Docker GPU Installation Guide
 
 Guide for a real Ubuntu GPU VM or bare-metal host. The host must provide a working
 NVIDIA driver and Docker daemon. A Clore marketplace container is not a Docker
@@ -129,11 +129,11 @@ SSH is provided by the Ubuntu host or the cloud platform. Do not install a
 second Docker daemon inside the Qwen container.
 
 If a local Docker test container needs SSH, create it with the port mapping from
-`config.json` at creation time:
+`config.json` at creation time. Do not add `--gpus all` unless the host is a
+real NVIDIA-enabled Linux machine with the container toolkit configured:
 
 ```bash
 docker run -d --name ubuntu-gpu-test \
-  --gpus all \
   -p "${DOCKER_SSH_PORT_MAPPING}" \
   ubuntu:22.04 sleep infinity
 ```
@@ -141,7 +141,7 @@ docker run -d --name ubuntu-gpu-test \
 To create and configure the test container automatically from `config.json`:
 
 ```powershell
-$configPath = "D:\hustmedia\python\llms\media_tech\server\ubuntu\config.json"
+$configPath = "D:\hustmedia\python\llms\media_tech_ai\server\ubuntu\config.json"
 $password = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_password)" $configPath
 $dockerPort = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_dockerPort)" $configPath
 
@@ -161,17 +161,17 @@ This section is for Docker Desktop on Windows, not for a Clore marketplace
 container. Docker Desktop already owns the Docker daemon, so this Ubuntu test
 container can use the host daemon through the Docker socket.
 
-Recreate the test container with GPU access, the SSH mapping from `config.json`,
-and Docker CLI access to the host daemon:
+Recreate the test container with the SSH mapping from `config.json`, and Docker
+CLI access to the host daemon. This is the correct option for Docker Desktop on
+Windows:
 
 ```powershell
 docker rm -f ubuntu-gpu-test 2>$null
 
-$configPath = "D:\hustmedia\python\llms\media_tech\server\ubuntu\config.json"
+$configPath = "D:\hustmedia\python\llms\media_tech_ai\server\ubuntu\config.json"
 $dockerPort = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_dockerPort)" $configPath
 
 docker run -d --name ubuntu-gpu-test `
-  --gpus all `
   --privileged `
   -p $dockerPort `
   -v /var/run/docker.sock:/var/run/docker.sock `
@@ -218,7 +218,7 @@ pkill sshd || true
 Set the root password from `config.json` without copying it into this guide:
 
 ```powershell
-$configPath = "D:\hustmedia\python\llms\media_tech\server\ubuntu\config.json"
+$configPath = "D:\hustmedia\python\llms\media_tech_ai\server\ubuntu\config.json"
 $password = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_password)" $configPath
 docker exec -e "ROOT_PASSWORD=$password" ubuntu-gpu-test bash -lc 'printf "root:%s\n" "$ROOT_PASSWORD" | chpasswd'
 ```
@@ -275,7 +275,7 @@ pkill sshd || true
 Set the root password from `config.json` instead of typing a second password:
 
 ```powershell
-$configPath = "D:\hustmedia\python\llms\media_tech\server\ubuntu\config.json"
+$configPath = "D:\hustmedia\python\llms\media_tech_ai\server\ubuntu\config.json"
 $password = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_password)" $configPath
 docker exec ubuntu-gpu-test bash -lc "echo 'root:$password' | chpasswd"
 ```
@@ -283,7 +283,7 @@ docker exec ubuntu-gpu-test bash -lc "echo 'root:$password' | chpasswd"
 Connect from Windows through the mapped port:
 
 ```powershell
-$configPath = "D:\hustmedia\python\llms\media_tech\server\ubuntu\config.json"
+$configPath = "D:\hustmedia\python\llms\media_tech_ai\server\ubuntu\config.json"
 $sshCommand = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_sshCommand)" $configPath
 Invoke-Expression $sshCommand
 ```
@@ -307,3 +307,4 @@ Cloud:   recreate/redeploy container -> Docker host pulls the new image
 ```
 
 Pushing a new image does not modify an already-running container.
+

@@ -48,8 +48,8 @@ def _resolve_corpus_path() -> str:
     candidates = [
         os.path.abspath(os.path.join(base_dir, "..", "datasheet", "rag_media_tech.jsonl")),
         os.path.abspath(os.path.join(base_dir, "..", "train", "datasheet", "rag_media_tech.jsonl")),
-        r"D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn\train\datasheet\rag_media_tech.jsonl",
-        "/root/media_tech/ai/qwen/qwen3.5_4B_vn/train/datasheet/rag_media_tech.jsonl",
+        r"D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn\train\datasheet\rag_media_tech.jsonl",
+        "/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/train/datasheet/rag_media_tech.jsonl",
     ]
 
     for candidate in candidates:
@@ -414,4 +414,7 @@ def retrieve_context(
             messages=messages,
         )
     return get_rag_index(model_name=model_name).retrieve(question, top_k=top_k)
+
+
+
 

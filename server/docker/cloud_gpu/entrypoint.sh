@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 set -euo pipefail
 
-CODE_ROOT=/root/media_tech
+CODE_ROOT=/root/media_tech_ai
 MODEL_ROOT=/root/model
 BASE_MODEL_REPO=${QWEN_BASE_MODEL_REPO:-Qwen/Qwen3.5-4B}
 IMAGE_ADAPTER=/opt/media-tech/adapter
@@ -68,3 +68,4 @@ if [[ "${1:-}" == "python" || "${1:-}" == "python3" ]]; then
 fi
 
 exec python "$@"
+

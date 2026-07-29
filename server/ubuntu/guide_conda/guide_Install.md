@@ -1,4 +1,4 @@
-# guide_cai.md
+﻿# guide_cai.md
 
 ## Muc tieu
 
@@ -11,8 +11,8 @@ Cai moi tren Ubuntu de chay duoc repo nay on dinh.
 - Cung mot code base, nhung khac path:
   - Windows model: `D:\huggingface\hub\Qwen\Qwen3.5-4B`
   - Ubuntu model: `/root/model/Qwen/Qwen3.5-4B`
-  - Windows repo: `D:\hustmedia\python\llms\media_tech\ai\qwen\qwen3.5_4B_vn`
-  - Ubuntu repo: `/root/media_tech/ai/qwen/qwen3.5_4B_vn`
+  - Windows repo: `D:\hustmedia\python\llms\media_tech_ai\ai\qwen\qwen3.5_4B_vn`
+  - Ubuntu repo: `/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn`
 
 ## Thu tu doc
 
@@ -81,7 +81,7 @@ guide_folder.md
 Phan nay dung de dam bao cac duong dan chuan:
 - `/root/model/Qwen/Qwen3.5-4B`
 - `/root/model/Qwen/Qwen3.5-4B_vn_1`
-- `/root/media_tech/ai/qwen/qwen3.5_4B_vn`
+- `/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn`
 
 ## 4. Download model neu chua co
 
@@ -107,7 +107,7 @@ huggingface-cli login
 Neu repo da nam o:
 
 ```text
-/root/media_tech/ai/qwen/qwen3.5_4B_vn
+/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn
 ```
 
 thi bo qua.
@@ -115,11 +115,11 @@ thi bo qua.
 Neu chua co:
 
 ```bash
-rm -rf /root/media_tech
-git clone --depth 1 https://github.com/dangtin306/media_tech_1.git /root/media_tech
+rm -rf /root/media_tech_ai
+git clone --depth 1 https://github.com/dangtin306/media_tech_1.git /root/media_tech_ai
 ```
 
-Neu can cap nhat lai code, dung `git pull` trong `/root/media_tech`.
+Neu can cap nhat lai code, dung `git pull` trong `/root/media_tech_ai`.
 
 ## 6. Kiem tra nhanh
 
@@ -213,3 +213,6 @@ nvidia-smi
 free -h
 ps -eo pid,pmem,rss,cmd --sort=-rss | head
 ```
+
+
+

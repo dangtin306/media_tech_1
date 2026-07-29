@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import json
@@ -15,11 +15,11 @@ import paramiko
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG_PATH = ROOT / "server" / "ubuntu" / "config.json"
-REMOTE_MAIN = "/root/media_tech/ai/qwen/qwen3.5_4B_vn/server/main.py"
-REMOTE_APP_DIR = "/root/media_tech/ai/qwen/qwen3.5_4B_vn"
+REMOTE_MAIN = "/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/server/main.py"
+REMOTE_APP_DIR = "/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn"
 REMOTE_CONDA_SH = "/root/miniconda3/etc/profile.d/conda.sh"
 REMOTE_CONDA_ENV = "qwen"
-REMOTE_LOG_DIR = "/root/media_tech/ai/qwen/qwen3.5_4B_vn/server/logs"
+REMOTE_LOG_DIR = "/root/media_tech_ai/ai/qwen/qwen3.5_4B_vn/server/logs"
 REMOTE_LOG_FILE = f"{REMOTE_LOG_DIR}/ubuntu_run.log"
 REMOTE_PID_FILE = "/tmp/qwen3.5_4B_vn_server.pid"
 DEFAULT_START_TIMEOUT = 30
@@ -328,3 +328,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
