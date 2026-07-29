@@ -1,5 +1,3 @@
-{"timestamp":"2026-07-29T09:20:31.916Z","event":"disconnected","wsUrl":"ws://gpu-sim:8796/chatbot/gpu","device":"gpu"}
-{"timestamp":"2026-07-29T09:20:56.061Z","event":"starting","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu"}
 {"timestamp":"2026-07-29T09:21:03.319Z","event":"error","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu","error":"getaddrinfo ENOTFOUND openclaw"}
 {"timestamp":"2026-07-29T09:21:03.321Z","event":"disconnected","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu"}
 {"timestamp":"2026-07-29T09:21:31.935Z","event":"starting","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu"}
@@ -18,3 +16,5 @@
 {"timestamp":"2026-07-29T09:24:09.855Z","event":"disconnected","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu"}
 {"timestamp":"2026-07-29T09:24:47.414Z","event":"error","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu","error":"getaddrinfo ENOTFOUND openclaw"}
 {"timestamp":"2026-07-29T09:24:47.416Z","event":"disconnected","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu"}
+{"timestamp":"2026-07-29T09:25:24.663Z","event":"error","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu","error":"getaddrinfo ENOTFOUND openclaw"}
+{"timestamp":"2026-07-29T09:25:24.665Z","event":"disconnected","wsUrl":"ws://openclaw:8796/chatbot/gpu","device":"gpu"}
