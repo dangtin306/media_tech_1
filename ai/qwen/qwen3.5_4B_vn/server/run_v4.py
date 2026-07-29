@@ -10,12 +10,15 @@ from uuid import uuid4
 import context as qwen_context
 import torch
 from call_ai import call_model
+import lora as qwen_lora
 import use_rag as qwen_use_rag
 
 
 LOG_API_DIR = os.path.join(os.path.dirname(__file__), "log_api")
 LOG_API_RUN_INPUT_PATH = os.path.join(LOG_API_DIR, "agent_run_input.json")
 LOG_API_RUN_OUTPUT_PATH = os.path.join(LOG_API_DIR, "agent_run_output.json")
+VRAM_DISABLE_4BIT_THRESHOLD_GIB = 8.0
+RUN_4BIT_POLICY_STATE: bool | None = None
 DEFAULT_SYSTEM_MESSAGE = (
     "Bạn là trợ lý tư vấn dịch vụ/quán/sản phẩm chạy sau OpenClaw. "
     "Trả lời tiếng Việt ngắn gọn, rõ ý."
@@ -33,6 +36,69 @@ def write_run_log(file_path: str, data: Any) -> None:
 
 def parse_bool(value: Any, default: bool = True) -> bool:
     return qwen_context.parse_bool(value, default=default)
+
+
+def get_total_vram_gib() -> float:
+    if not torch.cuda.is_available():
+        return 0.0
+    try:
+        total_bytes = torch.cuda.get_device_properties(0).total_memory
+    except Exception:
+        return 0.0
+    try:
+        return float(total_bytes) / (1024.0 ** 3)
+    except Exception:
+        return 0.0
+
+
+def should_disable_4bit_for_run() -> bool:
+    return get_total_vram_gib() > VRAM_DISABLE_4BIT_THRESHOLD_GIB
+
+
+def reset_model_caches_for_run() -> None:
+    try:
+        server_main = qwen_context._load_server_main_module()
+    except Exception:
+        server_main = None
+
+    for module in (server_main, qwen_lora):
+        if module is None:
+            continue
+        for attr in ("TOKENIZER", "MODEL", "DEVICE"):
+            if hasattr(module, attr):
+                try:
+                    setattr(module, attr, None)
+                except Exception:
+                    pass
+
+
+def load_model_for_run(
+    load_fn: Callable[[], tuple[Any, Any, Any]],
+    *,
+    disable_4bit: bool,
+    log_line: Callable[[str], None],
+) -> tuple[Any, Any, Any]:
+    global RUN_4BIT_POLICY_STATE
+
+    original_use_4bit = os.environ.get("QWEN_USE_4BIT")
+    should_force_4bit_off = disable_4bit and RUN_4BIT_POLICY_STATE is not False
+
+    if should_force_4bit_off:
+        reset_model_caches_for_run()
+        os.environ["QWEN_USE_4BIT"] = "0"
+        log_line(f"[run] vram_total_gib={get_total_vram_gib():.2f} policy=disable_4bit")
+
+    try:
+        tokenizer, model, device = load_fn()
+    finally:
+        if should_force_4bit_off:
+            if original_use_4bit is None:
+                os.environ.pop("QWEN_USE_4BIT", None)
+            else:
+                os.environ["QWEN_USE_4BIT"] = original_use_4bit
+
+    RUN_4BIT_POLICY_STATE = disable_4bit
+    return tokenizer, model, device
 
 
 def limit_run_messages(messages: List[Dict[str, str]], limit: int = 5) -> List[Dict[str, str]]:
@@ -160,7 +226,25 @@ def create_run_handler(
     load_lora_model: Callable[[], tuple[Any, Any, Any]],
     log_line: Callable[[str], None],
 ):
-    rag_run_handler = qwen_use_rag.create_v4_rag_run_handler(load_base_model, load_lora_model, log_line)
+    def load_base_model_for_run() -> tuple[Any, Any, Any]:
+        return load_model_for_run(
+            load_base_model,
+            disable_4bit=should_disable_4bit_for_run(),
+            log_line=log_line,
+        )
+
+    def load_lora_model_for_run() -> tuple[Any, Any, Any]:
+        return load_model_for_run(
+            load_lora_model,
+            disable_4bit=should_disable_4bit_for_run(),
+            log_line=log_line,
+        )
+
+    rag_run_handler = qwen_use_rag.create_v4_rag_run_handler(
+        load_base_model_for_run,
+        load_lora_model_for_run,
+        log_line,
+    )
 
     def handle_run(payload: Dict[str, Any], headers: Mapping[str, str] | None = None) -> Dict[str, Any]:
         del headers
@@ -175,15 +259,16 @@ def create_run_handler(
         max_tokens = int(payload.get("max_tokens", payload.get("max_new_tokens", 256)))
         temperature = float(payload.get("temperature", 0.7))
         top_p = float(payload.get("top_p", 0.9))
+        disable_4bit = should_disable_4bit_for_run()
 
         if use_rag:
             return rag_run_handler(payload, None)
 
         if use_lora:
-            tokenizer, model, device = load_lora_model()
+            tokenizer, model, device = load_lora_model_for_run()
             log_line("[run] use_lora_on")
         else:
-            tokenizer, model, device = load_base_model()
+            tokenizer, model, device = load_base_model_for_run()
             log_line("[run] use_lora_off")
 
         messages = move_system_context_to_penultimate_assistant(messages)

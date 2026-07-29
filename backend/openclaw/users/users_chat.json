@@ -7172,6 +7172,7 @@
       {
         "role": "user",
         "content": "hà nội có quán gì ăn không",
+        "response_id": null,
         "created_at": "2026-07-28T04:04:19.973Z"
       },
       {
@@ -7179,6 +7180,130 @@
         "content": "Lỗi GPU server: CUDA error: unspecified launch failure\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.",
         "response_id": "chatcmpl_8ff7dbd7-cd91-4cb8-b843-3358e792bdcf",
         "created_at": "2026-07-28T04:04:19.973Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có quán gì ăn không",
+        "response_id": null,
+        "created_at": "2026-07-28T08:38:12.549Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi khi gọi API Qwen backend: HTTP 500: {\"ok\":false,\"error\":\"GPU websocket response timeout after 40000ms\"}",
+        "response_id": "chatcmpl_d5bcc5e6-effd-4388-89c6-95bcb4abe541",
+        "created_at": "2026-07-28T08:38:12.549Z"
+      },
+      {
+        "role": "user",
+        "content": "ok",
+        "response_id": null,
+        "created_at": "2026-07-28T10:09:00.241Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Rất tốt! Anh cần mình hỗ trợ gì ngay?",
+        "response_id": "chatcmpl_0cd9ca7d-25c6-4ab5-843b-52769edbcd12",
+        "created_at": "2026-07-28T10:09:00.241Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-28T10:09:09.847Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)",
+        "response_id": "chatcmpl_bab037a8-486c-44ff-b9fe-bc94ed83fb1e",
+        "created_at": "2026-07-28T10:09:09.847Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-28T10:09:21.571Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)",
+        "response_id": "chatcmpl_38c65f96-cc88-4edc-ab3d-8250842f8131",
+        "created_at": "2026-07-28T10:09:21.571Z"
+      },
+      {
+        "role": "user",
+        "content": "cảm ơn",
+        "response_id": null,
+        "created_at": "2026-07-28T10:09:33.674Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Lỗi GPU server: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument index in method wrapper_CUDA__index_select)",
+        "response_id": "chatcmpl_89c77730-c0a4-44a4-9fbf-52e595aa0f51",
+        "created_at": "2026-07-28T10:09:33.674Z"
+      },
+      {
+        "role": "user",
+        "content": "cảm ơn",
+        "created_at": "2026-07-28T11:15:07.727Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Bạn có cần tôi hỗ trợ gì thêm không?",
+        "response_id": "chatcmpl_1581227e-acd3-479f-bae4-5cf917cb4fe6",
+        "created_at": "2026-07-28T11:15:07.727Z"
+      }
+    ]
+  },
+  {
+    "user_id": 43,
+    "history": [
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-28T09:06:14.666Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình là trợ lý ảo của trang **tuongtac.tv**, chuyên hỗ trợ bạn tìm kiếm dịch vụ, quán ăn, sản phẩm hoặc địa điểm phù hợp quanh nơi bạn đang ở. Mình trả lời ngắn gọn, tự nhiên và bằng tiếng Việt.\n\nBạn cần tìm gì hôm nay không?",
+        "response_id": "chatcmpl_0b977260-bb73-4010-b5fd-283e0bf30828",
+        "created_at": "2026-07-28T09:06:14.666Z"
+      },
+      {
+        "role": "user",
+        "content": "bạn là ai",
+        "response_id": null,
+        "created_at": "2026-07-28T10:12:29.126Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Mình là trợ lý ảo của trang **tuongtac.tv**, chuyên hỗ trợ bạn tìm kiếm dịch vụ, quán ăn, sản phẩm hoặc địa điểm phù hợp quanh nơi bạn đang ở.\n\nBạn cần tìm gì hôm nay không?",
+        "response_id": "chatcmpl_71575f50-eaf8-4314-81dc-29214288e74c",
+        "created_at": "2026-07-28T10:12:29.126Z"
+      },
+      {
+        "role": "user",
+        "content": "hà nội có món gì ngon không",
+        "response_id": null,
+        "created_at": "2026-07-28T10:13:31.382Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn, dựa trên dữ liệu từ các nhà hàng được cung cấp, đây là những gợi ý món ngon tại Hà Nội:\n\n**[1] Nhà Hàng Chay Phương Mai (Món ăn nhẹ)**\nĐây là quán cơm Việt thật ấm giữa Hà Nội, mang hương vị \"Bếp tuổi thơ\". Menu gồm các món: Cá ngừ kho tộ, Bò xào dưa cải chua, Rau muống xào tỏi, Gà ta kho gừng, Bánh tráng cuốn thịt heo, Mỳ quảng gà đặc biệt, Gỏi bưởi tôm thịt, Cá nục cuốn rau muống, Thịt kho tàu, Ba chỉ luộc, Trứng chiên hành, Thịt rim.\n*   **Lưu ý:** Quán này chỉ phục vụ suất mẹ nấu 1 người.\n\n**[2] Nhà Hàng Hương Hội An (Các món lẩu - Gà)**\nTại đây bạn có thể thưởng thức các món ăn hoàn hảo để giải ngấy sau mấy ngày Tết như: Lẩu gà tiềm ớt, Lẩu bò nhúng ớt, Mẹt gà đặc biệt, Gà nướng lá chanh, Mẹt đồ nướng Miền Trung, Gà chặt 1/4 lườn.\n\n**[3] Nhà Hàng Hương Hội An (Cơm gà Hội An)**\nNếu bạn thích cơm gà, quán này có đa dạng các món: Cơm Thịt Heo Nướng Ngũ Vị, Cơm cánh gà sốt Rôti, Cơm xá xíu Hội An, Cơm gà xào nấm, Cơm gà cuộn sốt nấm, Cơm gà Hội An đặc biệt, Cơm gà Hội An thường.\n\n**[4] Nhà Hàng Chay Phương Mai (Món chính)**\nNgoài món ăn nhẹ, quán còn phục vụ món chính với món tráng miệng là Chè đậu đỏ.\n\n*Lưu ý: Các món ăn trong danh sách [2] và [3] đều thuộc về Nhà Hàng Hương Hội An, trong khi [1] và [4] thuộc về Nhà Hàng Chay Phương Mai.*",
+        "response_id": "chatcmpl_c1b7635b-cf26-45de-8388-b05900b2b97c",
+        "created_at": "2026-07-28T10:13:31.382Z"
+      },
+      {
+        "role": "user",
+        "content": "Nhà Hàng Hương Hội An có món gì",
+        "response_id": null,
+        "created_at": "2026-07-28T10:14:21.503Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn, tại **Nhà Hàng Hương Hội An** (nằm ở khu vực **Hà Nội**), chúng tôi mang đến cho bạn những hương vị Hội An đặc sắc với các món ăn nổi bật sau:\n\n*   **[3] Cơm gà Hội An:** Đây là món chủ lực, bao gồm các lựa chọn như Cơm gà Hội An thường (lẫn), Cơm gà Hội An đặc biệt, Cơm gà xào nấm, Cơm gà cuộn sốt nấm, Cơm cánh gà sốt Rôti, Cơm Thịt Heo Nướng Ngũ Vị và Cơm xá xíu Hội An.\n*   **[1] Các món lẩu - Gà:** Bạn có thể thưởng thức Lẩu gà tiềm ớt, Lẩu bò nhúng ớt, Mẹt gà đặc biệt, Gà nướng lá chanh, Gà chặt 1/4 lườn cùng Mẹt đồ nướng Miền Trung.\n*   **[2] Khai vị:** Menu khai vị đa dạng với Gỏi chân gà rút xương, Bò cuốn lá lốt, Nem lụi (5), Cánh gà chiên mắm, Nem gà nấm, Chân gà chiên mắm và Tràng trứng cháy tỏi.\n*   **[4] Thông tin nổi bật:** Restaurant này được quảng bá là nơi \"Hương vị Hội An thu nhỏ ngay giữa lòng Hà Nội\", nơi bạn vừa có cơm gà Hội An vừa có bún thịt nướng. Bạn có thể xem video giới thiệu tại địa chỉ: https://mediatuongtac.mediatech.vn/dulich/storage/uploads/videos/b3acf87c-9975-4ba3-9038-9290e1b0aa38.mp4.\n\nCác món ăn này được trình bày theo chế độ layout grid để bạn dễ dàng lựa chọn. Nếu bạn cần đặt lịch hoặc biết thêm chi tiết, hãy xem mục \"Info + QR Đặt lịch\" trong menu.",
+        "response_id": "chatcmpl_90f18e70-b811-46b8-8aed-36fdb628c169",
+        "created_at": "2026-07-28T10:14:21.503Z"
       }
     ]
   }
