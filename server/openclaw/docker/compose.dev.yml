@@ -1,0 +1,35 @@
+services:
+  openclaw:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.dev
+    image: openclaw:dev
+    working_dir: /workspace/openclaw/app
+    environment:
+      HOME: /home/node
+      OPENCLAW_HOME: /home/node
+      OPENCLAW_CONFIG_DIR: /workspace/openclaw/config
+      OPENCLAW_CONFIG_PATH: /workspace/openclaw/config/openclaw.json
+      OPENCLAW_STATE_DIR: /workspace/openclaw/data
+      OPENCLAW_WORKSPACE_DIR: /workspace/openclaw/data/workspace
+      CHOKIDAR_USEPOLLING: "1"
+      CHOKIDAR_INTERVAL: "1000"
+      CHOKIDAR_BINARY_INTERVAL: "3000"
+      TZ: ${OPENCLAW_TZ:-UTC}
+    volumes:
+      - "../app:/workspace/openclaw/app"
+      - "../config:/workspace/openclaw/config"
+      - "../data:/workspace/openclaw/data"
+      - openclaw_node_modules:/workspace/openclaw/app/node_modules
+    ports:
+      - "${OPENCLAW_GATEWAY_PORT:-18789}:18789"
+      - "${OPENCLAW_BRIDGE_PORT:-18790}:18790"
+      - "${OPENCLAW_MSTEAMS_PORT:-3978}:3978"
+    init: true
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    command: ["pnpm", "dev"]
+
+volumes:
+  openclaw_node_modules:

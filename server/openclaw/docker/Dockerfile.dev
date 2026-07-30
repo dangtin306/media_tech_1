@@ -1,0 +1,43 @@
+FROM ubuntu:22.04
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    bash \
+    build-essential \
+    ca-certificates \
+    curl \
+    git \
+    g++ \
+    gnupg \
+    make \
+    python3 \
+    tini \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - \
+  && apt-get update \
+  && apt-get install -y --no-install-recommends nodejs \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN corepack enable
+
+WORKDIR /workspace/openclaw
+
+# Install dependencies in the app tree so the node_modules volume can be seeded.
+COPY app/ ./app/
+
+WORKDIR /workspace/openclaw/app
+RUN pnpm install --frozen-lockfile
+
+ENV HOME=/home/node \
+    OPENCLAW_HOME=/home/node \
+    OPENCLAW_CONFIG_DIR=/workspace/openclaw/config \
+    OPENCLAW_CONFIG_PATH=/workspace/openclaw/config/openclaw.json \
+    OPENCLAW_STATE_DIR=/workspace/openclaw/data \
+    OPENCLAW_WORKSPACE_DIR=/workspace/openclaw/data/workspace \
+    CHOKIDAR_USEPOLLING=1 \
+    CHOKIDAR_INTERVAL=1000 \
+    CHOKIDAR_BINARY_INTERVAL=3000
+
+ENTRYPOINT ["tini", "-s", "--"]
+CMD ["pnpm", "dev"]

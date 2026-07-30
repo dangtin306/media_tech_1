@@ -9,7 +9,7 @@
   "ubuntu_test_user": "root",
   "ubuntu_test_password": "Matkhau@abc",
   "ubuntu_test_container": "ubuntu-gpu-test",
-  "ubuntu_test_dockerImage": "ubuntu:22.04",
+  "ubuntu_test_dockerImage": "media_tech_ai_ubuntu_test:sshd",
   "ubuntu_test_dockerPort": "8799:22",
   "ubuntu_test_sshCommand": "ssh root@localhost -p 8799"
 }

@@ -1,0 +1,14 @@
+.git
+app/.git
+app/node_modules
+app/**/node_modules
+app/dist
+app/**/dist
+app/.artifacts
+app/**/.artifacts
+app/.cache
+app/**/.cache
+app/.pnpm-store
+app/**/.pnpm-store
+config
+data

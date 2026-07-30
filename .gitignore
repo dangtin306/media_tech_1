@@ -7,3 +7,7 @@ node_modules/
 *.err
 dist/
 coverage/
+server/openclaw/data/
+server/openclaw/config/
+server/openclaw/.env
+server/openclaw/docker/.env

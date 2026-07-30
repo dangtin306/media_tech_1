@@ -123,36 +123,15 @@ docker logs -f media-tech-qwen
 curl "http://127.0.0.1:${MEDIA_TECH_APP_PORT}/health"
 ```
 
-## 7. SSH access
+## 7. Build the Ubuntu test image
 
-SSH is provided by the Ubuntu host or the cloud platform. Do not install a
-second Docker daemon inside the Qwen container.
-
-If a local Docker test container needs SSH, create it with the port mapping from
-`config.json` at creation time. Do not add `--gpus all` unless the host is a
-real NVIDIA-enabled Linux machine with the container toolkit configured:
-
-```bash
-docker run -d --name ubuntu-gpu-test \
-  -p "${DOCKER_SSH_PORT_MAPPING}" \
-  ubuntu:22.04 sleep infinity
-```
-
-To create and configure the test container automatically from `config.json`:
+The SSH test container now has `sshd` installed and started inside the image, so
+`docker run` does not need a follow-up `apt-get install openssh-server` step.
+Build it once from this folder:
 
 ```powershell
-$configPath = "D:\hustmedia\python\llms\media_tech_ai\server\ubuntu\config.json"
-$password = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_password)" $configPath
-$dockerPort = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_dockerPort)" $configPath
-
-docker run -d --name ubuntu-gpu-test --gpus all -p $dockerPort ubuntu:22.04 sleep infinity
-docker exec ubuntu-gpu-test bash -lc "export DEBIAN_FRONTEND=noninteractive; apt-get update -qq && apt-get install -y -qq openssh-server && mkdir -p /run/sshd && echo 'root:$password' | chpasswd && printf '\\nPermitRootLogin yes\\nPasswordAuthentication yes\\n' >> /etc/ssh/sshd_config && /usr/sbin/sshd"
-```
-
-Enter it directly without SSH:
-
-```bash
-docker exec -it ubuntu-gpu-test bash
+cd D:\hustmedia\python\llms\media_tech_ai\server\ubuntu
+docker build -t media_tech_ai_ubuntu_test:sshd .
 ```
 
 ## 8. Local Docker Desktop Ubuntu test container
@@ -161,21 +140,22 @@ This section is for Docker Desktop on Windows, not for a Clore marketplace
 container. Docker Desktop already owns the Docker daemon, so this Ubuntu test
 container can use the host daemon through the Docker socket.
 
-Recreate the test container with the SSH mapping from `config.json`, and Docker
-CLI access to the host daemon. This is the correct option for Docker Desktop on
-Windows:
+Recreate the test container with the SSH mapping from `config.json`. The
+container starts `sshd` automatically, so pressing Run or starting it from the
+CLI no longer leaves you with a dead shell-only container:
 
 ```powershell
 docker rm -f ubuntu-gpu-test 2>$null
 
 $configPath = "D:\hustmedia\python\llms\media_tech_ai\server\ubuntu\config.json"
+$password = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_password)" $configPath
 $dockerPort = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_dockerPort)" $configPath
 
 docker run -d --name ubuntu-gpu-test `
-  --privileged `
   -p $dockerPort `
   -v /var/run/docker.sock:/var/run/docker.sock `
-  ubuntu:22.04 sleep infinity
+  -e ROOT_PASSWORD=$password `
+  media_tech_ai_ubuntu_test:sshd
 ```
 
 Enter the container:
@@ -184,8 +164,9 @@ Enter the container:
 docker exec -it ubuntu-gpu-test bash
 ```
 
-Install the full Docker package set. The container still uses the Docker
-Desktop host daemon through the mounted socket; the inner daemon is not started.
+Install the full Docker package set only if you need the Docker CLI inside the
+container. The container still uses the Docker Desktop host daemon through the
+mounted socket; the inner daemon is not started.
 
 ```bash
 apt-get update
@@ -203,27 +184,8 @@ docker ps
 docker pull hustmedia/media-tech-qwen:latest
 ```
 
-Install and start SSH before attempting the SSH connection:
-
-```bash
-apt-get update
-apt-get install -y openssh-server
-mkdir -p /run/sshd
-printf '\nPermitRootLogin yes\nPasswordAuthentication yes\n' >> /etc/ssh/sshd_config
-sshd -t
-pkill sshd || true
-/usr/sbin/sshd
-```
-
-Set the root password from `config.json` without copying it into this guide:
-
-```powershell
-$configPath = "D:\hustmedia\python\llms\media_tech_ai\server\ubuntu\config.json"
-$password = node -e "const c=require(process.argv[1]); process.stdout.write(c.ubuntu_test_password)" $configPath
-docker exec -e "ROOT_PASSWORD=$password" ubuntu-gpu-test bash -lc 'printf "root:%s\n" "$ROOT_PASSWORD" | chpasswd'
-```
-
-Test GPU access:
+Test GPU access only on a real NVIDIA-enabled Linux host with the container
+toolkit configured:
 
 ```bash
 nvidia-smi
@@ -260,17 +222,6 @@ docker image rm ubuntu:22.04
 
 Do not run `docker system prune -a` unless all unused images and containers are
 intended to be deleted.
-
-If SSH needs to be configured again:
-
-```bash
-apt-get update
-apt-get install -y openssh-server
-mkdir -p /run/sshd
-printf '\nPermitRootLogin yes\nPasswordAuthentication yes\n' >> /etc/ssh/sshd_config
-pkill sshd || true
-/usr/sbin/sshd
-```
 
 Set the root password from `config.json` instead of typing a second password:
 
