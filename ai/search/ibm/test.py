@@ -131,7 +131,7 @@ def main() -> None:
     parser.add_argument("--device", default="", help="cpu, cuda, mps, or empty for auto")
     parser.add_argument(
         "--query",
-        default="Cafe Má»™c cĂ³ trĂ  Ä‘Ă o khĂ´ng?",
+        default="Cafe Mộc có trà đào không?",
         help="Query text to search in the corpus",
     )
     parser.add_argument(

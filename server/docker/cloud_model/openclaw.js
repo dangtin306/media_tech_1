@@ -1,7 +1,7 @@
 const http = require('http');
 const { WebSocketServer } = require('/workspace/backend/node_modules/ws');
 
-const PORT = Number(process.env.PORT || 8796);
+const PORT = Number(process.env.PORT || 8802);
 const WS_PATH = process.env.WS_PATH || '/chatbot/gpu';
 
 function json(res, statusCode, data) {

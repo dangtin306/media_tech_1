@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-07-29T09:05:14.102Z",
+  "timestamp": "2026-07-29T10:56:58.891Z",
   "request": {
-    "session_id": "qwen-api-1785315912761-90adac21342fb",
-    "turn_id": "msg-1785315912778-72e42439835ed",
+    "session_id": "qwen-api-1785322617855-761d5161e5344",
+    "turn_id": "msg-1785322617868-89edb4a67ee2a",
     "system_context": "Chỉ trả lời 1 con số từ 1 đến 4, từ list tin nhắn check tin mới nhất là level nào.\nLevel 1\nChỉ dùng khi người dùng chỉ chào hỏi, không có câu hỏi, không có nhu cầu.\n\nLevel 2\nKhông liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm.\n\nLevel 3\nđang có nhu cầu liên quan đến tìm kiếm, dịch vụ, quán, sản phẩm hoặc địa điểm, hoặc có đang cần biết thêm.\n\nLevel 4\nKhông rõ.",
-    "user_message": "chào",
+    "user_message": "chào bạn",
     "history": [],
     "scenario": "customer_consulting",
     "user_state": {},
@@ -31,8 +31,8 @@
       "stage": "level"
     },
     "model": "Qwen3.5-4B-V4",
-    "user": "qwen-api-1785315912761-90adac21342fb",
-    "session_key": "qwen-api-1785315912761-90adac21342fb",
+    "user": "qwen-api-1785322617855-761d5161e5344",
+    "session_key": "qwen-api-1785322617855-761d5161e5344",
     "messages": [
       {
         "role": "system",
@@ -40,7 +40,7 @@
       },
       {
         "role": "user",
-        "content": "chào"
+        "content": "chào bạn"
       }
     ],
     "temperature": 0.5,
@@ -63,9 +63,9 @@
           }
         }
       ],
-      "created": 1785315918,
+      "created": 1785322623,
       "enable_thinking": false,
-      "id": "chatcmpl-level-20260729090518",
+      "id": "chatcmpl-level-20260729105703",
       "model": "Qwen3.5-4B-V4",
       "normalized_level": "1",
       "object": "chat.completion",

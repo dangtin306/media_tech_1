@@ -6965,6 +6965,7 @@
       {
         "role": "user",
         "content": "chào",
+        "response_id": null,
         "created_at": "2026-07-29T09:18:43.430Z"
       },
       {
@@ -7311,6 +7312,17 @@
         "content": "Chào bạn, dưới đây là thông tin về các món ngon tại các nhà hàng trong khu vực Hà Nội dựa trên dữ liệu đã cung cấp:\n\n**1. Nhà Hàng Chay Phương Mai (Phù hợp nhất cho nhu cầu tìm quán cơm Việt ấm áp giữa Hà Nội):**\nĐây là lựa chọn nổi bật nếu bạn đang tìm kiếm không gian và hương vị gợi nhớ về \"Bếp tuổi thơ\". Menu món ăn nhẹ tại đây bao gồm: Cá ngừ kho tộ, Bò xào dưa cải chua, Rau muống xào tỏi, Gà ta kho gừng, Bánh tráng cuốn thịt heo, Mỳ quảng gà đặc biệt, Gỏi bưởi tôm thịt, Cá nục cuốn rau muống, Thịt kho tàu, Ba chỉ luộc, Trứng chiên hành, Thịt rim.\n*   **Đặc điểm:** Suất mẹ nấu 1 người, chế độ hiển thị grid.\n\n**2. Nhà Hàng Hương Hội An (Phù hợp cho các món ăn giải ngấy sau Tết hoặc món đặc trưng miền Trung):**\nNhà hàng này cung cấp nhiều lựa chọn đa dạng, đặc biệt là các món cơm và lẩu.\n*   **Menu Cơm gà Hội An:** Bao gồm Cơm Xá Xíu Hội An, Cơm Thịt Heo Nướng Ngũ Vị, Cơm cánh gà sốt Rôti, Cơm xá xíu Hội An, Cơm gà xào nấm, Cơm gà cuộn sốt nấm, Cơm gà Hội An đặc biệt, Cơm gà Hội An thường (lẫn).\n*   **Menu Các món lẩu - Gà:** Bao gồm Lẩu gà tiềm ớt, Lẩu bò nhúng ớt, Mẹt gà đặc biệt, Gà nướng lá chanh, Mẹt đồ nướng Miền Trung, Gà chặt 1/4 lườn.\n*   **Các món khác:** Bún trộn thịt nướng, Bò nướng lá Lốt.\n*   **Đặc điểm:** Chế độ hiển thị grid.\n\n**3. NHÀ HÀNG TRÚC AN (Phù hợp cho các món ăn chính đậm đà):**\nNếu bạn muốn thưởng thức các món nướng và ăn chính truyền thống, nhà hàng này có menu: Gà nướng mật ong, Chim câu xúc phồng tôm, Cá lăng hấp bia, Gà rang muối, Combo chân giò, Cá dầm xanh nướng.\n*   **Đặc điểm:** Chế độ hiển thị grid.\n\n**Tóm lại:**\n*   Nếu muốn tìm **quán cơm Việt ấm áp** với nhiều",
         "response_id": "chatcmpl_8b1661ab-fca9-4691-be69-6d5a944d9d54",
         "created_at": "2026-07-29T03:05:56.256Z"
+      },
+      {
+        "role": "user",
+        "content": "chào bạn",
+        "created_at": "2026-07-29T10:57:05.363Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào anh! Mình là trợ lý của tuongtac.tv. Anh cần tìm dịch vụ, quán ăn hay địa điểm nào quanh đây không?",
+        "response_id": "chatcmpl_42cbdbfa-b855-4fbd-81c1-dbe72bb2222b",
+        "created_at": "2026-07-29T10:57:05.363Z"
       }
     ]
   },

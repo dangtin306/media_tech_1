@@ -3,7 +3,7 @@
     "expected_conda_prefix": "D:\\hustmedia\\conda_envs\\qwen",
     "base_model": "D:\\huggingface\\hub\\Qwen\\Qwen3.5-4B",
     "lora_adapter": "D:\\huggingface\\hub\\Qwen\\Qwen3.5-4B_vn_1\\adapter",
-    "offload_folder": "D:\\hustmedia\\python\\llms\\media_tech\\ai\\qwen\\qwen3.5_4B_vn\\server\\offload",
+    "offload_folder": "D:\\hustmedia\\python\\llms\\media_tech_ai\\ai\\qwen\\qwen3.5_4B_vn\\server\\offload",
     "app_port": 8005,
     "strict_cuda_only": true,
     "default_use_4bit": true,

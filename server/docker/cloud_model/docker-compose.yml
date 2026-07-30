@@ -1,6 +1,9 @@
 services:
   backend:
-    image: n8nio/n8n:latest
+    image: media_tech_ai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: media_tech_ai_backend
     working_dir: /workspace/backend
     volumes:
@@ -11,19 +14,26 @@ services:
     command: ["server.js"]
 
   openclaw:
-    image: n8nio/n8n:latest
+    image: media_tech_ai_openclaw:latest
+    build:
+      context: ../../openclaw
+      dockerfile: Dockerfile
     container_name: media_tech_ai_openclaw
-    working_dir: /workspace/server/docker/cloud_model
-    volumes:
-      - ../../..:/workspace
+    working_dir: /workspace/server/openclaw
     environment:
-      PORT: "8796"
+      PORT: "8802"
       WS_PATH: "/chatbot/gpu"
+      OPENCLAW_CONFIG_PATH: "/workspace/server/openclaw/config.json"
+    ports:
+      - "8802:8802"
     entrypoint: ["node"]
     command: ["openclaw.js"]
 
   frontend:
-    image: n8nio/n8n:latest
+    image: media_tech_ai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: media_tech_ai_fontend
     working_dir: /workspace/fontend
     volumes:

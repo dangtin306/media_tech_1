@@ -116,14 +116,14 @@ def build_keyword_prompt(user_texts: List[str]) -> str:
     previous_block = "\n".join(f"- {text}" for text in previous_users) if previous_users else "- (khĂ´ng cĂ³)"
 
     return (
-        "Báº¡n lĂ  bá»™ tĂ¡ch cá»¥m tá»« tĂ¬m kiáº¿m cho RAG.\n"
-        "Chá»‰ Æ°u tiĂªn cĂ¢u user cuá»‘i cĂ¹ng.\n\n"
-        f"CĂ¢u user cuá»‘i cĂ¹ng:\n{last_user}\n\n"
-        f"CĂ¡c cĂ¢u user trÆ°á»›c Ä‘Ă³:\n{previous_block}\n\n"
-        "YĂªu cáº§u:\n"
-        "- Chá»‰ tráº£ vá» Ä‘Ăºng 1 cá»¥m tá»« tĂ¬m kiáº¿m.\n"
-        "- KhĂ´ng giáº£i thĂ­ch, khĂ´ng markdown, khĂ´ng code block, khĂ´ng thĂªm nhĂ£n.\n"
-        "- Æ¯u tiĂªn cá»¥m tá»« tá»± nhiĂªn, gá»n vĂ  sĂ¡t nhu cáº§u tĂ¬m kiáº¿m.\n"
+        "Bạn là bộ tách cụm từ tìm kiếm cho RAG.\n"
+        "Chỉ ưu tiên câu user cuối cùng.\n\n"
+        f"Câu user cuối cùng:\n{last_user}\n\n"
+        f"Các câu user trước đó:\n{previous_block}\n\n"
+        "Yêu cầu:\n"
+        "- Chỉ trả về đúng 1 cụm từ tìm kiếm.\n"
+        "- Không giải thích, không markdown, không code block, không thêm nhãn.\n"
+        "- Ưu tiên cụm từ tự nhiên, gọn và sát nhu cầu tìm kiếm.\n"
     )
 
 
@@ -157,7 +157,7 @@ def normalize_search_query(text: str) -> str:
 
     query = re.sub(r"^[\-\*\u2022]+\s*", "", query)
     query = re.sub(r"^\d+[\.\)]\s*", "", query)
-    query = re.sub(r"^(keyword|keywords|query|search query)\s*[:ï¼]\s*", "", query, flags=re.IGNORECASE)
+    query = re.sub(r"^(keyword|keywords|query|search query)\s*[:：]\s*", "", query, flags=re.IGNORECASE)
     query = re.sub(r"\s+", " ", query).strip(" ,;")
     return query
 

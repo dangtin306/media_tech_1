@@ -1,34 +1,34 @@
-﻿# Git Auto CLI Guide
+# Git Auto CLI Guide
 
-ThÆ° má»¥c gá»‘c:
+Thư mục gốc:
 
 ```powershell
 D:\hustmedia\python\llms\media_tech_ai\backend\git_auto
 ```
 
-## 1) Cháº¡y auto commit/push
+## 1) Chạy auto commit/push
 
-Cháº¡y tá»« báº¥t ká»³ Ä‘Ă¢u:
+Chạy từ bất kỳ đâu:
 
 ```powershell
 python D:\hustmedia\python\llms\media_tech_ai\backend\git_auto\auto\test.py --repo D:\hustmedia\python\llms\media_tech_ai\backend\git_auto\project_test -m "auto push"
 ```
 
-Náº¿u Ä‘ang Ä‘á»©ng ngay trong repo cáº§n Ä‘áº©y:
+Nếu đang đứng ngay trong repo cần đẩy:
 
 ```powershell
 python D:\hustmedia\python\llms\media_tech_ai\backend\git_auto\auto\test.py
 ```
 
-## 2) Kiá»ƒm tra nhanh repo
+## 2) Kiểm tra nhanh repo
 
-Xem tráº¡ng thĂ¡i:
+Xem trạng thái:
 
 ```powershell
 git status
 ```
 
-Xem branch hiá»‡n táº¡i:
+Xem branch hiện tại:
 
 ```powershell
 git branch --show-current
@@ -40,7 +40,7 @@ Xem remote:
 git remote -v
 ```
 
-## 3) Luá»“ng thá»§ cĂ´ng
+## 3) Luồng thủ công
 
 ```powershell
 cd D:\hustmedia\python\llms\media_tech_ai\backend\git_auto\project_test
@@ -52,11 +52,10 @@ git push
 
 ## 4) Gitea local
 
-Web UI hiá»‡n Ä‘ang cháº¡y á»Ÿ:
+Web UI hiện đang chạy ở:
 
 ```text
 http://localhost:33443/
 ```
 
-Trong cáº¥u hĂ¬nh Gitea, web service map tá»« container port `3000` ra host port `33443`.
-
+Trong cấu hình Gitea, web service map từ container port `3000` ra host port `33443`.

@@ -192,73 +192,73 @@ JSON_TEXT_KEYS = {
 }
 
 LABELS = {
-    "store_id": "MĂ£ cá»­a hĂ ng",
-    "store_menu_id": "MĂ£ menu",
-    "user_id": "MĂ£ ngÆ°á»i dĂ¹ng",
-    "type": "Loáº¡i",
-    "status": "Tráº¡ng thĂ¡i",
-    "name": "TĂªn",
+    "store_id": "Mã của hàng",
+    "store_menu_id": "Mã menu",
+    "user_id": "Mã người dùng",
+    "type": "Loại",
+    "status": "Trạng thái",
+    "name": "Tên",
     "slug": "Slug",
-    "title": "TiĂªu Ä‘á»",
-    "description": "MĂ´ táº£",
-    "note": "Ghi chĂº",
-    "notes": "Ghi chĂº",
-    "admin_note": "Ghi chĂº quáº£n trá»‹",
-    "customer_name": "TĂªn khĂ¡ch",
-    "customer_phone": "Sá»‘ Ä‘iá»‡n thoáº¡i",
+    "title": "Tiêu đề",
+    "description": "Mô tả",
+    "note": "Ghi chú",
+    "notes": "Ghi chú",
+    "admin_note": "Ghi chú quản trị",
+    "customer_name": "Tên khách",
+    "customer_phone": "Số điện thoại",
     "customer_email": "Email",
-    "booking_at": "Thá»i gian Ä‘áº·t",
-    "time_slot": "Khung giá»",
-    "guests": "Sá»‘ khĂ¡ch",
-    "cancel_reason": "LĂ½ do huá»·",
-    "staff_note": "Ghi chĂº nhĂ¢n viĂªn",
-    "assigned_to": "NgÆ°á»i phá»¥ trĂ¡ch",
-    "table_ref": "BĂ n",
-    "area_ref": "Khu vá»±c",
-    "total": "Tá»•ng tiá»n",
-    "rating_score": "Äiá»ƒm Ä‘Ă¡nh giĂ¡",
-    "rating_text": "MĂ´ táº£ Ä‘Ă¡nh giĂ¡",
-    "review_count": "Sá»‘ lÆ°á»£t Ä‘Ă¡nh giĂ¡",
-    "opening_hours": "Giá» má»Ÿ cá»­a",
-    "phone": "Äiá»‡n thoáº¡i",
+    "booking_at": "Thời gian đặt",
+    "time_slot": "Khung giờ",
+    "guests": "Số khách",
+    "cancel_reason": "Lý do hủy",
+    "staff_note": "Ghi chú nhân viên",
+    "assigned_to": "Người phụ trách",
+    "table_ref": "Bàn",
+    "area_ref": "Khu vực",
+    "total": "Tổng tiền",
+    "rating_score": "Điểm đánh giá",
+    "rating_text": "Mô tả đánh giá",
+    "review_count": "Số lượt đánh giá",
+    "opening_hours": "Giờ mở cửa",
+    "phone": "Điện thoại",
     "email": "Email",
-    "address": "Äá»‹a chá»‰",
-    "location": "Vá»‹ trĂ­",
-    "store_type": "Loáº¡i cá»­a hĂ ng",
-    "layout": "Bá»‘ cá»¥c",
-    "layout_mode": "Cháº¿ Ä‘á»™ bá»‘ cá»¥c",
-    "layout_cols": "Sá»‘ cá»™t",
-    "layout_tablet": "Bá»‘ cá»¥c tablet",
-    "layout_tablet_cols": "Sá»‘ cá»™t tablet",
-    "layout_mobile": "Bá»‘ cá»¥c mobile",
-    "layout_mobile_cols": "Sá»‘ cá»™t mobile",
-    "role": "Vai trĂ²",
-    "can_edit_booking": "CĂ³ thá»ƒ sá»­a booking",
-    "is_admin": "Quáº£n trá»‹ viĂªn",
-    "is_homepage": "Trang chá»§",
-    "is_available": "CĂ²n hĂ ng",
-    "is_best_seller": "BĂ¡n cháº¡y",
-    "use_tabs": "DĂ¹ng tabs",
-    "auto_play": "Tá»± cháº¡y",
-    "is_swiper": "DĂ¹ng swiper",
-    "swiper_interval": "Khoáº£ng láº·p",
-    "sort_order": "Thá»© tá»±",
-    "base_price": "GiĂ¡ cÆ¡ báº£n",
-    "cover_position": "Vá»‹ trĂ­ áº£nh bĂ¬a",
-    "modal_size": "KĂ­ch thÆ°á»›c modal",
-    "display_ratio": "Tá»· lá»‡ hiá»ƒn thá»‹",
-    "grid_col_span": "Sá»‘ cá»™t lÆ°á»›i",
-    "grid_row_span": "Sá»‘ hĂ ng lÆ°á»›i",
-    "tab_config": "Cáº¥u hĂ¬nh tab",
-    "sizes": "KĂ­ch cá»¡",
+    "address": "Địa chỉ",
+    "location": "Vị trí",
+    "store_type": "Loại cửa hàng",
+    "layout": "Bố cục",
+    "layout_mode": "Chế độ bố cục",
+    "layout_cols": "Số cột",
+    "layout_tablet": "Bố cục tablet",
+    "layout_tablet_cols": "Số cột tablet",
+    "layout_mobile": "Bố cục mobile",
+    "layout_mobile_cols": "Số cột mobile",
+    "role": "Vai trò",
+    "can_edit_booking": "Có thể sửa booking",
+    "is_admin": "Quản trị viên",
+    "is_homepage": "Trang chủ",
+    "is_available": "Còn hàng",
+    "is_best_seller": "Bán chạy",
+    "use_tabs": "Dùng tabs",
+    "auto_play": "Tự chạy",
+    "is_swiper": "Dùng swiper",
+    "swiper_interval": "Khoảng lặp",
+    "sort_order": "Thứ tự",
+    "base_price": "Giá cơ bản",
+    "cover_position": "Vị trí ảnh bìa",
+    "modal_size": "Kích thước modal",
+    "display_ratio": "Tỷ lệ hiển thị",
+    "grid_col_span": "Số cột lưới",
+    "grid_row_span": "Số hàng lưới",
+    "tab_config": "Cấu hình tab",
+    "sizes": "Kích cỡ",
     "toppings": "Topping",
-    "booking_data": "Dá»¯ liá»‡u Ä‘áº·t bĂ n",
-    "items": "Máº·t hĂ ng",
-    "current_values": "GiĂ¡ trá»‹ hiá»‡n táº¡i",
-    "requested_changes": "Thay Ä‘á»•i yĂªu cáº§u",
-    "media_key": "KhĂ³a media",
-    "dish_key": "KhĂ³a mĂ³n",
-    "author": "TĂ¡c giáº£",
+    "booking_data": "Dữ liệu đặt bàn",
+    "items": "Mặt hàng",
+    "current_values": "Giá trị hiện tại",
+    "requested_changes": "Thay đổi yêu cầu",
+    "media_key": "Khóa media",
+    "dish_key": "Khóa món",
+    "author": "Tác giả",
 }
 
 
@@ -269,7 +269,7 @@ def normalize_ws(value: str) -> str:
 def repair_mojibake(value: str) -> str:
     if not value:
         return value
-    suspicious = ("Ăƒ", "Ă„", "Ă†", "Ă¡Â»", "Ă¡Âº", "ĂƒÂ¡", "ĂƒÂ¨", "ĂƒÂ¬", "ĂƒÂ³", "Ă", "Ă")
+    suspicious = ("Ã", "Ä", "Æ", "á»", "áº", "Ã¡", "Ã¨", "Ã¬", "Ã³", "Ê", "Þ")
     if not any(token in value for token in suspicious):
         return value
     for encoding in ("latin1", "cp1252"):
@@ -554,7 +554,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
     pairs = field_pairs(table, clean_row)
 
     if table == "bookings":
-        bits = ["ThĂ´ng tin booking"]
+        bits = ["Th?ng tin booking"]
         for col in ("customer_name", "customer_phone", "booking_at", "time_slot", "guests", "status", "cancel_reason", "notes"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -564,7 +564,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
         return " | ".join([bit for bit in bits if bit])
 
     if table == "signature_dishes":
-        bits = ["ThĂ´ng tin mĂ³n Äƒn"]
+        bits = ["Th?ng tin m?n ?n"]
         for col in ("title", "description", "base_price", "status", "rating", "is_best_seller", "is_available"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -574,7 +574,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
         return " | ".join([bit for bit in bits if bit])
 
     if table == "store_menus":
-        bits = ["ThĂ´ng tin thá»±c Ä‘Æ¡n"]
+        bits = ["Th?ng tin th?c ??n"]
         for col in ("name", "layout", "layout_mode", "sort_order"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -584,7 +584,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
         return " | ".join([bit for bit in bits if bit])
 
     if table == "stores":
-        bits = ["ThĂ´ng tin cá»­a hĂ ng"]
+        bits = ["Th?ng tin c?a h?ng"]
         for col in ("name", "store_type", "address", "location", "phone", "email", "opening_hours", "rating_score", "rating_text", "review_count"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -594,7 +594,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
         return " | ".join([bit for bit in bits if bit])
 
     if table == "media_highlights":
-        bits = ["ThĂ´ng tin ná»•i báº­t"]
+        bits = ["Th?ng tin n?i b?t"]
         for col in ("title", "tag", "author", "sort_order"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -604,7 +604,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
         return " | ".join([bit for bit in bits if bit])
 
     if table == "users":
-        bits = ["ThĂ´ng tin ngÆ°á»i dĂ¹ng"]
+        bits = ["Th?ng tin ng??i d?ng"]
         for col in ("name", "email", "note", "is_admin", "last_accessed_store_id"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -614,7 +614,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
         return " | ".join([bit for bit in bits if bit])
 
     if table == "store_user":
-        bits = ["ThĂ´ng tin phĂ¢n quyá»n cá»­a hĂ ng"]
+        bits = ["Th?ng tin ph?n quy?n c?a h?ng"]
         for col in ("user_id", "store_id", "role", "can_edit_booking"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -624,7 +624,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
         return " | ".join([bit for bit in bits if bit])
 
     if table == "store_applications":
-        bits = ["ThĂ´ng tin Ä‘Äƒng kĂ½ cá»­a hĂ ng"]
+        bits = ["Th?ng tin ??ng k? c?a h?ng"]
         for col in ("name", "slug", "address", "phone", "status", "admin_note"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -634,7 +634,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
         return " | ".join([bit for bit in bits if bit])
 
     if table == "store_change_requests":
-        bits = ["ThĂ´ng tin yĂªu cáº§u thay Ä‘á»•i"]
+        bits = ["Th?ng tin y?u c?u thay ??i"]
         for col in ("store_id", "status", "note", "admin_note", "requested_changes", "current_values"):
             value = clean_row.get(col)
             if looks_useful(col, value):
@@ -643,7 +643,7 @@ def build_text(table: str, row: Dict[str, Any]) -> str:
             bits.append(format_pairs(pairs))
         return " | ".join([bit for bit in bits if bit])
 
-    parts: List[str] = [f"ThĂ´ng tin {table.replace('_', ' ')}"]
+    parts: List[str] = [f"Th?ng tin {table.replace('_', ' ')}"]
     for col, value in pairs:
         formatted = json_text(value)
         if formatted:
