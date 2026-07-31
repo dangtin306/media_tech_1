@@ -1,35 +1,42 @@
 services:
-  openclaw:
+  openclaw-dev:
     build:
       context: ..
       dockerfile: docker/Dockerfile.dev
     image: openclaw:dev
-    working_dir: /workspace/openclaw/app
+    working_dir: /root/media_tech_ai/server/openclaw/app
     environment:
-      HOME: /home/node
-      OPENCLAW_HOME: /home/node
-      OPENCLAW_CONFIG_DIR: /workspace/openclaw/config
-      OPENCLAW_CONFIG_PATH: /workspace/openclaw/config/openclaw.json
-      OPENCLAW_STATE_DIR: /workspace/openclaw/data
-      OPENCLAW_WORKSPACE_DIR: /workspace/openclaw/data/workspace
-      CHOKIDAR_USEPOLLING: "1"
-      CHOKIDAR_INTERVAL: "1000"
-      CHOKIDAR_BINARY_INTERVAL: "3000"
+      OPENCLAW_CONFIG_DIR: /root/media_tech_ai/server/openclaw/config
+      OPENCLAW_CONFIG_PATH: /root/media_tech_ai/server/openclaw/config/openclaw.json
+      OPENCLAW_STATE_DIR: /root/media_tech_ai/server/openclaw/data
+      OPENCLAW_WORKSPACE_DIR: /root/media_tech_ai/server/openclaw/data/workspace
+      OPENCLAW_GATEWAY_BIND: auto
+      OPENCLAW_GATEWAY_WATCH_AUTO_DOCTOR: "0"
+      OPENCLAW_GATEWAY_TOKEN: dev-openclaw-token
+      OPENCLAW_GATEWAY_PORT: "8803"
+      OPENCLAW_GATEWAY_WATCH_TMUX: "0"
+      CI: "true"
+      GIT_DIR: /tmp/nonexistent
       TZ: ${OPENCLAW_TZ:-UTC}
     volumes:
-      - "../app:/workspace/openclaw/app"
-      - "../config:/workspace/openclaw/config"
-      - "../data:/workspace/openclaw/data"
-      - openclaw_node_modules:/workspace/openclaw/app/node_modules
+      - "../app:/root/media_tech_ai/server/openclaw/app"
+      - "../config:/root/media_tech_ai/server/openclaw/config"
+      - "../data:/root/media_tech_ai/server/openclaw/data"
+      - openclaw_node_modules:/root/media_tech_ai/server/openclaw/app/node_modules
     ports:
-      - "${OPENCLAW_GATEWAY_PORT:-18789}:18789"
+      - "8803:8803"
       - "${OPENCLAW_BRIDGE_PORT:-18790}:18790"
       - "${OPENCLAW_MSTEAMS_PORT:-3978}:3978"
+    entrypoint:
+      - bash
+      - -lc
+      - cd /root/media_tech_ai/server/openclaw/app && exec "$@"
+      - --
     init: true
     stdin_open: true
     tty: true
     restart: unless-stopped
-    command: ["pnpm", "dev"]
+    command: ["pnpm", "gateway:watch:raw"]
 
 volumes:
   openclaw_node_modules:

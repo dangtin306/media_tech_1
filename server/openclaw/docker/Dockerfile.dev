@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1.7
+
 FROM ubuntu:22.04
 
 RUN apt-get update \
@@ -8,7 +10,6 @@ RUN apt-get update \
     curl \
     git \
     g++ \
-    gnupg \
     make \
     python3 \
     tini \
@@ -19,15 +20,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - \
   && apt-get install -y --no-install-recommends nodejs \
   && rm -rf /var/lib/apt/lists/*
 
-RUN corepack enable
-
-WORKDIR /workspace/openclaw
-
-# Install dependencies in the app tree so the node_modules volume can be seeded.
-COPY app/ ./app/
-
-WORKDIR /workspace/openclaw/app
-RUN pnpm install --frozen-lockfile
+RUN corepack enable \
+  && corepack prepare pnpm@11.15.1 --activate
 
 ENV HOME=/home/node \
     OPENCLAW_HOME=/home/node \
@@ -39,5 +33,10 @@ ENV HOME=/home/node \
     CHOKIDAR_INTERVAL=1000 \
     CHOKIDAR_BINARY_INTERVAL=3000
 
-ENTRYPOINT ["tini", "-s", "--"]
-CMD ["pnpm", "dev"]
+WORKDIR /workspace/openclaw/app
+
+COPY docker/dev-entrypoint.sh /usr/local/bin/openclaw-dev-entrypoint
+RUN chmod 755 /usr/local/bin/openclaw-dev-entrypoint
+
+ENTRYPOINT ["tini", "-s", "--", "/usr/local/bin/openclaw-dev-entrypoint"]
+CMD ["pnpm", "gateway:watch:raw"]

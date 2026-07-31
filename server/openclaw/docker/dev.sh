@@ -2,4 +2,4 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-docker compose -f "$ROOT_DIR/docker/compose.dev.yml" up --build
+docker compose -f "$ROOT_DIR/docker/compose.dev.yml" up -d --no-build
