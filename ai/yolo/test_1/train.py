@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import torch
@@ -20,7 +21,7 @@ def main() -> None:
     model = YOLO(str(MODEL_PATH))
     model.train(
         data=str(DATASET_YAML),
-        epochs=100,
+        epochs=int(os.getenv("YOLO_EPOCHS", "100")),
         imgsz=640,
         batch=8,
         device=device,
