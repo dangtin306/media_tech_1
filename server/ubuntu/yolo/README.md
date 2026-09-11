@@ -20,3 +20,11 @@ Ubuntu git pull
 3. `guide_install.md`
 4. `guide_run.md`
 
+Cho Ubuntu mới hoặc GPU khác nhau, dùng guide chính:
+
+```text
+guide_ubuntu_any_gpu.md
+install_yolo_ubuntu.sh
+```
+
+Guide này có kiểm tra DNS, Conda TOS, Miniconda fallback bằng Python, CPU fallback và biến `TORCH_INDEX_URL` để chọn bản PyTorch CUDA phù hợp.
