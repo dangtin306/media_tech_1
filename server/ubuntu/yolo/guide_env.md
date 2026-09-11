@@ -1,61 +1,65 @@
-# YOLO26 — môi trường Conda trên Ubuntu
+# YOLO26 - moi truong Ubuntu
 
-Không copy `.venv` Windows sang Ubuntu. Tạo môi trường Linux mới.
+Khong copy .venv Windows sang Ubuntu. Tao moi truong Linux moi:
 
-```bash
+~~~bash
 source /root/miniconda3/etc/profile.d/conda.sh
 conda create -y -n yolo26 python=3.10
 conda activate yolo26
-```
+which python
+python --version
+python -m pip --version
+~~~
 
-Neu Conda bao `CondaToSNonInteractiveError`, chap nhan TOS truoc:
+Neu Conda bao TOS:
 
-```bash
+~~~bash
 conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
 conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
-```
+~~~
 
-Neu bao `NameResolutionError`, kiem tra DNS truoc khi cai tiep:
+Neu bao NameResolutionError, sua DNS/network truoc:
 
-```bash
+~~~bash
 getent hosts repo.anaconda.com
 getent hosts github.com
+getent hosts download.pytorch.org
 cat /etc/resolv.conf
-```
+~~~
 
-## Cài Ultralytics từ GitHub
+## Cai thu vien
 
-```bash
+~~~bash
 python -m pip install --upgrade pip
-python -m pip install \
-  git+https://github.com/ultralytics/ultralytics.git
-```
+python -m pip install git+https://github.com/ultralytics/ultralytics.git
+~~~
 
-Nếu dùng Roboflow SDK/API:
+PyTorch CPU:
 
-```bash
-python -m pip install inference-sdk roboflow
-```
+~~~bash
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+~~~
 
-## PyTorch CUDA cho RTX 20/30/40
+NVIDIA: chon dung index CUDA tai PyTorch selector, vi du cu124:
 
-Vi du server RTX 3090 dung CUDA 12.4:
+~~~bash
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+~~~
 
-```bash
-python -m pip install torch==2.6.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
-```
+Khong cai CUDA wheel tren may khong co NVIDIA. Kiem tra:
 
-Goi CUDA/cuDNN rat lon. Neu mang cham, pip co the mat nhieu phut; khong chay nhieu tien trinh cai song song.
-
-## Kiểm tra GPU
-
-```bash
-nvidia-smi
+~~~bash
+nvidia-smi || true
 python -c "import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
-```
+~~~
 
-Nếu `torch.cuda.is_available()` là `False`, cần cài PyTorch bản CUDA phù hợp với driver/GPU Ubuntu trước khi train.
+## Bien train
 
-## Secret
+~~~bash
+export YOLO_DEVICE=auto
+export YOLO_BATCH=auto
+export YOLO_EPOCHS=100
+export YOLO_WORKERS=4
+~~~
 
-API key Roboflow/Hugging Face phải đặt bằng biến môi trường hoặc file `.env` riêng trên Ubuntu, không commit vào GitHub.
+YOLO_DEVICE=auto dung GPU khi PyTorch nhan ra CUDA, neu khong tu chuyen sang CPU.

@@ -1,63 +1,48 @@
-# YOLO26 — cài đặt trên Ubuntu
+# YOLO26 - cai dat tren Ubuntu
 
-## 1. Lấy code
+## Lay code
 
-```bash
+~~~bash
+git clone --depth 1 https://github.com/dangtin306/media_tech_1.git /root/media_tech_ai
+cd /root/media_tech_ai
+~~~
+
+Neu repo da co:
+
+~~~bash
 cd /root/media_tech_ai
 git pull --ff-only
-```
+~~~
 
-Neu repo chua ton tai:
+Neu Could not resolve host, kiem tra DNS bang getent hosts github.com truoc.
 
-```bash
-git clone --depth 1 https://github.com/dangtin306/media_tech_1.git /root/media_tech_ai
-```
+## Cai tu dong
 
-Neu `git clone` bao `Could not resolve host`, day la loi DNS/mang cua Ubuntu. Kiem tra:
+~~~bash
+cd /root/media_tech_ai/server/ubuntu/yolo
+bash install_yolo_ubuntu.sh
+~~~
 
-```bash
-getent hosts github.com
-cat /etc/resolv.conf
-```
+Script tao env /root/miniconda3/envs/yolo26, cai PyTorch theo CPU/GPU va cai Ultralytics tu GitHub chinh thuc.
 
-## 2. Tạo thư mục model
+## Layout khuyen nghi
 
-```bash
-mkdir -p /root/model/yolo/vietnam_flag
-```
+~~~text
+/root/media_tech_ai/                         # code
+/root/model/yolo/yolo26n.pt                  # model goc
+/root/model/yolo/vietnam_flag/               # dataset/output lon
+~~~
 
-Đưa `yolo26n.pt` vào:
+Model ngoai repo:
 
-```text
-/root/model/yolo/yolo26n.pt
-```
+~~~bash
+export YOLO_MODEL=/root/model/yolo/yolo26n.pt
+~~~
 
-Có thể dùng `scp` từ Windows:
+Dataset ngoai repo can co data.yaml, anh va label YOLO. Truyen duong dan:
 
-```powershell
-scp -P <SSH_PORT> `
-  "D:\hustmedia\python\llms\media_tech_ai\ai\yolo\yolo26n\yolo26n.pt" `
-  root@<UBUNTU_HOST>:/root/model/yolo/yolo26n.pt
-```
+~~~bash
+export YOLO_DATA=/root/model/yolo/vietnam_flag/data.yaml
+~~~
 
-Dataset YOLO đưa vào:
-
-```text
-/root/model/yolo/vietnam_flag/
-```
-
-Dataset cần có ảnh, label và `data.yaml` theo format Ultralytics.
-
-## 3. Kiểm tra project
-
-```bash
-test -f /root/media_tech_ai/ai/yolo/test_1/train.py
-test -f /root/model/yolo/yolo26n.pt
-find /root/model/yolo/vietnam_flag -maxdepth 2 -type d
-```
-
-Neu Ubuntu toi gian chua co `curl`, co the tai file bang Python:
-
-```bash
-python3 -c "import urllib.request; urllib.request.urlretrieve('URL', '/root/model/yolo/file')"
-```
+Khong commit model, dataset, API key hoac runs/ len Git.
