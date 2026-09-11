@@ -1,0 +1,6 @@
+path: datasets/vietnam_flag/Vietnam Flag.v3-v3.yolo26
+train: train/images
+val: valid/images
+
+names:
+  0: vietnam_flag
