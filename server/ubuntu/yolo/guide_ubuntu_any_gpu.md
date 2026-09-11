@@ -38,6 +38,18 @@ The script creates:
 
 It does not store API keys and does not download a dataset.
 
+The project code is separate from the Ultralytics package. If the project is
+not present yet, clone it first:
+
+```bash
+git clone --depth 1 https://github.com/dangtin306/media_tech_1.git /root/media_tech_ai
+cd /root/media_tech_ai/server/ubuntu/yolo
+bash install_yolo_ubuntu.sh
+```
+
+The script installs Ultralytics from its official GitHub repository. Set
+`ULTRALYTICS_REPO` only when you intentionally want another fork.
+
 ## 2. Choose the PyTorch build
 
 Default behavior:
@@ -62,4 +74,3 @@ conda activate yolo26
 python -c "import torch; print('torch=', torch.__version__); print('cuda=', torch.cuda.is_available()); print('device=', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
 python -c "from ultralytics import YOLO; print('ultralytics import ok')"
 ```
-

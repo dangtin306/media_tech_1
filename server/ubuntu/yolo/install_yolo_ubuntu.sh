@@ -4,6 +4,7 @@ set -euo pipefail
 CONDA_DIR="${CONDA_DIR:-/root/miniconda3}"
 ENV_NAME="${ENV_NAME:-yolo26}"
 REPO_URL="${REPO_URL:-https://github.com/dangtin306/media_tech_1.git}"
+ULTRALYTICS_REPO="${ULTRALYTICS_REPO:-https://github.com/ultralytics/ultralytics.git}"
 
 echo "[1/6] Checking network"
 getent hosts github.com >/dev/null
@@ -50,7 +51,7 @@ else
 fi
 
 echo "[5/6] Installing Ultralytics from GitHub"
-python -m pip install --upgrade "git+$REPO_URL"
+python -m pip install --upgrade "git+$ULTRALYTICS_REPO"
 
 echo "[6/6] Verifying"
 python - <<'PY'
@@ -63,4 +64,3 @@ print("cuda=", torch.cuda.is_available())
 if torch.cuda.is_available():
     print("device=", torch.cuda.get_device_name(0))
 PY
-
