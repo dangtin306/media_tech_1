@@ -7,6 +7,19 @@ cd /root/media_tech_ai
 git pull --ff-only
 ```
 
+Neu repo chua ton tai:
+
+```bash
+git clone --depth 1 https://github.com/dangtin306/media_tech_1.git /root/media_tech_ai
+```
+
+Neu `git clone` bao `Could not resolve host`, day la loi DNS/mang cua Ubuntu. Kiem tra:
+
+```bash
+getent hosts github.com
+cat /etc/resolv.conf
+```
+
 ## 2. Tạo thư mục model
 
 ```bash
@@ -43,3 +56,8 @@ test -f /root/model/yolo/yolo26n.pt
 find /root/model/yolo/vietnam_flag -maxdepth 2 -type d
 ```
 
+Neu Ubuntu toi gian chua co `curl`, co the tai file bang Python:
+
+```bash
+python3 -c "import urllib.request; urllib.request.urlretrieve('URL', '/root/model/yolo/file')"
+```
