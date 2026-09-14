@@ -20,6 +20,14 @@ Train day du:
 YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
 ~~~
 
+Lenh khuyen nghi cho SSH session moi, khong can activate:
+
+~~~bash
+YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto \
+/root/miniconda3/bin/conda run --no-capture-output -n yolo26 \
+python train.py
+~~~
+
 Neu model o ngoai repo:
 
 ~~~bash

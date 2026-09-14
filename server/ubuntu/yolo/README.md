@@ -1,30 +1,25 @@
 # YOLO26 Ubuntu
 
-Hướng dẫn đưa project YOLO26 từ Windows lên Ubuntu để train và chạy inference.
+Quy trình đưa project YOLO26 từ Windows lên Ubuntu để train và inference.
 
-## Luồng chuẩn
+## Thứ tự đọc trên máy mới
 
-```text
+1. `guide_ubuntu_any_gpu.md` - kiểm tra máy và cài môi trường.
+2. `guide_folder.md` - layout code/model/dataset.
+3. `guide_install.md` - clone code và cài tự động.
+4. `guide_data.md` - truyền model/dataset từ Windows.
+5. `guide_run.md` - train, inference và export ONNX.
+
+## Quy trình chuẩn
+
+~~~text
 Windows sửa code
     -> git commit / git push
 Ubuntu git pull
-    -> kích hoạt Conda env YOLO
-    -> đặt model và dataset ngoài Git
+    -> cài hoặc dùng env yolo26
+    -> model/dataset ở ngoài Git
     -> train hoặc inference
-```
+~~~
 
-Đọc theo thứ tự:
-
-1. `guide_folder.md`
-2. `guide_env.md`
-3. `guide_install.md`
-4. `guide_run.md`
-
-Cho Ubuntu mới hoặc GPU khác nhau, dùng guide chính:
-
-```text
-guide_ubuntu_any_gpu.md
-install_yolo_ubuntu.sh
-```
-
-Guide này có kiểm tra DNS, Conda TOS, Miniconda fallback bằng Python, CPU fallback và biến `TORCH_INDEX_URL` để chọn bản PyTorch CUDA phù hợp.
+Installer đã xử lý DNS preflight, Conda TOS, Miniconda fallback, Ubuntu
+minimal thiếu OpenCV libraries và CPU host cũ thiếu AVX.

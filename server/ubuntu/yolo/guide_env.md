@@ -71,3 +71,9 @@ export YOLO_WORKERS=4
 ~~~
 
 YOLO_DEVICE=auto dung GPU khi PyTorch nhan ra CUDA, neu khong tu chuyen sang CPU.
+
+Neu mo SSH session moi va khong muon phu thuoc vao lenh activate, dung truc tiep:
+
+~~~bash
+/root/miniconda3/bin/conda run --no-capture-output -n yolo26 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+~~~

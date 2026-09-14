@@ -1,34 +1,42 @@
-# YOLO26 — cấu trúc thư mục
+# YOLO26 - cau truc thu muc
 
-## Project
+## Code
 
-```text
 Windows:
+
+~~~text
 D:\hustmedia\python\llms\media_tech_ai\ai\yolo\test_1
+~~~
 
 Ubuntu:
+
+~~~text
 /root/media_tech_ai/ai/yolo/test_1
-```
+~~~
 
-Project gồm code train và cấu hình dataset. Không commit các output train lớn vào Git.
+## Model va du lieu lon tren Ubuntu
 
-## Model và dataset trên Ubuntu
-
-```text
+~~~text
 /root/model/yolo/yolo26n.pt
 /root/model/yolo/vietnam_flag/
+/root/model/yolo/vietnam_flag/data.yaml
 /root/model/yolo/vietnam_flag/best.pt
-```
+~~~
 
-Có thể giữ dataset trong project nếu nhỏ, nhưng dataset lớn nên đặt ngoài repo để pull code không làm nặng Git.
+Code duoc pull tu Git. Model, dataset, cache va ket qua train de ngoai Git.
 
-## Quy tắc đồng bộ
+## Thu tu lam tren may moi
 
-```bash
+1. Doc guide_ubuntu_any_gpu.md va chay install_yolo_ubuntu.sh.
+2. Doc guide_data.md de dua model/dataset sang dung layout.
+3. Doc guide_run.md de train/inference.
+
+## Dong bo code
+
+~~~bash
 cd /root/media_tech_ai
 git pull --ff-only
 git log -1 --oneline
-```
+~~~
 
-Windows sửa code rồi push GitHub; Ubuntu chỉ pull commit cần chạy. Không copy đè nguyên repo bằng `scp -r` sau khi đã clone.
-
+Khong dung `scp -r` de ghi de toan bo repo sau khi da clone.

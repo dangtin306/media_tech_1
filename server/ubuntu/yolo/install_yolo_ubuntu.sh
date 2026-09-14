@@ -3,7 +3,6 @@ set -euo pipefail
 
 CONDA_DIR="${CONDA_DIR:-/root/miniconda3}"
 ENV_NAME="${ENV_NAME:-yolo26}"
-REPO_URL="${REPO_URL:-https://github.com/dangtin306/media_tech_1.git}"
 ULTRALYTICS_REPO="${ULTRALYTICS_REPO:-https://github.com/ultralytics/ultralytics.git}"
 
 echo "[1/6] Checking network"

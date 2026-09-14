@@ -57,3 +57,9 @@ names:
 ~~~
 
 Khong commit model, dataset, API key hoac runs/ len Git.
+
+Sau khi install, verify khong phu thuoc shell activation:
+
+~~~bash
+/root/miniconda3/bin/conda run --no-capture-output -n yolo26 python -c "import torch, ultralytics; print(torch.__version__, torch.cuda.is_available(), ultralytics.__version__)"
+~~~
