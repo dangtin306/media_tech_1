@@ -39,6 +39,7 @@ sudo apt-get install -y libgl1 libglib2.0-0
 ~~~bash
 python -m pip install --upgrade pip
 python -m pip install git+https://github.com/ultralytics/ultralytics.git
+python -m pip install --upgrade "polars[rtcompat]"
 ~~~
 
 PyTorch CPU:

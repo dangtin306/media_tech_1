@@ -28,6 +28,17 @@ export YOLO_DATA=/root/media_tech_ai/ai/yolo/test_1/data.yaml
 python train.py
 ~~~
 
+Voi dataset nam ngoai repo, YOLO_DATA phai tro toi YAML co path tuyet doi:
+
+~~~yaml
+path: /root/model/yolo/vietnam_flag
+train: train/images
+val: valid/images
+test: test/images
+names:
+  0: covn
+~~~
+
 Model output:
 
 ~~~text

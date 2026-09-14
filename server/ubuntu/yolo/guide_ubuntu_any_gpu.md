@@ -9,6 +9,9 @@ This is the portable guide for a fresh Ubuntu machine. It supports:
 
 It does not assume a specific GPU model. The NVIDIA driver must be installed by the machine/provider first.
 
+The helper also installs OpenCV system libraries on Ubuntu minimal and the
+Polars runtime-compatible extra for older CPU hosts without AVX instructions.
+
 ## 0. Network preflight
 
 Run these before installing anything:
@@ -49,6 +52,18 @@ bash install_yolo_ubuntu.sh
 
 The script installs Ultralytics from its official GitHub repository. Set
 `ULTRALYTICS_REPO` only when you intentionally want another fork.
+
+If a dataset is stored outside the repository, its YAML must use Linux paths,
+for example:
+
+```yaml
+path: /root/model/yolo/vietnam_flag
+train: train/images
+val: valid/images
+test: test/images
+names:
+  0: covn
+```
 
 ## 2. Choose the PyTorch build
 

@@ -64,6 +64,9 @@ fi
 echo "[5/6] Installing Ultralytics from GitHub"
 python -m pip install --upgrade "git+$ULTRALYTICS_REPO"
 
+echo "[5/6] Installing CPU-compatible Polars runtime"
+python -m pip install --upgrade "polars[rtcompat]"
+
 echo "[6/6] Verifying"
 python - <<'PY'
 import torch
