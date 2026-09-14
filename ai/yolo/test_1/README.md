@@ -34,7 +34,7 @@ python train.py
 
 ```bash
 source /root/miniconda3/etc/profile.d/conda.sh
-conda activate yolo26
+conda activate images_1
 cd /root/media_tech_ai/ai/yolo/test_1
 YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
 ```

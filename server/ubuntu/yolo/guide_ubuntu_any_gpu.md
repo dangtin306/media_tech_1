@@ -36,7 +36,7 @@ bash install_yolo_ubuntu.sh
 The script creates:
 
 ```text
-/root/miniconda3/envs/yolo26
+/root/miniconda3/envs/images_1
 ```
 
 It does not store API keys and does not download a dataset.
@@ -85,7 +85,7 @@ Use the index recommended by the [official PyTorch install selector](https://pyt
 
 ```bash
 source /root/miniconda3/etc/profile.d/conda.sh
-conda activate yolo26
+conda activate images_1
 python -c "import torch; print('torch=', torch.__version__); print('cuda=', torch.cuda.is_available()); print('device=', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
 python -c "from ultralytics import YOLO; print('ultralytics import ok')"
 ```

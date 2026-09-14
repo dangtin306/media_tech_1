@@ -4,7 +4,7 @@
 
 ~~~bash
 source /root/miniconda3/etc/profile.d/conda.sh
-conda activate yolo26
+conda activate images_1
 cd /root/media_tech_ai/ai/yolo/test_1
 ~~~
 
@@ -31,7 +31,7 @@ Lenh khuyen nghi cho SSH session moi, khong can activate:
 
 ~~~bash
 YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto \
-/root/miniconda3/bin/conda run --no-capture-output -n yolo26 \
+/root/miniconda3/bin/conda run --no-capture-output -n images_1 \
 python train.py
 ~~~
 

@@ -16,7 +16,7 @@ Quy trình đưa project YOLO26 từ Windows lên Ubuntu để train và inferen
 Windows sửa code
     -> git commit / git push
 Ubuntu git pull
-    -> cài hoặc dùng env yolo26
+    -> cài hoặc dùng env images_1
     -> package model/dataset tải riêng từ GitHub Release
     -> train hoặc inference
 ~~~

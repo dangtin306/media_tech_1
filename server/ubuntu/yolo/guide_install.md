@@ -23,7 +23,7 @@ cd /root/media_tech_ai/server/ubuntu/yolo
 bash install_yolo_ubuntu.sh
 ~~~
 
-Script tao env /root/miniconda3/envs/yolo26, cai PyTorch theo CPU/GPU, cai Ultralytics tu GitHub chinh thuc va cai Polars runtime tuong thich voi CPU host cu.
+Script tao env /root/miniconda3/envs/images_1, cai PyTorch theo CPU/GPU, cai Ultralytics tu GitHub chinh thuc va cai Polars runtime tuong thich voi CPU host cu.
 
 ## Layout khuyen nghi
 
@@ -65,5 +65,5 @@ trong package `media_tech_yolo`.
 Sau khi install, verify khong phu thuoc shell activation:
 
 ~~~bash
-/root/miniconda3/bin/conda run --no-capture-output -n yolo26 python -c "import torch, ultralytics; print(torch.__version__, torch.cuda.is_available(), ultralytics.__version__)"
+/root/miniconda3/bin/conda run --no-capture-output -n images_1 python -c "import torch, ultralytics; print(torch.__version__, torch.cuda.is_available(), ultralytics.__version__)"
 ~~~

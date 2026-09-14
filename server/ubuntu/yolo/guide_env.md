@@ -4,8 +4,8 @@ Khong copy .venv Windows sang Ubuntu. Tao moi truong Linux moi:
 
 ~~~bash
 source /root/miniconda3/etc/profile.d/conda.sh
-conda create -y -n yolo26 python=3.10
-conda activate yolo26
+conda create -y -n images_1 python=3.10
+conda activate images_1
 which python
 python --version
 python -m pip --version
@@ -75,5 +75,5 @@ YOLO_DEVICE=auto dung GPU khi PyTorch nhan ra CUDA, neu khong tu chuyen sang CPU
 Neu mo SSH session moi va khong muon phu thuoc vao lenh activate, dung truc tiep:
 
 ~~~bash
-/root/miniconda3/bin/conda run --no-capture-output -n yolo26 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+/root/miniconda3/bin/conda run --no-capture-output -n images_1 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ~~~
