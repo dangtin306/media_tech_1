@@ -56,6 +56,12 @@ names:
   0: covn
 ~~~
 
+Hoac dung mau co san:
+
+~~~bash
+cp /root/media_tech_ai/server/ubuntu/yolo/data_external.yaml /root/model/yolo/vietnam_flag/data.yaml
+~~~
+
 Khong commit model, dataset, API key hoac runs/ len Git.
 
 Sau khi install, verify khong phu thuoc shell activation:

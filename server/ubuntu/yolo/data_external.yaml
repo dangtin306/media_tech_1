@@ -1,0 +1,6 @@
+path: /root/model/yolo/vietnam_flag
+train: train/images
+val: valid/images
+test: test/images
+names:
+  0: covn

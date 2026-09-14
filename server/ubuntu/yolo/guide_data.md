@@ -46,7 +46,13 @@ PY
 
 ## YAML external
 
-Tao `/root/model/yolo/vietnam_flag/data.yaml` voi duong dan Linux:
+Copy mau YAML co san trong repo:
+
+~~~bash
+cp /root/media_tech_ai/server/ubuntu/yolo/data_external.yaml /root/model/yolo/vietnam_flag/data.yaml
+~~~
+
+Noi dung YAML dung duong dan Linux:
 
 ~~~yaml
 path: /root/model/yolo/vietnam_flag
