@@ -12,6 +12,13 @@ Model goc duoc clone cung repo tai:
 `/root/media_tech_ai/ai/yolo/yolo26n/yolo26n.pt`.
 Khong can truyen model bang SCP.
 
+Neu muon dung package chung thay cho file trong repo:
+
+~~~bash
+export YOLO_MODEL=/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
+export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
+~~~
+
 Test nhanh tren CPU/GPU:
 
 ~~~bash

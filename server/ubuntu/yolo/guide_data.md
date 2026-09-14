@@ -5,6 +5,47 @@ Sau khi clone repo khong can SCP model nua.
 
 Dataset van de ngoai Git vi co nhieu file anh va nhan.
 
+## Tai package YOLO tu GitHub
+
+Package dung chung cua project co ten `media_tech_yolo`. Package gom model
+goc va dataset YOLO co Viet Nam, khong can `git clone` dataset:
+
+~~~bash
+PACKAGE_URL="https://github.com/dangtin306/media_tech_1/releases/download/media_tech_yolo/media_tech_yolo.zip"
+mkdir -p /root/model/yolo_package
+curl -fL "$PACKAGE_URL" -o /tmp/media_tech_yolo.zip
+unzip -q -o /tmp/media_tech_yolo.zip -d /root/model/yolo_package
+~~~
+
+Neu Ubuntu chua co `unzip`, dung Python:
+
+~~~bash
+python3 - <<'PY'
+import pathlib
+import zipfile
+
+archive = zipfile.ZipFile('/tmp/media_tech_yolo.zip')
+root = pathlib.Path('/root/model/yolo_package')
+for item in archive.infolist():
+    relative = item.filename.replace(chr(92), '/')
+    target = root / relative
+    if item.is_dir():
+        target.mkdir(parents=True, exist_ok=True)
+    else:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(archive.read(item))
+PY
+~~~
+
+Dat bien moi truong de dung model va dataset trong package:
+
+~~~bash
+export YOLO_MODEL=/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
+export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
+~~~
+
+Khi package duoc cap nhat, chi can tai lai cung URL va ghi de file cu.
+
 ## Dataset
 
 Dataset co nhieu file nho nen nen truoc:
