@@ -35,11 +35,11 @@ YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto \
 python train.py
 ~~~
 
-Neu model o ngoai repo:
+Neu muon dung model/dataset khac:
 
 ~~~bash
-export YOLO_MODEL=/root/model/yolo/yolo26n.pt
-export YOLO_DATA=/root/media_tech_ai/ai/yolo/test_1/data.yaml
+export YOLO_MODEL=/duong/dan/toi/model.pt
+export YOLO_DATA=/duong/dan/toi/data.yaml
 python train.py
 ~~~
 

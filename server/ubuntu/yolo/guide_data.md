@@ -11,7 +11,11 @@ goc va dataset YOLO co Viet Nam, khong can `git clone` dataset:
 ~~~bash
 PACKAGE_URL="https://github.com/dangtin306/media_tech_1/releases/download/media_tech_yolo/media_tech_yolo.zip"
 mkdir -p /root/model/yolo_package
-curl -fL "$PACKAGE_URL" -o /tmp/media_tech_yolo.zip
+if command -v curl >/dev/null 2>&1; then
+  curl -fL "$PACKAGE_URL" -o /tmp/media_tech_yolo.zip
+else
+  wget -O /tmp/media_tech_yolo.zip "$PACKAGE_URL"
+fi
 unzip -q -o /tmp/media_tech_yolo.zip -d /root/model/yolo_package
 ~~~
 
