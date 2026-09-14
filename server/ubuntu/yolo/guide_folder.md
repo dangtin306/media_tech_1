@@ -17,18 +17,18 @@ Ubuntu:
 ## Model va du lieu lon tren Ubuntu
 
 ~~~text
-/root/model/yolo/yolo26n.pt
+/root/media_tech_ai/ai/yolo/yolo26n/yolo26n.pt
 /root/model/yolo/vietnam_flag/
 /root/model/yolo/vietnam_flag/data.yaml
 /root/model/yolo/vietnam_flag/best.pt
 ~~~
 
-Code duoc pull tu Git. Model, dataset, cache va ket qua train de ngoai Git.
+Code va model goc duoc pull tu Git. Dataset, cache va ket qua train de ngoai Git.
 
 ## Thu tu lam tren may moi
 
 1. Doc guide_ubuntu_any_gpu.md va chay install_yolo_ubuntu.sh.
-2. Doc guide_data.md de dua model/dataset sang dung layout.
+2. Doc guide_data.md de dua dataset sang dung layout.
 3. Doc guide_run.md de train/inference.
 
 ## Dong bo code

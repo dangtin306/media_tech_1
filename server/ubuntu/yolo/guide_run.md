@@ -8,6 +8,10 @@ conda activate yolo26
 cd /root/media_tech_ai/ai/yolo/test_1
 ~~~
 
+Model goc duoc clone cung repo tai:
+`/root/media_tech_ai/ai/yolo/yolo26n/yolo26n.pt`.
+Khong can truyen model bang SCP.
+
 Test nhanh tren CPU/GPU:
 
 ~~~bash

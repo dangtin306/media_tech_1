@@ -1,16 +1,9 @@
-# YOLO26 - dua model va dataset tu Windows sang Ubuntu
+# YOLO26 - dua dataset tu Windows sang Ubuntu
 
-Model va dataset khong dua len Git. Dung SCP sau khi da clone code.
+Model `yolo26n.pt` da nam trong Git tai `ai/yolo/yolo26n/yolo26n.pt`.
+Sau khi clone repo khong can SCP model nua.
 
-## Model
-
-Chay tren PowerShell Windows:
-
-~~~powershell
-scp -P <SSH_PORT> `
-  "D:\hustmedia\python\llms\media_tech_ai\ai\yolo\yolo26n\yolo26n.pt" `
-  root@<UBUNTU_HOST>:/root/model/yolo/yolo26n.pt
-~~~
+Dataset van de ngoai Git vi co nhieu file anh va nhan.
 
 ## Dataset
 

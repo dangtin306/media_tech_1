@@ -7,7 +7,7 @@ Quy trình đưa project YOLO26 từ Windows lên Ubuntu để train và inferen
 1. `guide_ubuntu_any_gpu.md` - kiểm tra máy và cài môi trường.
 2. `guide_folder.md` - layout code/model/dataset.
 3. `guide_install.md` - clone code và cài tự động.
-4. `guide_data.md` - truyền model/dataset từ Windows.
+4. `guide_data.md` - truyền dataset từ Windows.
 5. `guide_run.md` - train, inference và export ONNX.
 
 ## Quy trình chuẩn
@@ -17,7 +17,7 @@ Windows sửa code
     -> git commit / git push
 Ubuntu git pull
     -> cài hoặc dùng env yolo26
-    -> model/dataset ở ngoài Git
+    -> model trong Git, dataset ở ngoài Git
     -> train hoặc inference
 ~~~
 
