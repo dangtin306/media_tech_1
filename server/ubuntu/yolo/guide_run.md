@@ -5,7 +5,7 @@
 ~~~bash
 source /root/miniconda3/etc/profile.d/conda.sh
 conda activate images_1
-cd /root/media_tech_ai/ai/yolo/test_1
+cd /root/media_tech_ai/ai/images/yolo/test_1
 ~~~
 
 Model va dataset duoc tai tu package chung:

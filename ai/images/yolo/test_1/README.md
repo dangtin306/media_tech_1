@@ -13,9 +13,8 @@ Package cũng chứa model `yolo26n.pt`; code không còn giữ bản model tron
 ## Chạy trên Windows
 
 ```powershell
-cd D:\hustmedia\python\llms\media_tech_ai\ai\yolo\yolo26n
-.\.venv\Scripts\Activate.ps1
-cd ..\test_1
+conda activate images_1
+cd D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1
 python train.py
 ```
 
@@ -35,7 +34,7 @@ python train.py
 ```bash
 source /root/miniconda3/etc/profile.d/conda.sh
 conda activate images_1
-cd /root/media_tech_ai/ai/yolo/test_1
+cd /root/media_tech_ai/ai/images/yolo/test_1
 YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
 ```
 

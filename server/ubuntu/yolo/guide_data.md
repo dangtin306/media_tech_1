@@ -49,7 +49,7 @@ Khi package duoc cap nhat, chi can tai lai cung URL va ghi de file cu.
 Dataset co nhieu file nho nen nen truoc:
 
 ~~~powershell
-$d="D:\hustmedia\python\llms\media_tech_ai\ai\yolo\test_1\datasets\vietnam_flag\Vietnam Flag.v3-v3.yolo26"
+$d="D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\datasets\vietnam_flag\Vietnam Flag.v3-v3.yolo26"
 $z="$env:TEMP\vietnam_flag_dataset.zip"
 Compress-Archive -Path "$d\train","$d\valid","$d\test" -DestinationPath $z -CompressionLevel Optimal -Force
 scp -P <SSH_PORT> $z root@<UBUNTU_HOST>:/tmp/vietnam_flag_dataset.zip

@@ -5,13 +5,13 @@
 Windows:
 
 ~~~text
-D:\hustmedia\python\llms\media_tech_ai\ai\yolo\test_1
+D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1
 ~~~
 
 Ubuntu:
 
 ~~~text
-/root/media_tech_ai/ai/yolo/test_1
+/root/media_tech_ai/ai/images/yolo/test_1
 ~~~
 
 ## Model va du lieu lon tren Ubuntu
