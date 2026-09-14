@@ -16,12 +16,6 @@ if command -v curl >/dev/null 2>&1; then
 else
   wget -O /tmp/media_tech_yolo.zip "$PACKAGE_URL"
 fi
-unzip -q -o /tmp/media_tech_yolo.zip -d /root/model/yolo_package
-~~~
-
-Neu Ubuntu chua co `unzip`, dung Python:
-
-~~~bash
 python3 - <<'PY'
 import pathlib
 import zipfile
@@ -31,7 +25,9 @@ root = pathlib.Path('/root/model/yolo_package')
 for item in archive.infolist():
     relative = item.filename.replace(chr(92), '/')
     target = root / relative
-    if item.is_dir():
+    if item.is_dir() or relative.endswith('/'):
+        if target.exists() and target.is_file():
+            target.unlink()
         target.mkdir(parents=True, exist_ok=True)
     else:
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -72,7 +68,9 @@ root = pathlib.Path('/root/model/yolo/vietnam_flag')
 for item in archive.infolist():
     relative = item.filename.replace(chr(92), '/')
     target = root / relative
-    if item.is_dir():
+    if item.is_dir() or relative.endswith('/'):
+        if target.exists() and target.is_file():
+            target.unlink()
         target.mkdir(parents=True, exist_ok=True)
     else:
         target.parent.mkdir(parents=True, exist_ok=True)
