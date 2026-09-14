@@ -2,13 +2,13 @@
 
 Project dùng `yolo26n.pt` để train một class: `covn`.
 
-Dataset Roboflow đã có sẵn tại:
+Dataset Roboflow được tải từ package `media_tech_yolo` tại:
 
 ```text
 datasets/vietnam_flag/Vietnam Flag.v3-v3.yolo26/
 ```
 
-Hiện dataset có 182 ảnh train và 30 ảnh validation.
+Package cũng chứa model `yolo26n.pt`; code không còn giữ bản model trong repo.
 
 ## Chạy trên Windows
 
@@ -25,7 +25,8 @@ Script tự chọn CUDA nếu PyTorch thấy GPU, nếu không sẽ dùng CPU:
 $env:YOLO_EPOCHS="5"       # test nhanh; train thật dùng 100
 $env:YOLO_DEVICE="auto"    # auto, cpu hoặc cuda:0
 $env:YOLO_BATCH="auto"     # GPU tự dò; CPU dùng batch 2
-$env:YOLO_MODEL="D:\model\yolo26n.pt"
+$env:YOLO_MODEL="<đường-dẫn-đã-giải-nén>\model\yolo26n.pt"
+$env:YOLO_DATA="<đường-dẫn-đã-giải-nén>\datasets\vietnam_flag\data.yaml"
 python train.py
 ```
 
@@ -38,11 +39,11 @@ cd /root/media_tech_ai/ai/yolo/test_1
 YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
 ```
 
-Nếu model nằm ngoài repo:
+Sau khi tải và giải nén package trên Ubuntu:
 
 ```bash
-export YOLO_MODEL=/root/model/yolo/yolo26n.pt
-export YOLO_DATA=/root/media_tech_ai/ai/yolo/test_1/data.yaml
+export YOLO_MODEL=/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
+export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
 python train.py
 ```
 

@@ -29,12 +29,12 @@ Script tao env /root/miniconda3/envs/yolo26, cai PyTorch theo CPU/GPU, cai Ultra
 
 ~~~text
 /root/media_tech_ai/                         # code
-/root/media_tech_ai/ai/yolo/yolo26n/yolo26n.pt # model goc trong Git
+/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt # model trong package
 /root/model/yolo/vietnam_flag/               # dataset/output lon
 ~~~
 
-Sau khi clone repo, code tu dong dung model goc trong repo. Khong can SCP
-model va khong can dat `YOLO_MODEL`.
+Sau khi clone repo, tai package `media_tech_yolo` theo `guide_data.md` va
+dat `YOLO_MODEL` toi model trong package.
 
 Dataset ngoai repo can co data.yaml, anh va label YOLO. Truyen duong dan:
 
@@ -59,8 +59,8 @@ Hoac dung mau co san:
 cp /root/media_tech_ai/server/ubuntu/yolo/data_external.yaml /root/model/yolo/vietnam_flag/data.yaml
 ~~~
 
-Model goc da duoc commit trong repo. Khong commit dataset, API key hoac
-`runs/` len Git.
+Khong commit dataset, API key hoac `runs/` len Git. Model duoc phat hanh
+trong package `media_tech_yolo`.
 
 Sau khi install, verify khong phu thuoc shell activation:
 

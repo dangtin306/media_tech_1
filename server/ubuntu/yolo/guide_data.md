@@ -1,9 +1,7 @@
 # YOLO26 - dua dataset tu Windows sang Ubuntu
 
-Model `yolo26n.pt` da nam trong Git tai `ai/yolo/yolo26n/yolo26n.pt`.
-Sau khi clone repo khong can SCP model nua.
-
-Dataset van de ngoai Git vi co nhieu file anh va nhan.
+Model va dataset duoc dong goi trong package `media_tech_yolo`.
+Sau khi clone repo, khong can SCP model hoac dataset nua.
 
 ## Tai package YOLO tu GitHub
 
@@ -103,5 +101,5 @@ Kiem tra truoc khi train:
 find /root/model/yolo/vietnam_flag/train/images -type f | wc -l
 find /root/model/yolo/vietnam_flag/valid/images -type f | wc -l
 test -f /root/model/yolo/vietnam_flag/data.yaml
-test -f /root/media_tech_ai/ai/yolo/yolo26n/yolo26n.pt
+test -f /root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
 ~~~

@@ -8,11 +8,7 @@ conda activate yolo26
 cd /root/media_tech_ai/ai/yolo/test_1
 ~~~
 
-Model goc duoc clone cung repo tai:
-`/root/media_tech_ai/ai/yolo/yolo26n/yolo26n.pt`.
-Khong can truyen model bang SCP.
-
-Neu muon dung package chung thay cho file trong repo:
+Model va dataset duoc tai tu package chung:
 
 ~~~bash
 export YOLO_MODEL=/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt

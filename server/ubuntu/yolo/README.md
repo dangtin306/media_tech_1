@@ -17,7 +17,7 @@ Windows sửa code
     -> git commit / git push
 Ubuntu git pull
     -> cài hoặc dùng env yolo26
-    -> model trong Git, dataset ở ngoài Git
+    -> package model/dataset tải riêng từ GitHub Release
     -> train hoặc inference
 ~~~
 
