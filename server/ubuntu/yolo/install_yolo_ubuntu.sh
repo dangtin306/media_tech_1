@@ -10,6 +10,17 @@ echo "[1/6] Checking network"
 getent hosts github.com >/dev/null
 getent hosts repo.anaconda.com >/dev/null
 
+if command -v apt-get >/dev/null 2>&1 && command -v ldconfig >/dev/null 2>&1 \
+  && ! ldconfig -p 2>/dev/null | grep -q 'libGL.so.1'; then
+  echo "[1/6] Installing OpenCV runtime libraries"
+  APT=(apt-get)
+  if [[ "${EUID}" -ne 0 ]]; then
+    APT=(sudo apt-get)
+  fi
+  "${APT[@]}" update
+  "${APT[@]}" install -y libgl1 libglib2.0-0
+fi
+
 if [[ ! -x "$CONDA_DIR/bin/conda" ]]; then
   echo "[2/6] Installing Miniconda at $CONDA_DIR"
   INSTALLER="/tmp/miniconda-yolo.sh"

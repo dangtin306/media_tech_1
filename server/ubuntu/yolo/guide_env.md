@@ -29,6 +29,13 @@ cat /etc/resolv.conf
 
 ## Cai thu vien
 
+Ubuntu minimal can them thu vien runtime cho OpenCV:
+
+~~~bash
+sudo apt-get update
+sudo apt-get install -y libgl1 libglib2.0-0
+~~~
+
 ~~~bash
 python -m pip install --upgrade pip
 python -m pip install git+https://github.com/ultralytics/ultralytics.git
