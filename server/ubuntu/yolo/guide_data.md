@@ -13,8 +13,16 @@ PACKAGE_URL="https://github.com/dangtin306/media_tech_1/releases/download/media_
 mkdir -p /root/model/yolo_package
 if command -v curl >/dev/null 2>&1; then
   curl -fL "$PACKAGE_URL" -o /tmp/media_tech_yolo.zip
-else
+elif command -v wget >/dev/null 2>&1; then
   wget -O /tmp/media_tech_yolo.zip "$PACKAGE_URL"
+else
+  python3 - <<'PY'
+import urllib.request
+urllib.request.urlretrieve(
+    "https://github.com/dangtin306/media_tech_1/releases/download/media_tech_yolo/media_tech_yolo.zip",
+    "/tmp/media_tech_yolo.zip",
+)
+PY
 fi
 python3 - <<'PY'
 import pathlib
