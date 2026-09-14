@@ -62,5 +62,5 @@ Kiem tra truoc khi train:
 find /root/model/yolo/vietnam_flag/train/images -type f | wc -l
 find /root/model/yolo/vietnam_flag/valid/images -type f | wc -l
 test -f /root/model/yolo/vietnam_flag/data.yaml
-test -f /root/model/yolo/yolo26n.pt
+test -f /root/media_tech_ai/ai/yolo/yolo26n/yolo26n.pt
 ~~~
