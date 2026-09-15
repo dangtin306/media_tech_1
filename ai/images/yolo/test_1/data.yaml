@@ -1,4 +1,4 @@
-path: datasets/vietnam_flag/Vietnam Flag.v3-v3.yolo26
+path: datasets/vietnam_flag
 train: train/images
 val: valid/images
 
