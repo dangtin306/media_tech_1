@@ -11,7 +11,6 @@ REPO_DIR = Path(__file__).resolve().parents[2]
 PACKAGE_SCRIPT = (
     REPO_DIR / "ai" / "images" / "yolo" / "test_1" / "datasets" / "convert_zip.py"
 )
-MODEL_DEFAULT = Path(r"D:\hustmedia\python\yolo26n.pt")
 CONFIG_PATH = Path(__file__).with_name("config.json")
 YOLO_CODE_FILES = [
     "ai/images/yolo/test_1/README.md",
@@ -66,8 +65,7 @@ def run(command: list[str], env: dict[str, str] | None = None) -> None:
 
 
 def publish_package() -> None:
-    model = Path(os.getenv("YOLO_MODEL", str(MODEL_DEFAULT)))
-    command = [sys.executable, str(PACKAGE_SCRIPT), "--model", str(model), "--upload-release"]
+    command = [sys.executable, str(PACKAGE_SCRIPT), "--upload-release"]
     env = os.environ.copy()
     env["GITHUB_TOKEN"] = get_github_token()
     run(command, env=env)

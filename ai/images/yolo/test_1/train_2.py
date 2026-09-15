@@ -9,7 +9,6 @@ from ultralytics import YOLO
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
-PACKAGE_DIR = Path("/root/model/yolo_package/media_tech_yolo")
 
 
 def first_file(paths: list[Path]) -> Path | None:
@@ -24,7 +23,6 @@ def find_dataset() -> Path:
     candidates = [
         Path(configured).expanduser() if configured else Path(),
         PROJECT_DIR / "datasets" / "cobasoc_1" / "data.yaml",
-        PACKAGE_DIR / "datasets" / "cobasoc_1" / "data.yaml",
     ]
     dataset = first_file([path for path in candidates if str(path) != "."])
     if dataset is None:
@@ -39,7 +37,6 @@ def find_model() -> Path:
     candidates = [
         Path(configured).expanduser() if configured else Path(),
         PROJECT_DIR.parent / "yolo26n" / "yolo26n.pt",
-        PACKAGE_DIR / "model" / "yolo26n.pt",
     ]
     model = first_file([path for path in candidates if str(path) != "."])
     if model is None:

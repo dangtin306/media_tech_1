@@ -1,16 +1,17 @@
 # YOLO26 - dua dataset tu Windows sang Ubuntu
 
-Model va dataset duoc dong goi trong package `media_tech_yolo`.
-Sau khi clone repo, khong can SCP model hoac dataset nua.
+Dataset duoc dong goi trong Release `media_tech_yolo`.
+Sau khi clone repo, dataset duoc giai nen thang vao thu muc `test_1/datasets`.
 
 ## Tai package YOLO tu GitHub
 
-Package dung chung cua project co ten `media_tech_yolo`. Package gom model
-goc va toan bo dataset YOLO, khong can `git clone` hay `scp` tung dataset:
+Package dung chung cua project co ten `media_tech_yolo`. Package gom toan bo
+dataset YOLO, khong chua model va khong can `scp` dataset:
 
 ~~~bash
 PACKAGE_URL="https://github.com/dangtin306/media_tech_1/releases/download/media_tech_yolo/media_tech_yolo.zip"
-mkdir -p /root/model/yolo_package
+DATASETS_DIR=/root/media_tech_ai/ai/images/yolo/test_1/datasets
+mkdir -p "$DATASETS_DIR"
 if command -v curl >/dev/null 2>&1; then
   curl -fL "$PACKAGE_URL" -o /tmp/media_tech_yolo.zip
 elif command -v wget >/dev/null 2>&1; then
@@ -29,7 +30,7 @@ import pathlib
 import zipfile
 
 archive = zipfile.ZipFile('/tmp/media_tech_yolo.zip')
-root = pathlib.Path('/root/model/yolo_package')
+root = pathlib.Path('/root/media_tech_ai/ai/images/yolo/test_1/datasets')
 for item in archive.infolist():
     relative = item.filename.replace(chr(92), '/')
     target = root / relative
@@ -43,37 +44,33 @@ for item in archive.infolist():
 PY
 ~~~
 
-Dat bien moi truong de dung model va dataset trong package:
+Dat bien moi truong toi dataset da giai nen. Model duoc quan ly rieng:
 
 ~~~bash
-export YOLO_MODEL=/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
-export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
+export YOLO_MODEL=/root/model/yolo26n.pt
+export YOLO_DATA=/root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/data.yaml
 ~~~
 
 Khi package duoc cap nhat, chi can tai lai cung URL va ghi de file cu.
 
 ## Cap nhat package va Release tren Windows
 
-Git chi day code nhe. Model va dataset lon phai dong goi thanh asset cua
+Git chi day code nhe. Dataset lon phai dong goi thanh asset cua
 GitHub Release `media_tech_yolo`; khong commit truc tiep vao repo.
 
 Package phai co dung cau truc:
 
 ~~~text
-media_tech_yolo/
-├── model/
-│   └── yolo26n.pt
-└── datasets/
-    ├── vietnam_flag/
-    │   ├── train/
-    │   ├── valid/
-    │   ├── test/
-    │   └── data.yaml
-    └── cobasoc_1/
-        ├── train/
-        ├── valid/
-        ├── test/
-        └── data.yaml
+vietnam_flag/
+├── train/
+├── valid/
+├── test/
+└── data.yaml
+cobasoc_1/
+├── train/
+├── valid/
+├── test/
+└── data.yaml
 ~~~
 
 Moi dataset phai co `data.yaml`; file se tu gom toan bo dataset co trong
@@ -101,8 +98,7 @@ Script tao file ZIP tai:
 D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\datasets\media_tech_yolo.zip
 ~~~
 
-ZIP co dang `media_tech_yolo/model/` va
-`media_tech_yolo/datasets/<ten_dataset>/`.
+ZIP co truc tiep cac thu muc `vietnam_flag/` va `cobasoc_1/`; khong co model.
 
 `up_to_github.py` tu dong doc token local, cap nhat repo va Release; khong can
 thao tac truc tiep tren giao dien GitHub. Khong dua `config.json` len GitHub.
@@ -116,15 +112,16 @@ Sau khi Windows chay xong `up_to_github.py`, Ubuntu tai ca code va package:
 
 ~~~bash
 PACKAGE_URL="https://github.com/dangtin306/media_tech_1/releases/download/media_tech_yolo/media_tech_yolo.zip"
-rm -rf /root/model/yolo_package/media_tech_yolo
-mkdir -p /root/model/yolo_package
+DATASETS_DIR=/root/media_tech_ai/ai/images/yolo/test_1/datasets
+rm -rf "$DATASETS_DIR/vietnam_flag" "$DATASETS_DIR/cobasoc_1"
+mkdir -p "$DATASETS_DIR"
 wget -O /tmp/media_tech_yolo.zip "$PACKAGE_URL"
 python3 - <<'PY'
 import pathlib
 import zipfile
 
 archive = zipfile.ZipFile('/tmp/media_tech_yolo.zip')
-root = pathlib.Path('/root/model/yolo_package')
+root = pathlib.Path('/root/media_tech_ai/ai/images/yolo/test_1/datasets')
 for item in archive.infolist():
     relative = item.filename.replace(chr(92), '/')
     target = root / relative
@@ -133,8 +130,9 @@ for item in archive.infolist():
     else:
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(archive.read(item))
-print('Package da cap nhat:', root / 'media_tech_yolo')
+print('Datasets da cap nhat:', root)
 PY
 ~~~
 
-`git pull` lay code; doan tai ZIP lay model va toan bo dataset tu Release.
+`git pull` lay code; doan tai ZIP lay toan bo dataset tu Release. Model duoc
+quan ly rieng qua `YOLO_MODEL` theo guide_run.md.

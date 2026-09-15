@@ -73,8 +73,8 @@ YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train_1.py
 Sau khi tải và giải nén package trên Ubuntu:
 
 ```bash
-export YOLO_MODEL=/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
-export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
+export YOLO_MODEL=/root/model/yolo26n.pt
+export YOLO_DATA=/root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/data.yaml
 python train_1.py
 ```
 

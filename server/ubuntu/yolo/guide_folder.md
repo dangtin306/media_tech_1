@@ -17,13 +17,13 @@ Ubuntu:
 ## Model va du lieu lon tren Ubuntu
 
 ~~~text
-/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
-/root/model/yolo/vietnam_flag/
-/root/model/yolo/vietnam_flag/data.yaml
+/root/model/yolo26n.pt
+/root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/
+/root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/data.yaml
 /root/model/yolo/vietnam_flag/best.pt
 ~~~
 
-Code duoc pull tu Git. Model va dataset duoc tai tu package `media_tech_yolo`.
+Code duoc pull tu Git. Dataset duoc tai tu Release; model duoc quan ly rieng.
 Cache va ket qua train de ngoai Git.
 
 ## Thu tu lam tren may moi

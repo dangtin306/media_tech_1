@@ -30,7 +30,6 @@ def find_model() -> Path:
         PROJECT_DIR / "runs" / "vietnam_flag" / "weights" / "best.pt",
         PROJECT_DIR / "runs" / "guide_new_ubuntu_test" / "weights" / "best.pt",
         PROJECT_DIR / "runs" / "guide_fresh_test" / "weights" / "best.pt",
-        Path("/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt"),
     ]
     model = first_existing([path for path in candidates if str(path) != "."])
     if model is None:
@@ -43,15 +42,12 @@ def find_model() -> Path:
 def find_source() -> Path:
     configured = os.getenv("YOLO_SOURCE")
     shared_yolo_dir = PROJECT_DIR.parent / "yolo26n"
-    package_dir = Path("/root/model/yolo_package/media_tech_yolo")
     candidates = [
         Path(configured).expanduser() if configured else Path(),
         PROJECT_DIR / "test.jpg",
         PROJECT_DIR / "test.png",
         shared_yolo_dir / "test.jpg",
         shared_yolo_dir / "test.png",
-        package_dir / "test.jpg",
-        package_dir / "test.png",
     ]
     source = first_existing([path for path in candidates if str(path) != "."])
     if source is None:
@@ -62,8 +58,6 @@ def find_source() -> Path:
             PROJECT_DIR / "datasets",
             PROJECT_DIR / "roboflow_downloaded",
             shared_yolo_dir,
-            package_dir / "datasets",
-            package_dir / "dataset",
         )
         for root in roots:
             if root.is_dir():
