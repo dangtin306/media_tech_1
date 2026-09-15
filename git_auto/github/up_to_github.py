@@ -29,7 +29,7 @@ def publish_package() -> None:
 
 
 def publish_repo() -> None:
-    run(["git", "add", "ai/images/up_to_github.py", "ai/images/yolo/test_1", "server/ubuntu/yolo"])
+    run(["git", "add", "git_auto/github/up_to_github.py", "ai/images/yolo/test_1", "server/ubuntu/yolo"])
     changed = subprocess.run(
         ["git", "diff", "--cached", "--quiet"], cwd=REPO_DIR
     ).returncode

@@ -82,7 +82,7 @@ thu muc `datasets`. Khong nen tu copy hoac tu nen bang tay.
 ~~~powershell
 cd D:\hustmedia\python\llms\media_tech_ai
 $env:GITHUB_TOKEN="<GITHUB_TOKEN>"
-python ai\images\up_to_github.py
+python git_auto\github\up_to_github.py
 ~~~
 
 `up_to_github.py` tu dong tao ZIP, bo qua file `.py`, `.zip`,
