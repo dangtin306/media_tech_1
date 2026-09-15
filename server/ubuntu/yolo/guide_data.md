@@ -148,7 +148,7 @@ New-Item -ItemType Directory -Force "$stage\model","$stage\datasets" | Out-Null
 Copy-Item "D:\duong-dan\yolo26n.pt" "$stage\model\yolo26n.pt" -Force
 Copy-Item "D:\duong-dan\vietnam_flag" "$stage\datasets\vietnam_flag" -Recurse -Force
 Copy-Item "D:\duong-dan\cobasoc_1" "$stage\datasets\cobasoc_1" -Recurse -Force
-Compress-Archive -Path "$stage\model","$stage\datasets" -DestinationPath $zip -CompressionLevel Optimal -Force
+Compress-Archive -Path $stage -DestinationPath $zip -CompressionLevel Optimal -Force
 ~~~
 
 Vao GitHub repo `dangtin306/media_tech_1` → Releases → release
@@ -165,3 +165,52 @@ git push origin main
 Sau khi thay asset, Ubuntu tai lai package bang cung URL o dau guide.
 Khong dung `scp` de truyen model/dataset va khong commit `runs/`, model
 hoac dataset lon vao Git.
+
+## Quy trinh moi lan cap nhat
+
+Neu chi sua code/guide: Windows push repo, sau do Ubuntu pull repo:
+
+~~~powershell
+cd D:\hustmedia\python\llms\media_tech_ai
+git add server/ubuntu/yolo ai/images/yolo/test_1
+git commit -m "Update YOLO code or guide"
+git push origin main
+~~~
+
+~~~bash
+cd /root/media_tech_ai
+git pull --ff-only origin main
+~~~
+
+Neu them dataset hoac doi model: tao lai `media_tech_yolo.zip`, xoa asset
+cu trong Release `media_tech_yolo`, upload lai dung ten
+`media_tech_yolo.zip`, roi Ubuntu tai lai package:
+
+~~~bash
+PACKAGE_URL="https://github.com/dangtin306/media_tech_1/releases/download/media_tech_yolo/media_tech_yolo.zip"
+rm -rf /root/model/yolo_package/media_tech_yolo
+mkdir -p /root/model/yolo_package
+wget -O /tmp/media_tech_yolo.zip "$PACKAGE_URL"
+python3 - <<'PY'
+import pathlib
+import zipfile
+
+archive = zipfile.ZipFile('/tmp/media_tech_yolo.zip')
+root = pathlib.Path('/root/model/yolo_package')
+for item in archive.infolist():
+    relative = item.filename.replace(chr(92), '/')
+    target = root / relative
+    if item.is_dir() or relative.endswith('/'):
+        target.mkdir(parents=True, exist_ok=True)
+    else:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(archive.read(item))
+print('Package da cap nhat:', root / 'media_tech_yolo')
+PY
+test -f /root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
+test -f /root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
+~~~
+
+Phai thuc hien ca hai phan neu vua doi code vua doi dataset/model: `git pull`
+de lay code va tai lai Release de lay file nang. `git pull` khong tu dong lay
+asset cua Release.
