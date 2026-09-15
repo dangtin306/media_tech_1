@@ -42,15 +42,30 @@ def find_model() -> Path:
 
 def find_source() -> Path:
     configured = os.getenv("YOLO_SOURCE")
+    shared_yolo_dir = PROJECT_DIR.parent / "yolo26n"
+    package_dir = Path("/root/model/yolo_package/media_tech_yolo")
     candidates = [
         Path(configured).expanduser() if configured else Path(),
         PROJECT_DIR / "test.jpg",
         PROJECT_DIR / "test.png",
+        shared_yolo_dir / "test.jpg",
+        shared_yolo_dir / "test.png",
+        package_dir / "test.jpg",
+        package_dir / "test.png",
     ]
     source = first_existing([path for path in candidates if str(path) != "."])
     if source is None:
         image_extensions = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
-        for root in (PROJECT_DIR / "datasets", PROJECT_DIR / "roboflow_downloaded"):
+        # Search common dataset/package image folders. Do not search runs/ because
+        # it contains previously annotated output images.
+        roots = (
+            PROJECT_DIR / "datasets",
+            PROJECT_DIR / "roboflow_downloaded",
+            shared_yolo_dir,
+            package_dir / "datasets",
+            package_dir / "dataset",
+        )
+        for root in roots:
             if root.is_dir():
                 source = next(
                     (p.resolve() for p in root.rglob("*") if p.suffix.lower() in image_extensions),
