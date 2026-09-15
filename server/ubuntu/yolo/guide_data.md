@@ -81,9 +81,12 @@ thu muc `datasets`. Khong nen tu copy hoac tu nen bang tay.
 
 ~~~powershell
 cd D:\hustmedia\python\llms\media_tech_ai
-$env:GITHUB_TOKEN="<GITHUB_TOKEN>"
 python git_auto\github\up_to_github.py
 ~~~
+
+Script tu doc token tai `git_auto/github/config.json` (truong
+`github_token_env`). Neu co bien moi truong `GITHUB_TOKEN`, bien moi truong
+duoc uu tien. File `config.json` la file bi mat local va khong duoc commit.
 
 `up_to_github.py` tu dong tao ZIP, bo qua file `.py`, `.zip`,
 `__pycache__`, xoa asset cu va upload asset moi vao Release
@@ -98,14 +101,8 @@ D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\datasets\media_tech
 ZIP co dang `media_tech_yolo/model/` va
 `media_tech_yolo/datasets/<ten_dataset>/`.
 
-Token chi dat trong terminal hien tai, khong commit vao Git:
-
-~~~powershell
-$env:GITHUB_TOKEN="<GITHUB_TOKEN>"
-~~~
-
-`up_to_github.py` tu dong cap nhat repo va Release; khong can thao tac
-truc tiep tren giao dien GitHub.
+`up_to_github.py` tu dong doc token local, cap nhat repo va Release; khong can
+thao tac truc tiep tren giao dien GitHub. Khong dua `config.json` len GitHub.
 Sau khi chay `up_to_github.py`, Ubuntu tai lai package bang cung URL o dau guide.
 Khong dung `scp` de truyen model/dataset va khong commit `runs/`, model
 hoac dataset lon vao Git.
