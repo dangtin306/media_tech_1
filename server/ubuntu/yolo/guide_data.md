@@ -77,35 +77,36 @@ media_tech_yolo/
 ~~~
 
 Moi dataset phai co `data.yaml`; file se tu gom toan bo dataset co trong
-thu muc `datasets`. Khong nen tu copy hoac tu nen bang tay. Chay script:
+thu muc `datasets`. Khong nen tu copy hoac tu nen bang tay.
 
 ~~~powershell
-cd D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1
-python datasets\convert_zip.py --model D:\hustmedia\python\yolo26n.pt
+cd D:\hustmedia\python\llms\media_tech_ai
+$env:GITHUB_TOKEN="<GITHUB_TOKEN>"
+python ai\images\up_to_github.py
 ~~~
 
-Script tu tao file:
+`up_to_github.py` tu dong tao ZIP, bo qua file `.py`, `.zip`,
+`__pycache__`, xoa asset cu va upload asset moi vao Release
+`media_tech_yolo`, sau do commit/push code len repo.
+
+Script tao file ZIP tai:
 
 ~~~text
 D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\datasets\media_tech_yolo.zip
 ~~~
 
 ZIP co dang `media_tech_yolo/model/` va
-`media_tech_yolo/datasets/<ten_dataset>/`. Script tu bo qua file `.py`,
-`.zip` va `__pycache__`, nen khong bi nen long hoac lap vong.
+`media_tech_yolo/datasets/<ten_dataset>/`.
 
-Vao GitHub repo `dangtin306/media_tech_1` → Releases → release
-`media_tech_yolo` → Edit release. Xoa asset ZIP cu, them file moi va giu
-dung ten `media_tech_yolo.zip`. Code nhe thi day rieng bang Git:
+Token chi dat trong terminal hien tai, khong commit vao Git:
 
 ~~~powershell
-cd D:\hustmedia\python\llms\media_tech_ai
-git add server/ubuntu/yolo ai/images/yolo/test_1
-git commit -m "Update YOLO package guide"
-git push origin main
+$env:GITHUB_TOKEN="<GITHUB_TOKEN>"
 ~~~
 
-Sau khi thay asset, Ubuntu tai lai package bang cung URL o dau guide.
+`up_to_github.py` tu dong cap nhat repo va Release; khong can thao tac
+truc tiep tren giao dien GitHub.
+Sau khi chay `up_to_github.py`, Ubuntu tai lai package bang cung URL o dau guide.
 Khong dung `scp` de truyen model/dataset va khong commit `runs/`, model
 hoac dataset lon vao Git.
 

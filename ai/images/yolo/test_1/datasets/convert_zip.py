@@ -5,7 +5,11 @@ one stable top-level folder containing the model and every dataset folder.
 """
 
 import argparse
+import hashlib
+import json
 import os
+import urllib.parse
+import urllib.request
 import zipfile
 from pathlib import Path
 
@@ -56,6 +60,69 @@ def add_file(archive: zipfile.ZipFile, source: Path, archive_path: Path) -> None
     archive.write(source, archive_path.as_posix())
 
 
+def github_request(
+    url: str,
+    token: str,
+    method: str = "GET",
+    body: bytes | None = None,
+    content_type: str = "application/vnd.github+json",
+) -> bytes:
+    request = urllib.request.Request(
+        url,
+        data=body,
+        method=method,
+        headers={
+            "Accept": "application/vnd.github+json",
+            "Authorization": f"Bearer {token}",
+            "Content-Type": content_type,
+            "User-Agent": "media-tech-yolo-release",
+        },
+    )
+    with urllib.request.urlopen(request) as response:
+        return response.read()
+
+
+def upload_release(output: Path) -> None:
+    token = os.getenv("GITHUB_TOKEN")
+    if not token:
+        raise RuntimeError(
+            "Thieu GITHUB_TOKEN. Dat token trong bien moi truong, sau do chay lai --upload-release."
+        )
+
+    repository = os.getenv("GITHUB_REPO", "dangtin306/media_tech_1")
+    release_tag = os.getenv("GITHUB_RELEASE_TAG", "media_tech_yolo")
+    api_root = f"https://api.github.com/repos/{repository}"
+    release = json.loads(
+        github_request(f"{api_root}/releases/tags/{release_tag}", token)
+    )
+
+    asset_names = {output.name, f"{output.stem}.sha256"}
+    for asset in release.get("assets", []):
+        if asset["name"] in asset_names:
+            github_request(
+                f"{api_root}/releases/assets/{asset['id']}", token, method="DELETE"
+            )
+
+    digest = hashlib.sha256(output.read_bytes()).hexdigest()
+    checksum = output.with_name(f"{output.stem}.sha256")
+    checksum.write_text(f"{digest}  {output.name}\n", encoding="ascii")
+    upload_url = release["upload_url"].split("{", 1)[0]
+    for asset_path, content_type in (
+        (output, "application/zip"),
+        (checksum, "text/plain"),
+    ):
+        query = urllib.parse.urlencode({"name": asset_path.name})
+        github_request(
+            f"{upload_url}?{query}",
+            token,
+            method="POST",
+            body=asset_path.read_bytes(),
+            content_type=content_type,
+        )
+    print(f"Release updated: {repository}@{release_tag}")
+    print(f"Uploaded: {output.name}, {checksum.name}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -69,6 +136,11 @@ def main() -> None:
         type=Path,
         default=DEFAULT_OUTPUT,
         help="File ZIP dau ra; mac dinh datasets/media_tech_yolo.zip.",
+    )
+    parser.add_argument(
+        "--upload-release",
+        action="store_true",
+        help="Tu dong ghi de asset trong GitHub Release media_tech_yolo.",
     )
     args = parser.parse_args()
 
@@ -98,6 +170,8 @@ def main() -> None:
     print("Datasets: " + ", ".join(dataset.name for dataset in datasets))
     print(f"Created: {output}")
     print(f"Size: {size_mb:.2f} MB")
+    if args.upload_release:
+        upload_release(output)
 
 
 if __name__ == "__main__":
