@@ -57,7 +57,7 @@ Khi package duoc cap nhat, chi can tai lai cung URL va ghi de file cu.
 Dataset co nhieu file nho nen nen truoc:
 
 ~~~powershell
-$d="D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\datasets\vietnam_flag\Vietnam Flag.v3-v3.yolo26"
+$d="D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\datasets\vietnam_flag"
 $z="$env:TEMP\vietnam_flag_dataset.zip"
 Compress-Archive -Path "$d\train","$d\valid","$d\test" -DestinationPath $z -CompressionLevel Optimal -Force
 scp -P <SSH_PORT> $z root@<UBUNTU_HOST>:/tmp/vietnam_flag_dataset.zip
@@ -113,3 +113,55 @@ find /root/model/yolo/vietnam_flag/valid/images -type f | wc -l
 test -f /root/model/yolo/vietnam_flag/data.yaml
 test -f /root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
 ~~~
+
+## Cap nhat package va Release tren Windows
+
+Git chi day code nhe. Model va dataset lon phai dong goi thanh asset cua
+GitHub Release `media_tech_yolo`; khong commit truc tiep vao repo.
+
+Package phai co dung cau truc:
+
+~~~text
+media_tech_yolo/
+├── model/
+│   └── yolo26n.pt
+└── datasets/
+    ├── vietnam_flag/
+    │   ├── train/
+    │   ├── valid/
+    │   ├── test/
+    │   └── data.yaml
+    └── cobasoc_1/
+        ├── train/
+        ├── valid/
+        ├── test/
+        └── data.yaml
+~~~
+
+Moi dataset phai co anh va label cung ten, co `train`, `valid`, `test`, va
+`data.yaml` dung duong dan. Tao ZIP tren PowerShell:
+
+~~~powershell
+$stage="D:\yolo_release\media_tech_yolo"
+$zip="D:\yolo_release\media_tech_yolo.zip"
+New-Item -ItemType Directory -Force "$stage\model","$stage\datasets" | Out-Null
+Copy-Item "D:\duong-dan\yolo26n.pt" "$stage\model\yolo26n.pt" -Force
+Copy-Item "D:\duong-dan\vietnam_flag" "$stage\datasets\vietnam_flag" -Recurse -Force
+Copy-Item "D:\duong-dan\cobasoc_1" "$stage\datasets\cobasoc_1" -Recurse -Force
+Compress-Archive -Path "$stage\model","$stage\datasets" -DestinationPath $zip -CompressionLevel Optimal -Force
+~~~
+
+Vao GitHub repo `dangtin306/media_tech_1` → Releases → release
+`media_tech_yolo` → Edit release. Xoa asset ZIP cu, them file moi va giu
+dung ten `media_tech_yolo.zip`. Code nhe thi day rieng bang Git:
+
+~~~powershell
+cd D:\hustmedia\python\llms\media_tech_ai
+git add server/ubuntu/yolo ai/images/yolo/test_1
+git commit -m "Update YOLO package guide"
+git push origin main
+~~~
+
+Sau khi thay asset, Ubuntu tai lai package bang cung URL o dau guide.
+Khong dung `scp` de truyen model/dataset va khong commit `runs/`, model
+hoac dataset lon vao Git.
