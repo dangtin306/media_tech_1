@@ -30,6 +30,8 @@ def find_model() -> Path:
         PROJECT_DIR / "runs" / "vietnam_flag" / "weights" / "best.pt",
         PROJECT_DIR / "runs" / "guide_new_ubuntu_test" / "weights" / "best.pt",
         PROJECT_DIR / "runs" / "guide_fresh_test" / "weights" / "best.pt",
+        Path("/root/model/yolo26n.pt"),
+        Path(r"D:\hustmedia\python\yolo26n.pt"),
     ]
     model = first_existing([path for path in candidates if str(path) != "."])
     if model is None:
