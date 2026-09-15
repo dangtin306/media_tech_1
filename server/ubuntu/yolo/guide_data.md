@@ -209,6 +209,7 @@ print('Package da cap nhat:', root / 'media_tech_yolo')
 PY
 test -f /root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
 test -f /root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
+test -f /root/model/yolo_package/media_tech_yolo/datasets/cobasoc_1/data.yaml
 ~~~
 
 Phai thuc hien ca hai phan neu vua doi code vua doi dataset/model: `git pull`
