@@ -15,7 +15,7 @@ Package cũng chứa model `yolo26n.pt`; code không còn giữ bản model tron
 ```powershell
 conda activate images_1
 cd D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1
-python train.py
+D:\hustmedia\conda_envs\images_1\python.exe D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\train.py
 ```
 
 ## Test anh va luu ket qua
@@ -23,7 +23,7 @@ python train.py
 Dat anh can test vao `test.jpg` trong thu muc nay, sau do chay:
 
 ```powershell
-python test_1.py
+D:\hustmedia\conda_envs\images_1\python.exe D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\test_1.py
 ```
 
 Anh da ve box se duoc luu tai:
@@ -37,7 +37,7 @@ Neu dung anh/model o noi khac:
 ```powershell
 $env:YOLO_SOURCE="D:\duong\dan\anh.jpg"
 $env:YOLO_MODEL="D:\duong\dan\best.pt"
-python test_1.py
+& D:\hustmedia\conda_envs\images_1\python.exe D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\test_1.py
 ```
 
 Tren Ubuntu dung cung file:
@@ -45,7 +45,7 @@ Tren Ubuntu dung cung file:
 ```bash
 YOLO_SOURCE=/duong/dan/anh.jpg \\
 YOLO_MODEL=/root/media_tech_ai/ai/images/yolo/test_1/runs/vietnam_flag/weights/best.pt \\
-python test_1.py
+/root/miniconda3/envs/images_1/bin/python /root/media_tech_ai/ai/images/yolo/test_1/test_1.py
 ```
 
 Co giao dien thi them `--show`; tren SSH khong co giao dien, mo file trong `runs/test/` de xem anh ket qua.
@@ -58,7 +58,7 @@ $env:YOLO_DEVICE="auto"    # auto, cpu hoặc cuda:0
 $env:YOLO_BATCH="auto"     # GPU tự dò; CPU dùng batch 2
 $env:YOLO_MODEL="<đường-dẫn-đã-giải-nén>\model\yolo26n.pt"
 $env:YOLO_DATA="<đường-dẫn-đã-giải-nén>\datasets\vietnam_flag\data.yaml"
-python train.py
+D:\hustmedia\conda_envs\images_1\python.exe D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\train.py
 ```
 
 ## Chạy trên Ubuntu
@@ -67,7 +67,8 @@ python train.py
 source /root/miniconda3/etc/profile.d/conda.sh
 conda activate images_1
 cd /root/media_tech_ai/ai/images/yolo/test_1
-YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
+YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto \\
+/root/miniconda3/envs/images_1/bin/python /root/media_tech_ai/ai/images/yolo/test_1/train.py
 ```
 
 Sau khi tải và giải nén package trên Ubuntu:
@@ -75,7 +76,7 @@ Sau khi tải và giải nén package trên Ubuntu:
 ```bash
 export YOLO_MODEL=/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
 export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
-python train.py
+/root/miniconda3/envs/images_1/bin/python /root/media_tech_ai/ai/images/yolo/test_1/train.py
 ```
 
 Kết quả nằm trong `runs/vietnam_flag/`. Không commit dataset, model hoặc thư mục `runs` lên Git.

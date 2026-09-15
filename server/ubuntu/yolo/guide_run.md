@@ -18,13 +18,15 @@ export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/
 Test nhanh tren CPU/GPU:
 
 ~~~bash
-YOLO_EPOCHS=5 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
+YOLO_EPOCHS=5 YOLO_DEVICE=auto YOLO_BATCH=auto \\
+/root/miniconda3/envs/images_1/bin/python /root/media_tech_ai/ai/images/yolo/test_1/train.py
 ~~~
 
 Train day du:
 
 ~~~bash
-YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
+YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto \\
+/root/miniconda3/envs/images_1/bin/python /root/media_tech_ai/ai/images/yolo/test_1/train.py
 ~~~
 
 Lenh khuyen nghi cho SSH session moi, khong can activate:
@@ -32,7 +34,7 @@ Lenh khuyen nghi cho SSH session moi, khong can activate:
 ~~~bash
 YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto \
 /root/miniconda3/bin/conda run --no-capture-output -n images_1 \
-python train.py
+/root/miniconda3/envs/images_1/bin/python /root/media_tech_ai/ai/images/yolo/test_1/train.py
 ~~~
 
 Neu muon dung model/dataset khac:
@@ -40,7 +42,7 @@ Neu muon dung model/dataset khac:
 ~~~bash
 export YOLO_MODEL=/duong/dan/toi/model.pt
 export YOLO_DATA=/duong/dan/toi/data.yaml
-python train.py
+/root/miniconda3/envs/images_1/bin/python /root/media_tech_ai/ai/images/yolo/test_1/train.py
 ~~~
 
 Voi dataset nam ngoai repo, YOLO_DATA phai tro toi YAML co path tuyet doi:
@@ -62,6 +64,17 @@ runs/vietnam_flag/weights/last.pt
 ~~~
 
 ## Inference
+
+Chay file test bang Python trong env voi duong dan tuyet doi:
+
+~~~bash
+YOLO_MODEL=/root/media_tech_ai/ai/images/yolo/test_1/runs/guide_new_ubuntu_test/weights/best.pt \\
+YOLO_SOURCE=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/test/images/anh.jpg \\
+/root/miniconda3/envs/images_1/bin/python \\
+/root/media_tech_ai/ai/images/yolo/test_1/test_1.py
+~~~
+
+Anh ket qua nam trong `/root/media_tech_ai/ai/images/yolo/test_1/runs/test/`.
 
 ~~~bash
 yolo predict \
