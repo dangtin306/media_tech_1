@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 import os
+import urllib.error
 import urllib.parse
 import urllib.request
 import zipfile
@@ -78,8 +79,15 @@ def github_request(
             "User-Agent": "media-tech-yolo-release",
         },
     )
-    with urllib.request.urlopen(request) as response:
-        return response.read()
+    try:
+        with urllib.request.urlopen(request) as response:
+            return response.read()
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace")[:500]
+        raise RuntimeError(
+            f"GitHub API {error.code} khi {method} {url}. "
+            f"Kiem tra PAT co Contents: Read and write. Chi tiet: {detail}"
+        ) from error
 
 
 def upload_release(output: Path) -> None:

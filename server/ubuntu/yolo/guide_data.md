@@ -87,6 +87,9 @@ python git_auto\github\up_to_github.py
 Script tu doc token tai `git_auto/github/config.json` (truong
 `github_token_env`). Neu co bien moi truong `GITHUB_TOKEN`, bien moi truong
 duoc uu tien. File `config.json` la file bi mat local va khong duoc commit.
+Fine-grained PAT phai duoc cap quyen vao repository `dangtin306/media_tech_1`
+voi `Contents: Read and write`; thieu quyen nay se bi GitHub tra ve `403` khi
+xoa hoac upload Release asset.
 
 `up_to_github.py` tu dong tao ZIP, bo qua file `.py`, `.zip`,
 `__pycache__`, xoa asset cu va upload asset moi vao Release
