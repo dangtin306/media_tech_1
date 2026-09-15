@@ -18,13 +18,13 @@ export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/
 Test nhanh tren CPU/GPU:
 
 ~~~bash
-YOLO_EPOCHS=5 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
+YOLO_EPOCHS=5 YOLO_DEVICE=auto YOLO_BATCH=auto python train_1.py
 ~~~
 
 Train day du:
 
 ~~~bash
-YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
+YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train_1.py
 ~~~
 
 Lenh khuyen nghi cho SSH session moi, khong can activate:
@@ -32,7 +32,7 @@ Lenh khuyen nghi cho SSH session moi, khong can activate:
 ~~~bash
 YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto \
 /root/miniconda3/bin/conda run --no-capture-output -n images_1 \
-python train.py
+python train_1.py
 ~~~
 
 Neu muon dung model/dataset khac:
@@ -40,7 +40,7 @@ Neu muon dung model/dataset khac:
 ~~~bash
 export YOLO_MODEL=/duong/dan/toi/model.pt
 export YOLO_DATA=/duong/dan/toi/data.yaml
-python train.py
+python train_1.py
 ~~~
 
 Voi dataset nam ngoai repo, YOLO_DATA phai tro toi YAML co path tuyet doi:

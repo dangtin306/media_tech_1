@@ -15,7 +15,7 @@ Package cũng chứa model `yolo26n.pt`; code không còn giữ bản model tron
 ```powershell
 conda activate images_1
 cd D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1
-python train.py
+python train_1.py
 ```
 
 ## Test anh va luu ket qua
@@ -58,7 +58,7 @@ $env:YOLO_DEVICE="auto"    # auto, cpu hoặc cuda:0
 $env:YOLO_BATCH="auto"     # GPU tự dò; CPU dùng batch 2
 $env:YOLO_MODEL="<đường-dẫn-đã-giải-nén>\model\yolo26n.pt"
 $env:YOLO_DATA="<đường-dẫn-đã-giải-nén>\datasets\vietnam_flag\data.yaml"
-python train.py
+python train_1.py
 ```
 
 ## Chạy trên Ubuntu
@@ -67,7 +67,7 @@ python train.py
 source /root/miniconda3/etc/profile.d/conda.sh
 conda activate images_1
 cd /root/media_tech_ai/ai/images/yolo/test_1
-YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train.py
+YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train_1.py
 ```
 
 Sau khi tải và giải nén package trên Ubuntu:
@@ -75,7 +75,7 @@ Sau khi tải và giải nén package trên Ubuntu:
 ```bash
 export YOLO_MODEL=/root/model/yolo_package/media_tech_yolo/model/yolo26n.pt
 export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/vietnam_flag/data.yaml
-python train.py
+python train_1.py
 ```
 
 Kết quả nằm trong `runs/vietnam_flag/`. Không commit dataset, model hoặc thư mục `runs` lên Git.
