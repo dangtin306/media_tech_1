@@ -27,6 +27,19 @@ Train day du:
 YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train_1.py
 ~~~
 
+## Train dataset cobasoc_1
+
+~~~bash
+export YOLO_DATA=/root/model/yolo_package/media_tech_yolo/datasets/cobasoc_1/data.yaml
+YOLO_EPOCHS=5 YOLO_DEVICE=auto YOLO_BATCH=auto python train_2.py
+~~~
+
+Train day du:
+
+~~~bash
+YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train_2.py
+~~~
+
 Lenh khuyen nghi cho SSH session moi, khong can activate:
 
 ~~~bash
