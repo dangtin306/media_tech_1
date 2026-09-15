@@ -74,9 +74,30 @@ def find_source() -> Path:
                 if source is not None:
                     break
     if source is None:
-        raise FileNotFoundError(
-            "Khong tim thay anh. Dat YOLO_SOURCE toi anh can test, vi du test.jpg."
-        )
+        # A fresh Ubuntu install may contain the code/model but no dataset.
+        # Create a small Vietnamese-flag image so the smoke test can still run.
+        source = OUTPUT_DIR / "test_input_vietnam_flag.jpg"
+        source.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            from PIL import Image, ImageDraw
+
+            image = Image.new("RGB", (640, 400), (218, 37, 29))
+            draw = ImageDraw.Draw(image)
+            cx, cy = 320, 200
+            points = []
+            import math
+
+            for index in range(10):
+                angle = -math.pi / 2 + index * math.pi / 5
+                radius = 125 if index % 2 == 0 else 50
+                points.append((cx + radius * math.cos(angle), cy + radius * math.sin(angle)))
+            draw.polygon(points, fill=(255, 220, 0))
+            image.save(source, quality=95)
+            print(f"Khong co anh dataset; da tao anh test: {source}")
+        except ImportError as error:
+            raise FileNotFoundError(
+                "Khong tim thay anh. Dat YOLO_SOURCE toi anh can test, vi du test.jpg."
+            ) from error
     return source
 
 
