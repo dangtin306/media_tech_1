@@ -23,9 +23,13 @@ def first_file(paths: list[Path]) -> Path | None:
 
 def find_dataset() -> Path:
     configured = os.getenv("YOLO_DATA")
+    local_dataset_dir = PROJECT_DIR / "datasets" / "vietnam_flag"
     if configured:
         candidates = [Path(configured).expanduser()]
-    elif (PROJECT_DIR / "datasets").is_dir():
+    elif (
+        (local_dataset_dir / "train" / "images").is_dir()
+        and (local_dataset_dir / "valid" / "images").is_dir()
+    ):
         candidates = [PROJECT_DIR / "data.yaml"]
     else:
         candidates = [PACKAGE_DIR / "datasets" / "vietnam_flag" / "data.yaml"]
