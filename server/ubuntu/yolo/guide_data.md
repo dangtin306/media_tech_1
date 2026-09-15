@@ -76,18 +76,23 @@ media_tech_yolo/
         └── data.yaml
 ~~~
 
-Moi dataset phai co anh va label cung ten, co `train`, `valid`, `test`, va
-`data.yaml` dung duong dan. Tao ZIP tren PowerShell:
+Moi dataset phai co `data.yaml`; file se tu gom toan bo dataset co trong
+thu muc `datasets`. Khong nen tu copy hoac tu nen bang tay. Chay script:
 
 ~~~powershell
-$stage="D:\yolo_release\media_tech_yolo"
-$zip="D:\yolo_release\media_tech_yolo.zip"
-New-Item -ItemType Directory -Force "$stage\model","$stage\datasets" | Out-Null
-Copy-Item "D:\duong-dan\yolo26n.pt" "$stage\model\yolo26n.pt" -Force
-Copy-Item "D:\duong-dan\vietnam_flag" "$stage\datasets\vietnam_flag" -Recurse -Force
-Copy-Item "D:\duong-dan\cobasoc_1" "$stage\datasets\cobasoc_1" -Recurse -Force
-Compress-Archive -Path $stage -DestinationPath $zip -CompressionLevel Optimal -Force
+cd D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1
+python datasets\convert_zip.py --model D:\hustmedia\python\yolo26n.pt
 ~~~
+
+Script tu tao file:
+
+~~~text
+D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1\datasets\media_tech_yolo.zip
+~~~
+
+ZIP co dang `media_tech_yolo/model/` va
+`media_tech_yolo/datasets/<ten_dataset>/`. Script tu bo qua file `.py`,
+`.zip` va `__pycache__`, nen khong bi nen long hoac lap vong.
 
 Vao GitHub repo `dangtin306/media_tech_1` → Releases → release
 `media_tech_yolo` → Edit release. Xoa asset ZIP cu, them file moi va giu
