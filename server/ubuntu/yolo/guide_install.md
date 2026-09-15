@@ -23,6 +23,23 @@ cd /root/media_tech_ai/server/ubuntu/yolo
 bash install_yolo_ubuntu.sh
 ~~~
 
+## Tai model rieng
+
+Model khong nam trong Release dataset. Tai model YOLO26n chinh thuc vao
+`/root/model/yolo26n.pt`:
+
+~~~bash
+mkdir -p /root/model
+if command -v curl >/dev/null 2>&1; then
+  curl -fL https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt \
+    -o /root/model/yolo26n.pt
+else
+  wget -O /root/model/yolo26n.pt \
+    https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt
+fi
+test -s /root/model/yolo26n.pt
+~~~
+
 Script tao env /root/miniconda3/envs/images_1, cai PyTorch theo CPU/GPU, cai Ultralytics tu GitHub chinh thuc va cai Polars runtime tuong thich voi CPU host cu.
 
 ## Layout khuyen nghi
