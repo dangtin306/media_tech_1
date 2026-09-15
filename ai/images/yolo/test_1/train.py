@@ -23,11 +23,12 @@ def first_file(paths: list[Path]) -> Path | None:
 
 def find_dataset() -> Path:
     configured = os.getenv("YOLO_DATA")
-    candidates = [
-        Path(configured).expanduser() if configured else Path(),
-        PROJECT_DIR / "data.yaml",
-        PACKAGE_DIR / "datasets" / "vietnam_flag" / "data.yaml",
-    ]
+    if configured:
+        candidates = [Path(configured).expanduser()]
+    elif (PROJECT_DIR / "datasets").is_dir():
+        candidates = [PROJECT_DIR / "data.yaml"]
+    else:
+        candidates = [PACKAGE_DIR / "datasets" / "vietnam_flag" / "data.yaml"]
     dataset = first_file([path for path in candidates if str(path) != "."])
     if dataset is None:
         raise FileNotFoundError(
