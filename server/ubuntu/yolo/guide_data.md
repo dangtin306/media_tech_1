@@ -110,25 +110,9 @@ Sau khi chay `up_to_github.py`, Ubuntu tai lai package bang cung URL o dau guide
 Khong dung `scp` de truyen model/dataset va khong commit `runs/`, model
 hoac dataset lon vao Git.
 
-## Quy trinh moi lan cap nhat
+## Ubuntu sau khi publish
 
-Neu chi sua code/guide: Windows push repo, sau do Ubuntu pull repo:
-
-~~~powershell
-cd D:\hustmedia\python\llms\media_tech_ai
-git add server/ubuntu/yolo ai/images/yolo/test_1
-git commit -m "Update YOLO code or guide"
-git push origin main
-~~~
-
-~~~bash
-cd /root/media_tech_ai
-git pull --ff-only origin main
-~~~
-
-Neu them dataset hoac doi model: tao lai `media_tech_yolo.zip`, xoa asset
-cu trong Release `media_tech_yolo`, upload lai dung ten
-`media_tech_yolo.zip`, roi Ubuntu tai lai package:
+Sau khi Windows chay xong `up_to_github.py`, Ubuntu tai ca code va package:
 
 ~~~bash
 PACKAGE_URL="https://github.com/dangtin306/media_tech_1/releases/download/media_tech_yolo/media_tech_yolo.zip"
@@ -153,6 +137,4 @@ print('Package da cap nhat:', root / 'media_tech_yolo')
 PY
 ~~~
 
-Phai thuc hien ca hai phan neu vua doi code vua doi dataset/model: `git pull`
-de lay code va tai lai Release de lay file nang. `git pull` khong tu dong lay
-asset cua Release.
+`git pull` lay code; doan tai ZIP lay model va toan bo dataset tu Release.
