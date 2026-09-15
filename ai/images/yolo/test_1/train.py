@@ -7,14 +7,52 @@ from ultralytics import YOLO
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
+PACKAGE_DIR = Path("/root/model/yolo_package/media_tech_yolo")
 
 
 def env_path(name: str, default: Path) -> Path:
     return Path(os.getenv(name, str(default))).expanduser().resolve()
 
 
-DATASET_YAML = env_path("YOLO_DATA", PROJECT_DIR / "data.yaml")
-MODEL_PATH = env_path("YOLO_MODEL", PROJECT_DIR.parent / "yolo26n" / "yolo26n.pt")
+def first_file(paths: list[Path]) -> Path | None:
+    for path in paths:
+        if path.is_file():
+            return path.resolve()
+    return None
+
+
+def find_dataset() -> Path:
+    configured = os.getenv("YOLO_DATA")
+    candidates = [
+        Path(configured).expanduser() if configured else Path(),
+        PROJECT_DIR / "data.yaml",
+        PACKAGE_DIR / "datasets" / "vietnam_flag" / "data.yaml",
+    ]
+    dataset = first_file([path for path in candidates if str(path) != "."])
+    if dataset is None:
+        raise FileNotFoundError(
+            "Khong tim thay data.yaml. Dat YOLO_DATA toi file data.yaml cua dataset."
+        )
+    return dataset
+
+
+def find_model() -> Path:
+    configured = os.getenv("YOLO_MODEL")
+    candidates = [
+        Path(configured).expanduser() if configured else Path(),
+        PROJECT_DIR.parent / "yolo26n" / "yolo26n.pt",
+        PACKAGE_DIR / "model" / "yolo26n.pt",
+    ]
+    model = first_file([path for path in candidates if str(path) != "."])
+    if model is None:
+        raise FileNotFoundError(
+            "Khong tim thay yolo26n.pt. Dat YOLO_MODEL toi file model."
+        )
+    return model
+
+
+DATASET_YAML = find_dataset()
+MODEL_PATH = find_model()
 RUNS_DIR = env_path("YOLO_RUNS", PROJECT_DIR / "runs")
 
 
