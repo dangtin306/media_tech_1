@@ -48,6 +48,23 @@ def find_model() -> Path:
     return model
 
 
+def resolve_dataset_yaml(dataset: Path, output_dir: Path) -> Path:
+    """Create a portable YAML with absolute image paths for Ultralytics."""
+    import yaml
+
+    config = yaml.safe_load(dataset.read_text(encoding="utf-8")) or {}
+    dataset_root = dataset.parent.resolve()
+    for key in ("train", "val", "test"):
+        value = config.get(key)
+        if isinstance(value, str) and not Path(value).expanduser().is_absolute():
+            config[key] = str((dataset_root / value).resolve())
+    config["path"] = str(dataset_root)
+    resolved = output_dir / ".cobasoc_1_resolved.yaml"
+    resolved.parent.mkdir(parents=True, exist_ok=True)
+    resolved.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
+    return resolved
+
+
 DATASET_YAML = find_dataset()
 MODEL_PATH = find_model()
 RUNS_DIR = Path(os.getenv("YOLO_RUNS", str(PROJECT_DIR / "runs"))).expanduser().resolve()
@@ -70,13 +87,15 @@ def main() -> None:
     workers = int(os.getenv("YOLO_WORKERS", str(default_workers)))
 
     print(f"Training device: {device}")
+    resolved_dataset = resolve_dataset_yaml(DATASET_YAML, RUNS_DIR)
     print(f"Dataset: {DATASET_YAML}")
+    print(f"Resolved dataset: {resolved_dataset}")
     print(f"Model: {MODEL_PATH}")
     print(f"epochs={epochs}, imgsz={imgsz}, batch={batch}, workers={workers}")
 
     model = YOLO(str(MODEL_PATH))
     model.train(
-        data=str(DATASET_YAML),
+        data=str(resolved_dataset),
         epochs=epochs,
         imgsz=imgsz,
         batch=batch,
