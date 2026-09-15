@@ -18,6 +18,38 @@ cd D:\hustmedia\python\llms\media_tech_ai\ai\images\yolo\test_1
 python train.py
 ```
 
+## Test anh va luu ket qua
+
+Dat anh can test vao `test.jpg` trong thu muc nay, sau do chay:
+
+```powershell
+python test_1.py
+```
+
+Anh da ve box se duoc luu tai:
+
+```text
+runs/test/
+```
+
+Neu dung anh/model o noi khac:
+
+```powershell
+$env:YOLO_SOURCE="D:\duong\dan\anh.jpg"
+$env:YOLO_MODEL="D:\duong\dan\best.pt"
+python test_1.py
+```
+
+Tren Ubuntu dung cung file:
+
+```bash
+YOLO_SOURCE=/duong/dan/anh.jpg \\
+YOLO_MODEL=/root/media_tech_ai/ai/images/yolo/test_1/runs/vietnam_flag/weights/best.pt \\
+python test_1.py
+```
+
+Co giao dien thi them `--show`; tren SSH khong co giao dien, mo file trong `runs/test/` de xem anh ket qua.
+
 Script tự chọn CUDA nếu PyTorch thấy GPU, nếu không sẽ dùng CPU:
 
 ```powershell
