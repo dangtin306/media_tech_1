@@ -17,6 +17,7 @@ YOLO_CODE_FILES = [
     "ai/images/yolo/test_1/data.yaml",
     "ai/images/yolo/test_1/datasets/convert_zip.py",
     "ai/images/yolo/test_1/test_1.py",
+    "ai/images/yolo/test_1/test_2.py",
     "ai/images/yolo/test_1/train_1.py",
     "ai/images/yolo/test_1/train_2.py",
 ]
