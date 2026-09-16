@@ -57,7 +57,7 @@ If a dataset is stored outside the repository, its YAML must use Linux paths,
 for example:
 
 ```yaml
-path: /root/model/yolo/vietnam_flag
+path: /root/model/images/yolo/vietnam_flag
 train: train/images
 val: valid/images
 test: test/images

@@ -30,7 +30,7 @@ def find_model() -> Path:
     candidates = [
         Path(configured).expanduser() if configured else Path(),
         PROJECT_DIR / "runs" / "cobasoc_1" / "weights" / "best.pt",
-        Path("/root/model/yolo26n.pt"),
+        Path("/root/model/images/yolo/main/yolo26n.pt"),
         Path(r"D:\hustmedia\python\yolo26n.pt"),
     ]
     model = first_existing([path for path in candidates if str(path) != "."])

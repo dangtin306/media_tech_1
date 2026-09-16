@@ -36,7 +36,7 @@ def find_model() -> Path:
     configured = os.getenv("YOLO_MODEL")
     candidates = [
         Path(configured).expanduser() if configured else Path(),
-        Path("/root/model/yolo26n.pt"),
+        Path("/root/model/images/yolo/main/yolo26n.pt"),
         Path(r"D:\hustmedia\python\yolo26n.pt"),
         PROJECT_DIR.parent / "yolo26n" / "yolo26n.pt",
     ]
@@ -67,7 +67,12 @@ def resolve_dataset_yaml(dataset: Path, output_dir: Path) -> Path:
 
 DATASET_YAML = find_dataset()
 MODEL_PATH = find_model()
-RUNS_DIR = Path(os.getenv("YOLO_RUNS", str(PROJECT_DIR / "runs"))).expanduser().resolve()
+DEFAULT_RUNS_DIR = (
+    Path("/root/model/images/yolo")
+    if os.name != "nt"
+    else PROJECT_DIR / "runs"
+)
+RUNS_DIR = Path(os.getenv("YOLO_RUNS", str(DEFAULT_RUNS_DIR))).expanduser().resolve()
 
 
 def main() -> None:

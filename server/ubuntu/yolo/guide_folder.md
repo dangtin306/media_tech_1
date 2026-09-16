@@ -17,10 +17,10 @@ Ubuntu:
 ## Model va du lieu lon tren Ubuntu
 
 ~~~text
-/root/model/yolo26n.pt
+/root/model/images/yolo/main/yolo26n.pt
 /root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/
 /root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/data.yaml
-/root/model/yolo/vietnam_flag/best.pt
+/root/model/images/yolo/vietnam_flag/weights/best.pt
 ~~~
 
 Code duoc pull tu Git. Dataset duoc tai tu Release; model duoc quan ly rieng.

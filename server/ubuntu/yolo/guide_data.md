@@ -47,7 +47,7 @@ PY
 Dat bien moi truong toi dataset da giai nen. Model duoc quan ly rieng:
 
 ~~~bash
-export YOLO_MODEL=/root/model/yolo26n.pt
+export YOLO_MODEL=/root/model/images/yolo/main/yolo26n.pt
 export YOLO_DATA=/root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/data.yaml
 ~~~
 

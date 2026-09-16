@@ -26,18 +26,18 @@ bash install_yolo_ubuntu.sh
 ## Tai model rieng
 
 Model khong nam trong Release dataset. Tai model YOLO26n chinh thuc vao
-`/root/model/yolo26n.pt`:
+`/root/model/images/yolo/main/yolo26n.pt`:
 
 ~~~bash
-mkdir -p /root/model
+mkdir -p /root/model/images/yolo/main
 if command -v curl >/dev/null 2>&1; then
   curl -fL https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt \
-    -o /root/model/yolo26n.pt
+    -o /root/model/images/yolo/main/yolo26n.pt
 else
-  wget -O /root/model/yolo26n.pt \
+  wget -O /root/model/images/yolo/main/yolo26n.pt \
     https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt
 fi
-test -s /root/model/yolo26n.pt
+test -s /root/model/images/yolo/main/yolo26n.pt
 ~~~
 
 Script tao env /root/miniconda3/envs/images_1, cai PyTorch theo CPU/GPU, cai Ultralytics tu GitHub chinh thuc va cai Polars runtime tuong thich voi CPU host cu.
@@ -46,7 +46,8 @@ Script tao env /root/miniconda3/envs/images_1, cai PyTorch theo CPU/GPU, cai Ult
 
 ~~~text
 /root/media_tech_ai/                         # code
-/root/model/yolo26n.pt                     # model rieng
+/root/model/images/yolo/main/yolo26n.pt   # model rieng
+/root/model/images/yolo/                  # model da train va ket qua
 /root/media_tech_ai/ai/images/yolo/test_1/datasets/ # dataset
 ~~~
 
@@ -56,13 +57,13 @@ toi file model rieng tren may.
 Dataset ngoai repo can co data.yaml, anh va label YOLO. Truyen duong dan:
 
 ~~~bash
-export YOLO_DATA=/root/model/yolo/vietnam_flag/data.yaml
+export YOLO_DATA=/root/model/images/yolo/vietnam_flag/data.yaml
 ~~~
 
 YAML cho dataset ngoai repo phai dung duong dan Linux, khong dung duong dan Windows:
 
 ~~~yaml
-path: /root/model/yolo/vietnam_flag
+path: /root/model/images/yolo/vietnam_flag
 train: train/images
 val: valid/images
 test: test/images
@@ -73,7 +74,7 @@ names:
 Hoac dung mau co san:
 
 ~~~bash
-cp /root/media_tech_ai/server/ubuntu/yolo/data_external.yaml /root/model/yolo/vietnam_flag/data.yaml
+cp /root/media_tech_ai/server/ubuntu/yolo/data_external.yaml /root/model/images/yolo/vietnam_flag/data.yaml
 ~~~
 
 Khong commit dataset, API key, model hoac `runs/` len Git.

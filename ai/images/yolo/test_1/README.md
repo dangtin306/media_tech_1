@@ -44,7 +44,7 @@ Tren Ubuntu dung cung file:
 
 ```bash
 YOLO_SOURCE=/duong/dan/anh.jpg \\
-YOLO_MODEL=/root/media_tech_ai/ai/images/yolo/test_1/runs/vietnam_flag/weights/best.pt \\
+YOLO_MODEL=/root/model/images/yolo/vietnam_flag/weights/best.pt \\
 python test_1.py
 ```
 
@@ -73,12 +73,12 @@ YOLO_EPOCHS=100 YOLO_DEVICE=auto YOLO_BATCH=auto python train_1.py
 Sau khi tải và giải nén package trên Ubuntu:
 
 ```bash
-export YOLO_MODEL=/root/model/yolo26n.pt
+export YOLO_MODEL=/root/model/images/yolo/main/yolo26n.pt
 export YOLO_DATA=/root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/data.yaml
 python train_1.py
 ```
 
-Kết quả nằm trong `runs/vietnam_flag/`. Không commit dataset, model hoặc thư mục `runs` lên Git.
+Kết quả train nằm trong `/root/model/images/yolo/vietnam_flag/`. Không commit dataset hoặc model lớn lên Git.
 
 ## Dữ liệu tự thêm
 

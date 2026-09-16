@@ -18,8 +18,9 @@ cd /root/media_tech_ai/ai/images/yolo/test_1
 Model va dataset duoc tai tu package chung:
 
 ~~~bash
-export YOLO_MODEL=/root/model/yolo26n.pt
+export YOLO_MODEL=/root/model/images/yolo/main/yolo26n.pt
 export YOLO_DATA=/root/media_tech_ai/ai/images/yolo/test_1/datasets/vietnam_flag/data.yaml
+export YOLO_RUNS=/root/model/images/yolo
 ~~~
 
 Test nhanh tren CPU/GPU:
@@ -70,7 +71,7 @@ python /root/media_tech_ai/ai/images/yolo/test_1/train_1.py
 Voi dataset nam ngoai repo, YOLO_DATA phai tro toi YAML co path tuyet doi:
 
 ~~~yaml
-path: /root/model/yolo/vietnam_flag
+path: /root/model/images/yolo/vietnam_flag
 train: train/images
 val: valid/images
 test: test/images
@@ -81,24 +82,24 @@ names:
 Model output:
 
 ~~~text
-runs/vietnam_flag/weights/best.pt
-runs/vietnam_flag/weights/last.pt
+/root/model/images/yolo/vietnam_flag/weights/best.pt
+/root/model/images/yolo/vietnam_flag/weights/last.pt
 ~~~
 
 ## Inference
 
 ~~~bash
 yolo predict \
-  model=runs/vietnam_flag/weights/best.pt \
+  model=/root/model/images/yolo/vietnam_flag/weights/best.pt \
   source=/path/to/image.jpg \
-  project=runs \
+  project=/root/model/images/yolo \
   name=predict
 ~~~
 
 ## Export cho C#
 
 ~~~bash
-yolo export model=runs/vietnam_flag/weights/best.pt format=onnx
+yolo export model=/root/model/images/yolo/vietnam_flag/weights/best.pt format=onnx
 ~~~
 
 Sau do dung file .onnx voi Microsoft.ML.OnnxRuntime.
